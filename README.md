@@ -240,6 +240,7 @@ User Story ID | User | I Want To Be Able To... | So That I Can ...
 :--- | :--- | :--- | :---
 **Viewing & Navigation**
 1 | Shopper | View a list of products | Select items to purchase
+2 | Shopper | View a cateygory of products | Easily find products I'm interested in without having to search through all products
 2 | Shopper | View individual product details | Identify the price, description, rating, image, material
 3 | Shopper | View product sustainability credentials | Make an informed decision about purchasing a product
 4 | Shopper | View product maintenance details | Find out how to make my product last longer, be reused or recycled
