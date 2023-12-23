@@ -282,6 +282,10 @@ Considering the site's user stories, wireframes were created of the necessary pa
 
 ![Wireframes of the EcoRoots category page on mobile, tablet & desktop](readme_imgs/wireframe_category_page.png)
 
+**Product Detail Page:** The product detail page consists of a large product image along with the product name, description and price. It also includes a form allowing the user to input a quantity and size they would like to purchase with a button to add it to their bag.
+
+![Wireframes of the EcoRoots product detail page on mobile, tablet & desktop](readme_imgs/wireframe_product_detail.png)
+
 **Login Page:** The login page consists of a single form aasking the user to enter their email and password to login to the site. If the user does not already have an account, there is a link below the form that will take them to the registration page where they can create an account. The registration page will be very similar to the login page however will also ask for the user's name.
 
 ![Wireframes of the EcoRoots login page on mobile, tablet & desktop](readme_imgs/wireframe_login_page.png)
@@ -289,6 +293,10 @@ Considering the site's user stories, wireframes were created of the necessary pa
 **Profile Page:** The profile page consists of welcome text in the header, followed by three sections: The user's order history, along with a button to track their orders; their primary address, with an option to edit the address and; their account details, including options to edit or delete their account.
 
 ![Wireframes of the EcoRoots profile page on mobile, tablet & desktop](readme_imgs/wireframe_profile_page.png)
+
+**Shopping Basket Page:** The shopping basket page has a header followed by a table showing the products in the user's basket along with their quantity, size and subtotal. Below the basket is the total price of the basket and two buttons for the user to either keep shopping or continue to the checkout.
+
+![Wireframes of the EcoRoots shopping basket on mobile, tablet & desktop](readme_imgs/wireframe_basket.png)
 
 **Checkout Page:** Add this after doing the checkout walkthrough tutorial
 
@@ -329,11 +337,37 @@ During the development of the EcoRoots site, GitHub was used to manage versions 
 
 ## Site Development & Features
 
-### Project Setup
+### Project Setup (Commits from 22nd Dec)
 
-### Authentication & Authorisation
+First, the repositiory was created on GitHub using the Code Institute GitPod template and then opened in GitPod. To create a new django project the command 'python3 django-admin startproject' was used to create the project folder and initial python files.
 
-### Base Template
+![Initial file structure of the project](readme_imgs/project_setup_1.png)
+
+### Authentication & Authorisation (Commits from 22nd Dec)
+
+For user authenication in this project, django-allauth was used. To setup allauth it first had to be installed used the command 'pip3 install django-allauth'. After installing allauth, all the projects requirements were now installed, therefore the versions were frozen into the requirements.txt file using 'pip3 freeze -r requirements.txt'.
+
+Next, some changes were required to the settings.py and urls.py files. Within the settings.py file, allauth needed adding to the installed apps and some requirements from the allauth documentation was also needed, these were copied directly from the documentation to ensure they were correct.
+
+![Required allauth installed apps](readme_imgs/allauth_setup_1.png)
+
+![Allauth requirements within settings.py](readme_imgs/allauth_setup_2.png)
+
+Finally, within the urls.py file a new account path was required to show the allauth urls. This allows for any allauth templates to be rendered when on the accounts/ path.
+
+![Allauth account/ url setup within urls.py](readme_imgs/allauth_setup_3.png)
+
+### Base Template (Commits from 23rd Dec)
+
+Now that allauth is setup and working, the required allauth templates needed adding to the project. To do this the command 'cp -r ../.pip-modules/lib/python3.9/site-packages/allauth/templates/* ./templates/allauth/' was used. This installed the allauth templates and the final section of the command after the space allowed them to be saved in the correct place within the file structure. Only the account and socialaccount templates were required for customising, so the rest were deleted as allauth can access them directly instead.
+
+Next, the base template was created within the project templates folder. This html file is currently very basic, only containing a head element and within the body a header and single container. Blocks were added to separate out the code so it could be added to within other templates where required. Within the head element the content was split into meta, css and js block along with extra ones for each where required within the project. Within the body, a message container was created within an 'if messages' block followed by two blocks for the page header and content and finally a block for any javascript that can be loaded after the rest of the page.
+
+![Project templates file structure](readme_imgs/templates_setup_1.png)
+
+Finally, the home app was created using the command 'mkdir -p startapp home'. To setup the home app, it was added to the installed apps within the settings.py file and a path was added to the project urls.py file. Then the index.html file was created within the home/templates/home folder including a single h1 saying 'It Works!' simply to test that the home app is setup and working correctly when running the server. To allow the index page to render a view was added to the home/views.py file called 'index' and this path was included within the home/urls.py file.
+
+![Index.html rendering correctly](readme_imgs/templates_setup_2.png)
 
 ### Home Page
 
