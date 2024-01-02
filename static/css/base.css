@@ -2,14 +2,6 @@ html {
     height: 100%;
 }
 
-body {
-    background: url('/media/index_header.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: calc(100vh - 164px);
-    color: #555;
-    font-family: 'Lato';
-}
-
 /* from Bulma */
 .icon {
     align-items: center;
@@ -20,7 +12,11 @@ body {
 }
 
 .logo-font {
-    text-transform: uppercase;
+    font-family: 'Istok Web', sans-serif;
+}
+
+.logo-font:hover {
+    color: #2E4013;
 }
 
 .main-logo-link {
@@ -38,6 +34,51 @@ body {
 
 .border-black {
     border: 1px solid black !important;
+}
+
+#topnav {
+    background-color: #778C68;
+}
+
+.text-grey,
+.text-grey-nav {
+    color: #D9D9D9;
+    font-family: 'Duru Sans', sans-serif;
+}
+
+.text-grey:hover {
+    color: #778C68;
+}
+
+.text-grey-nav:hover {
+    color: #2E4013;
+}
+
+.bg-olive {
+    background-color: #2E4013;
+}
+
+.header-container {
+    margin-top: 136px;
+}
+
+.index-header {
+    background: url('/media/index_header.jpg') no-repeat center top fixed;
+    background-size: cover;
+    height: 250px;
+}
+
+.index-content {
+    margin-top: 10px;
+}
+
+.text-green {
+    color: #2E4013;
+}
+
+.text-subheading {
+    font-family: 'Kite One', sans-serif;
+    text-transform: uppercase;
 }
 
 /* -------------------------------- Media Queries */
