@@ -2,6 +2,10 @@ html {
     height: 100%;
 }
 
+body {
+    height: calc(100vh - 136px);
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -98,9 +102,5 @@ html {
         right: 0;
         left: 0;
         z-index: 1030;
-    }
-
-    .header-container {
-        padding-top: 164px;
     }
 }
