@@ -388,3 +388,5 @@ Finally, the home app was created using the command 'mkdir -p startapp home'. To
 ### Profile
 
 ## Credits & Acknowledgements
+
+DEBUG = int(os.environ.get("DEVELOPMENT", default=0))

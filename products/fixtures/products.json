@@ -1,0 +1,613 @@
+[
+  {
+    "pk": 1,
+    "model": "products.product",
+    "fields": {
+      "sku": 13839,
+      "name": "Recycled Cotton Throw Blanket",
+      "description": "Cozy throw blanket made from recycled cotton fibers.",
+      "price": 25.00,
+      "category": 1,
+      "rating": 2.8,
+      "image": "recycled-cotton-throw-blanket.jpg"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.product",
+    "fields": {
+      "sku": 20166,
+      "name": "Cotton Organic Towel Set",
+      "description": "Towels made from organic cotton, promoting sustainable agriculture practices.",
+      "price": 40.00,
+      "category": 1,
+      "rating": 3.3,
+      "image": "cotton-organic-towel-set.jpg"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "products.product",
+    "fields": {
+      "sku": 36226,
+      "name": "Upcycled Throw Pillows",
+      "description": "Throw pillows made from upcycled or recycled materials, reducing textile waste.",
+      "price": 25.00,
+      "category": 1,
+      "rating": 4.7,
+      "image": "upcycled-throw-pillows.jpg"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "products.product",
+    "fields": {
+      "sku": 15400,
+      "name": "Cork Coasters",
+      "description": "Coasters made from cork, a renewable and biodegradable material.",
+      "price": 15.00,
+      "category": 1,
+      "rating": 3.3,
+      "image": "cork-coasters.jpg"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "products.product",
+    "fields": {
+      "sku": 69539,
+      "name": "Soy Wax Candles",
+      "description": "Candles made from soy wax, a renewable and biodegradable alternative to traditional paraffin candles.",
+      "price": 20.00,
+      "category": 1,
+      "rating": 2.5,
+      "image": "soy-wax-candles.jpg"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "products.product",
+    "fields": {
+      "sku": 60127,
+      "name": "Upcycled Wooden Wall Art",
+      "description": "Unique wall art pieces crafted from upcycled wood, adding a rustic and sustainable touch to your living room decor. Each piece is one-of-a-kind, promoting the reuse of materials.",
+      "price": 60.00,
+      "category": 1,
+      "rating": 2.6,
+      "image": "upcycled-wooden-wall-art.jpg"
+    }
+  },
+  {
+    "pk": 7,
+    "model": "products.product",
+    "fields": {
+      "sku": 96167,
+      "name": "Upcycled Glass Vases",
+      "description": "Vases made from upcycled glass, combining aesthetics with sustainability.",
+      "price": 45.00,
+      "category": 1,
+      "rating": 3.2,
+      "image": "upcycled-glass-vases.jpg"
+    }
+  },
+  {
+    "pk": 8,
+    "model": "products.product",
+    "fields": {
+      "sku": 23946,
+      "name": "Organic Cotton Tote Bag",
+      "description": "A versatile tote bag made from organic cotton for sustainable shopping.",
+      "price": 10.00,
+      "category": 1,
+      "rating": 3.3,
+      "image": "organic-cotton-tote-bag.jpg"
+    }
+  },
+  {
+    "pk": 9,
+    "model": "products.product",
+    "fields": {
+      "sku": 94997,
+      "name": "Eco-Friendly Yoga Mat",
+      "description": "Yoga mats made from sustainable materials such as natural rubber or cork.",
+      "price": 30.00,
+      "category": 1,
+      "rating": 2.6,
+      "image": "eco-friendly-yoga-mat.jpg"
+    }
+  },
+  {
+    "pk": 10,
+    "model": "products.product",
+    "fields": {
+      "sku": 19627,
+      "name": "Recycled Paper Notebooks",
+      "description": "Notebooks made from recycled paper, reducing the demand for new paper production.",
+      "price": 10.00,
+      "category": 1,
+      "rating": 2.6,
+      "image": "recycled-paper-notebooks.jpg"
+    }
+  },
+  {
+    "pk": 11,
+    "model": "products.product",
+    "fields": {
+      "sku": 57245,
+      "name": "Bamboo Utensil Set",
+      "description": "Reusable bamboo utensils, an eco-friendly alternative to disposable plastic utensils.",
+      "price": 10.00,
+      "category": 2,
+      "rating": 2.5,
+      "image": "bamboo-utensil-set.jpg"
+    }
+  },
+  {
+    "pk": 12,
+    "model": "products.product",
+    "fields": {
+      "sku": 59562,
+      "name": "Eco-Friendly Cleaning Brushes",
+      "description": "Cleaning brushes with biodegradable or sustainable materials like bamboo and plant-based fibers.",
+      "price": 15.00,
+      "category": 2,
+      "rating": 4.0,
+      "image": "eco-friendly-cleaning-brushes.jpg"
+    }
+  },
+  {
+    "pk": 13,
+    "model": "products.product",
+    "fields": {
+      "sku": 94603,
+      "name": "Reusable Beeswax Wraps",
+      "description": "Beeswax wraps for food storage, providing a sustainable alternative to plastic wrap.",
+      "price": 8.00,
+      "category": 2,
+      "rating": 4.5,
+      "image": "reusable-beeswax-wraps.jpg"
+    }
+  },
+  {
+    "pk": 14,
+    "model": "products.product",
+    "fields": {
+      "sku": 43818,
+      "name": "Bamboo Cutting Board",
+      "description": "A durable and sustainable cutting board made from bamboo, known for its renewable and fast-growing properties.",
+      "price": 30.00,
+      "category": 2,
+      "rating": 3.1,
+      "image": "bamboo-cutting-board.jpg"
+    }
+  },
+  {
+    "pk": 15,
+    "model": "products.product",
+    "fields": {
+      "sku": 34930,
+      "name": "Glass Food Storage Containers",
+      "description": "A set of glass food containers, offering a plastic-free and durable alternative for storing leftovers.",
+      "price": 40.00,
+      "category": 2,
+      "rating": 3.4,
+      "image": "glass-food-storage-containers.jpg"
+    }
+  },
+  {
+    "pk": 16,
+    "model": "products.product",
+    "fields": {
+      "sku": 81450,
+      "name": "Organic Cotton Dish Towel Set",
+      "description": "A set of dish towels made from organic cotton, providing an eco-friendly and absorbent option for kitchen use.",
+      "price": 15.00,
+      "category": 2,
+      "rating": 4.0,
+      "image": "organic-cotton-dish-towel-set.jpg"
+    }
+  },
+  {
+    "pk": 17,
+    "model": "products.product",
+    "fields": {
+      "sku": 36878,
+      "name": "Cork Trivet Set",
+      "description": "A set of three cork trivets, made from sustainably sourced cork, promoting a zero-waste kitchen whilst protecting your counters.",
+      "price": 20.00,
+      "category": 2,
+      "rating": 3.6,
+      "image": "cork-trivet-set.jpg"
+    }
+  },
+  {
+    "pk": 18,
+    "model": "products.product",
+    "fields": {
+      "sku": 91587,
+      "name": "Recycled Glass Water Pitcher",
+      "description": "A water pitcher made from recycled glass, combining style with sustainability for serving beverages.",
+      "price": 25.00,
+      "category": 2,
+      "rating": 3.3,
+      "image": "recycled-glass-water-pitcher.jpg"
+    }
+  },
+  {
+    "pk": 19,
+    "model": "products.product",
+    "fields": {
+      "sku": 32234,
+      "name": "Glass Kitchen Spray Bottles",
+      "description": "Reusable glass spray bottles made from recycled materials, reducing plastic waste by replacing single-use spray bottles.",
+      "price": 20.00,
+      "category": 2,
+      "rating": 3.3,
+      "image": "glass-kitchen-spray-bottles.jpg"
+    }
+  },
+  {
+    "pk": 20,
+    "model": "products.product",
+    "fields": {
+      "sku": 73901,
+      "name": "Plant-Based Laundry Detergent.",
+      "description": "Powerful laundry detergent made from plant ingredients.",
+      "price": 10.00,
+      "category": 2,
+      "rating": 3.9,
+      "image": "plant-based-laundry-detergent.jpg"
+    }
+  },
+  {
+    "pk": 21,
+    "model": "products.product",
+    "fields": {
+      "sku": 34268,
+      "name": "Reusable Snack Food Tins",
+      "description": "Metal food storage tins for a durable and reusable alternative to disposable plastic bags.",
+      "price": 15.00,
+      "category": 2,
+      "rating": 4.7,
+      "image": "reusable-snack-food-tins.jpg"
+    }
+  },
+  {
+    "pk": 22,
+    "model": "products.product",
+    "fields": {
+      "sku": 40815,
+      "name": "Organic and Vegan Lip Balm",
+      "description": "A moisturizing lip balm made from organic and vegan ingredients, free from harmful chemicals and animal products.",
+      "price": 8.00,
+      "category": 3,
+      "rating": 4.8,
+      "image": "organic-and-vegan-lip-balm.jpg"
+    }
+  },
+  {
+    "pk": 23,
+    "model": "products.product",
+    "fields": {
+      "sku": 96114,
+      "name": "Bamboo Charcoal Cleansing Bar",
+      "description": "A facial cleansing bar containing bamboo charcoal, known for its detoxifying properties and eco-friendly packaging.",
+      "price": 8.00,
+      "category": 3,
+      "rating": 4.8,
+      "image": "bamboo-charcoal-cleansing-bar.jpg"
+    }
+  },
+  {
+    "pk": 24,
+    "model": "products.product",
+    "fields": {
+      "sku": 91173,
+      "name": "Zero-Waste Shampoo Bar",
+      "description": "A shampoo bar with zero-waste packaging, promoting a plastic-free and sustainable hair care routine.",
+      "price": 8.00,
+      "category": 3,
+      "rating": 4.0,
+      "image": "zero-waste-shampoo-bar.jpg"
+    }
+  },
+  {
+    "pk": 25,
+    "model": "products.product",
+    "fields": {
+      "sku": 26368,
+      "name": "Organic and Fair Trade Soap",
+      "description": "Soap made from organic and fair-trade ingredients, supporting ethical and sustainable farming practices.",
+      "price": 8.00,
+      "category": 3,
+      "rating": 4.9,
+      "image": "organic-and-fairtrade-soap.jpg"
+    }
+  },
+  {
+    "pk": 26,
+    "model": "products.product",
+    "fields": {
+      "sku": 93059,
+      "name": "Bamboo Toothbrush",
+      "description": "A toothbrush with a bamboo handle, a biodegradable alternative to traditional plastic toothbrushes.",
+      "price": 4.00,
+      "category": 3,
+      "rating": 3.0,
+      "image": "bamboo-toothbrush.jpg"
+    }
+  },
+  {
+    "pk": 27,
+    "model": "products.product",
+    "fields": {
+      "sku": 55297,
+      "name": "Natural Deodorant Stick",
+      "description": "A natural deodorant stick free from aluminum and other harmful chemicals, packaged in recyclable materials.",
+      "price": 5.00,
+      "category": 3,
+      "rating": 2.8,
+      "image": "natural-deodorant-stick.jpg"
+    }
+  },
+  {
+    "pk": 28,
+    "model": "products.product",
+    "fields": {
+      "sku": 38490,
+      "name": "Organic Cotton Facial Rounds",
+      "description": "Soft and reusable facial rounds made from organic cotton, replacing disposable cotton pads.",
+      "price": 10.00,
+      "category": 3,
+      "rating": 4.2,
+      "image": "organic-cotton-facial-rounds.jpg"
+    }
+  },
+  {
+    "pk": 29,
+    "model": "products.product",
+    "fields": {
+      "sku": 54353,
+      "name": "Fair Trade Shea Butter",
+      "description": "Pure shea butter sourced through fair trade practices, supporting women's cooperatives and sustainable harvesting.",
+      "price": 8.00,
+      "category": 3,
+      "rating": 4.6,
+      "image": "fairtrade-shea-butter.jpg"
+    }
+  },
+  {
+    "pk": 30,
+    "model": "products.product",
+    "fields": {
+      "sku": 42013,
+      "name": "Eco-Friendly Hair Conditioner",
+      "description": "Hair conditioner made from eco-friendly and sustainable ingredients, promoting healthy hair without harmful additives.",
+      "price": 8.00,
+      "category": 3,
+      "rating": 2.8,
+      "image": "eco-friendly-hair-conditioner.jpg"
+    }
+  },
+  {
+    "pk": 31,
+    "model": "products.product",
+    "fields": {
+      "sku": 90625,
+      "name": "Recycled Coffee Body Scrub",
+      "description": "A body scrub made from recycled coffee grounds, leaving skin sumptiously soft and reducing food waste in the process.",
+      "price": 10.00,
+      "category": 3,
+      "rating": 4.8,
+      "image": "recycled-coffee-body-scrub.jpg"
+    }
+  },
+  {
+    "pk": 32,
+    "model": "products.product",
+    "fields": {
+      "sku": 43922,
+      "name": "Sustainable Toothpaste Tablets",
+      "description": "Toothpaste tablets with recyclable packaging, offering a plastic-free alternative to traditional toothpaste tubes.",
+      "price": 4.00,
+      "category": 3,
+      "rating": 3.5,
+      "image": "sustainable-toothpaste-tablets.jpg"
+    }
+  },
+  {
+    "pk": 33,
+    "model": "products.product",
+    "fields": {
+      "sku": 35420,
+      "name": "Organic Cotton Dog Toy",
+      "description": "Squishy dog toy made from organic cotton, providing a loving and sustainable option for play.",
+      "price": 10.00,
+      "category": 4,
+      "rating": 2.7,
+      "image": "organic-cotton-dog-toy.jpg"
+    }
+  },
+  {
+    "pk": 34,
+    "model": "products.product",
+    "fields": {
+      "sku": 54764,
+      "name": "Organic Cotton Dog Bandana",
+      "description": "Pet bandana made from organic and natural ingredients.",
+      "price": 10.00,
+      "category": 4,
+      "rating": 4.0,
+      "image": "organic-cotton-dog-bandana.jpg"
+    }
+  },
+  {
+    "pk": 35,
+    "model": "products.product",
+    "fields": {
+      "sku": 74605,
+      "name": "Bamboo Pet Bowl",
+      "description": "Pet bowls made from bamboo, a fast-growing and renewable resource, providing a sustainable feeding option.",
+      "price": 15.00,
+      "category": 4,
+      "rating": 2.7,
+      "image": "bamboo-pet-bowl.jpg"
+    }
+  },
+  {
+    "pk": 36,
+    "model": "products.product",
+    "fields": {
+      "sku": 19688,
+      "name": "Natural Dog Treats",
+      "description": "Dog treats made from natural and locally sourced ingredients, promoting healthy and sustainable pet snacks.",
+      "price": 5.00,
+      "category": 4,
+      "rating": 4.6,
+      "image": "natural-dog-treats.jpg"
+    }
+  },
+  {
+    "pk": 37,
+    "model": "products.product",
+    "fields": {
+      "sku": 46501,
+      "name": "Recycled PET Dog Harness",
+      "description": "Dog harness made from recycled PET (polyethylene terephthalate) materials, reducing plastic waste.",
+      "price": 30.00,
+      "category": 4,
+      "rating": 2.8,
+      "image": "recycled-pet-dog-harness.jpg"
+    }
+  },
+  {
+    "pk": 38,
+    "model": "products.product",
+    "fields": {
+      "sku": 53069,
+      "name": "Organic Cotton Pet Bed",
+      "description": "Pet bed made from organic cotton, offering a soft and chemical-free sleeping environment.",
+      "price": 60.00,
+      "category": 4,
+      "rating": 3.1,
+      "image": "organic-cotton-pet-bed.jpg"
+    }
+  },
+  {
+    "pk": 39,
+    "model": "products.product",
+    "fields": {
+      "sku": 81690,
+      "name": "Natural Rubber Ball",
+      "description": "Fetch balls made from natural rubber, free from harmful additives, and designed for safe play.",
+      "price": 5.00,
+      "category": 4,
+      "rating": 3.2,
+      "image": "natual-rubber-ball.jpg"
+    }
+  },
+  {
+    "pk": 40,
+    "model": "products.product",
+    "fields": {
+      "sku": 91169,
+      "name": "Sustainable Dog Grooming Brush",
+      "description": "Dog grooming brushes made from sustainable materials, promoting ethical and eco-friendly pet care.",
+      "price": 20.00,
+      "category": 4,
+      "rating": 2.9,
+      "image": "sustainable-dog-grooming-brush.jpg"
+    }
+  },
+  {
+    "pk": 41,
+    "model": "products.product",
+    "fields": {
+      "sku": 98225,
+      "name": "Recycled Glass Tea Cups",
+      "description": "Tea cups made from recycled glass, providing a sustainable and durable option for tea enthusiasts.",
+      "price": 40.00,
+      "category": 5,
+      "rating": 4.6,
+      "image": "recycled-glass-teacups.jpg"
+    }
+  },
+  {
+    "pk": 42,
+    "model": "products.product",
+    "fields": {
+      "sku": 41881,
+      "name": "Bamboo Dustpan & Brush",
+      "description": "Dustpan and brush made from sustainably sourced bamboo, providing a beautiful and eco-friendly alternative to this everyday product.",
+      "price": 15.00,
+      "category": 5,
+      "rating": 2.9,
+      "image": "bamboo-dustpan-brush.jpg"
+    }
+  },
+  {
+    "pk": 43,
+    "model": "products.product",
+    "fields": {
+      "sku": 65111,
+      "name": "Bamboo Device Charging Dock",
+      "description": "Bamboo charging dock with compartments for your phone, watch, as well as wallet, keys etc.",
+      "price": 30.00,
+      "category": 5,
+      "rating": 4.1,
+      "image": "bamboo-device-charging-dock.jpg"
+    }
+  },
+  {
+    "pk": 44,
+    "model": "products.product",
+    "fields": {
+      "sku": 93838,
+      "name": "Zero-Waste Bathroom Starter Kit",
+      "description": "A comprehensive zero-waste bathroom kit that includes sustainable toothbrushes, shampoo bars, and other essentials for an eco-friendly bathroom routine.",
+      "price": 40.00,
+      "category": 6,
+      "rating": 3.9,
+      "image": "zero-waste-bathroom-starter-kit.jpg"
+    }
+  },
+  {
+    "pk": 45,
+    "model": "products.product",
+    "fields": {
+      "sku": 49006,
+      "name": "Zero-Waste Kitchen Starter Kit",
+      "description": "A comprehensive zero-waste kitchen kit that includes sustainable brushes, scrubbers, and other essentials for an eco-friendly kitchen.",
+      "price": 40.00,
+      "category": 6,
+      "rating": 3.4,
+      "image": "zero-waste-kitchen-starter-kit.jpg"
+    }
+  },
+  {
+    "pk": 46,
+    "model": "products.product",
+    "fields": {
+      "sku": 23013,
+      "name": "Zero-Waste Beauty Starter Kit",
+      "description": "A comprehensive zero-waste beaty kit that includes sustainable skincare products, and other essentials for an eco-friendly beauty routine.",
+      "price": 40.00,
+      "category": 6,
+      "rating": 4.1,
+      "image": "zero-waste-beauty-starter-kit.jpg"
+    }
+  },
+  {
+    "pk": 47,
+    "model": "products.product",
+    "fields": {
+      "sku": 37836,
+      "name": "Zero-Waste Pet Starter Kit",
+      "description": "A comprehensive zero-waste kit for your four-legged friend that includes sustainable everyday essentials for your pooch.",
+      "price": 40.00,
+      "category": 6,
+      "rating": 2.8,
+      "image": "zero-waste-pet-starter-kit.jpg"
+    }
+  }
+]
