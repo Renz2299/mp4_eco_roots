@@ -390,3 +390,5 @@ Finally, the home app was created using the command 'mkdir -p startapp home'. To
 ## Credits & Acknowledgements
 
 DEBUG = int(os.environ.get("DEVELOPMENT", default=0))
+
+No image found image = Image by <a href="https://www.freepik.com/free-vector/realistic-question-box-mockup_28846681.htm#query=mystery&position=1&from_view=search&track=sph&uuid=3ddffba5-4263-4cdb-8308-d88d826b07f6">Freepik</a>
