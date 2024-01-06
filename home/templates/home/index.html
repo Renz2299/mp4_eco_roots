@@ -20,18 +20,84 @@
     <div class="container index-content">
         <p class="text-center text-green text-subheading">New Arrivals</p>
         <div class="row">
-            <div class="col-sm-6 col-md-4 col-lg-3"></div>
-            <div class="col-sm-6 col-md-4 col-lg-3"></div>
-            <div class="col-sm-6 col-md-4 col-lg-3"></div>
-            <div class="col-sm-6 col-md-4 col-lg-3 d-md-none d-lg-block"></div>
+            {% for item in new_arrivals %}
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="card h-100 border-0">
+                        {% if item.image %}
+                        <a href="">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}{{ item.image }}" alt="{{ item.name }}">
+                        </a>
+                        {% else %}
+                        <a href="">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}no-image.jpg" alt="{{ item.name }}">
+                        </a>
+                        {% endif %}
+                        <div class="card-body pb-0">
+                            <p class="mb-0">{{ item.name }}</p>
+                        </div>
+                        <div class="card-footer bg-white pt-0 border-0 text-left">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="lead mb-0 text-left font-weight-bold">£{{ item.price }}</p>
+                                    {% if item.category %}
+                                        <p class="small mt-1 mb-0">
+                                            <a href="{% url 'products' %}?category={{ item.category.name }}" class="text-muted">
+                                                <i class="fas fa-tag mr-1"></i>{{  item.category.friendly_name }}
+                                            </a>
+                                        </p>
+                                    {% endif %}
+                                    {% if item.rating %}
+                                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ item.rating }}</small>
+                                    {% else %}
+                                        <small class="text-muted">No Rating</small>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
         <hr>
         <p class="text-center text-green text-subheading">Bundles</p>
         <div class="row">
-            <div class="col-sm-6 col-md-4 col-lg-3"></div>
-            <div class="col-sm-6 col-md-4 col-lg-3"></div>
-            <div class="col-sm-6 col-md-4 col-lg-3"></div>
-            <div class="col-sm-6 col-md-4 col-lg-3 d-md-none d-lg-block"></div>
+            {% for item in bundles %}
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="card h-100 border-0">
+                        {% if item.image %}
+                        <a href="">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}{{ item.image }}" alt="{{ item.name }}">
+                        </a>
+                        {% else %}
+                        <a href="">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}no-image.jpg" alt="{{ item.name }}">
+                        </a>
+                        {% endif %}
+                        <div class="card-body pb-0">
+                            <p class="mb-0">{{ item.name }}</p>
+                        </div>
+                        <div class="card-footer bg-white pt-0 border-0 text-left">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="lead mb-0 text-left font-weight-bold">£{{ item.price }}</p>
+                                    {% if item.category %}
+                                        <p class="small mt-1 mb-0">
+                                            <a href="{% url 'products' %}?category={{ item.category.name }}" class="text-muted">
+                                                <i class="fas fa-tag mr-1"></i>{{  item.category.friendly_name }}
+                                            </a>
+                                        </p>
+                                    {% endif %}
+                                    {% if item.rating %}
+                                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ item.rating }}</small>
+                                    {% else %}
+                                        <small class="text-muted">No Rating</small>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}
