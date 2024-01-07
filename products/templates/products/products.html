@@ -13,7 +13,38 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center mt-3">
-                <h2 class="logo-font text-green">Products</h2>
+                {% if 'home' in category %}
+                    <h2 class="logo-font text-green my-4">Homeware</h2>
+                    <p class="text-bulk my-4 mx-6">Our eco-conscious homeware collection is where sustainability meets style. We have curated a
+                        range of thoughtfully crafted homeware products designed to elevate your living space while minimising your
+                        environmental footprint. Each item is chosen with a commitment to sustainable materials and ethical production
+                        practices. Transform your home into a haven of sustainability that reflects a harmonious blend of functionality,
+                        aesthetics, and environmental responsibility.</p>
+                {% elif 'kitchen' in category %}
+                    <h2 class="logo-font text-green my-4">Kitchenware</h2>
+                    <p class="text-bulk my-4 mx-6">Our sustainable kitchenware is where conscious cooking meets stylish design. We take pride in
+                        offering a curated selection of kitchenware that not only elevates your culinary experience but also champions eco-friendly
+                        living. Our collection is a testament to the perfect combination of functionality and sustainability. Every product is chosen
+                        with utmost care, emphasizing durable, renewable, and biodegradable materials to ensure a minimal impact on our planet.
+                        Embrace the joy of cooking with a conscience, and explore our kitchenware range that brings you the best in sustainable,
+                        stylish, and environmentally friendly culinary essentials.</p>
+                {% elif 'beauty' in category %}
+                    <h2 class="logo-font text-green my-4">Beauty</h2>
+                    <p class="text-bulk my-4 mx-6">We have curated a collection of exquisite beauty products that redefine self-care with a green
+                        conscience. Each product is carefully chosen to pamper you while embracing a commitment to ethical and sustainable beauty.
+                        We believe that beauty should be kind to you and the planet. Elevate your self-care ritual with products that are as gentle
+                        on your skin as they are on the environment. Discover the transformative power of sustainable beauty, where glamour and
+                        green coexist harmoniously.</p>
+                {% elif 'pets' in category %}
+                    <h2 class="logo-font text-green my-4">Pets</h2>
+                    <p class="text-bulk my-4 mx-6">Our pet collection is dedicated to providing your furry companions with the finest in eco-conscious
+                        pet products. Our curated collection embodies a commitment to pampering your pets while treading lightly on our planet. Every
+                        product is selected with the well-being of your pets and the environment in mind, ensuring that playtime, feeding, and rest are
+                        all opportunities for sustainability. Embrace the joy of caring for your four-legged friends with products that are not only
+                        kind to them but also gentle on the Earth.</p>
+                {% else %}
+                    <h2 class="logo-font text-green my-4">All Products</h2>
+                {% endif %}
                 <hr>
             </div>
         </div>

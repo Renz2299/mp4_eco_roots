@@ -131,6 +131,13 @@ body {
     font-size: 20px;
 }
 
+/* --------------------------------------------------- Products */
+
+.mx-6 {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -262,5 +269,19 @@ footer {
 @media (max-width: 992px) {
     .logo {
         text-align: left;
+    }
+}
+
+@media (min-width: 768px) {
+    .mx-6 {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .mx-6 {
+        margin-left: 15%;
+        margin-right: 15%;
     }
 }
