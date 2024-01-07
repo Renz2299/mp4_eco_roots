@@ -37,14 +37,14 @@
   <body>
     <header class="container-fluid fixed-top">
       <div id="topnav" class="row pt-lg-2">
-        <div class="col-lg-4 my-auto py-1 py-lg-0"></div>
-        <div class="col-sm-6 col-md-6 col-lg-4 my-auto py-1 py-lg-0 text-center">
-          <a href="{% url 'home' %}" class="nav-link main-logo-link">
-            <h2 class="logo-font text-white my-0"><strong>Eco</strong>Roots</h2>
+        <div class="col-lg-4 .d-none .d-lg-block"></div>
+        <div class="col-6 col-md-6 col-lg-4 my-auto logo">
+          <a href="{% url 'home' %}" class="nav-link">
+            <h2 class="logo-font my-0"><strong>Eco</strong>Roots</h2>
           </a>
         </div>
-        <div class="col-sm-6 col-md-6 col-lg-4 my-auto py-1 py-lg-0 d-none d-sm-none d-md-block">
-          <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+        <div class="col-sm-6 col-md-6 col-lg-4 my-auto d-none d-sm-none d-md-block topnav-btns">
+          <ul class="list-inline list-unstyled text-lg-right text-md-right my-0">
             <li class="list-inline-item dropdown">
               <a class="text-grey-nav nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="text-center">
@@ -72,12 +72,12 @@
                     <p class="my-0">Search</p>
                   </div>
               </a>
-              <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="mobile-search">
+              <div class="dropdown-menu border-0 w-100 p-3 my-0" aria-labelledby="mobile-search">
                   <form class="form" method="GET" action="{% url 'products' %}">
                       <div class="input-group w-100">
-                          <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
+                          <input class="form-control" type="text" name="q" placeholder="Search our site">
                           <div class="input-group-append">
-                              <button class="form-control form-control btn btn-black border border-black rounded-0" type="submit">
+                              <button class="form-control btn search-btn" type="submit">
                                   <span class="icon">
                                     <i class="fas fa-search"></i>
                                   </span>
@@ -88,12 +88,12 @@
               </div>
             </li>
             <li class="list-inline-item">
-              <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-grey-nav{% endif %} nav-link" href="{% url 'view_basket' %}">
+              <a class="{% if grand_total %}text-green basket-nav font-weight-bold{% else %}text-grey-nav{% endif %} nav-link" href="{% url 'view_basket' %}">
                 <div class="text-center">
                     <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                     <p class="my-0">
                         {% if grand_total %}
-                            ${{ grand_total|floatformat:2 }}
+                            £{{ grand_total|floatformat:2 }}
                         {% else %}
                             $0.00
                         {% endif %}
@@ -103,7 +103,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-sm-6 d-md-none">
+        <div class="col-6 d-md-none">
           <nav class="navbar navbar-expand-md w-100">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="toggle-navigation">
               <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
@@ -111,7 +111,7 @@
           </nav>
         </div>
       </div>
-      <div class="row bg-olive">
+      <div class="row bg-olive main-nav">
         <nav class="navbar navbar-expand-md w-100">
           {% include 'includes/mobile-top-header.html' %}
           {% include 'includes/main-nav.html' %}
@@ -148,5 +148,100 @@
         $('.toast').toast('show');
       </script>
     {% endblock %}
+    <footer class="container py-5">
+      <div class="row">
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="" class="nav-link p-0 text-body-secondary">Link</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="" class="nav-link p-0 text-body-secondary">Link</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="" class="nav-link p-0 text-body-secondary">Link</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="" class="nav-link p-0 text-body-secondary">Link</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="" class="nav-link p-0 text-body-secondary">Link</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="" class="nav-link p-0 text-body-secondary">Link</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="" class="nav-link p-0 text-body-secondary">Link</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="" class="nav-link p-0 text-body-secondary">Link</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="" class="nav-link p-0 text-body-secondary">Link</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="" class="nav-link p-0 text-body-secondary">Link</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="" class="nav-link p-0 text-body-secondary">Link</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="" class="nav-link p-0 text-body-secondary">Link</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="" class="nav-link p-0 text-body-secondary">Link</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="" class="nav-link p-0 text-body-secondary">Link</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="" class="nav-link p-0 text-body-secondary">Link</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-5 offset-md-1 mb-3">
+          <form action="">
+            <h5>Subscribe to our newsletter</h5>
+            <p>Monthly digest of what's new and exciting from us.</p>
+            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+              <label for="newsletter" class="visually-hidden">Email Address</label>
+              <input type="text" class="form-control" placeholder="Email address">
+              <button class="btn btn-primary" type="button">Subscribe</button>
+            </div>
+          </form>
+        </div>
+        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+          <p>Copyright 2023 Company, Inc. All rights reserved.</p>
+          <ul class="list-unstyled d-flex">
+            <li class="ms-3">
+              <a href="" class="link-body-emphasis">
+                <i class="fas fa-brands-instagram"></i>
+              </a>
+            </li>
+            <li class="ms-3">
+              <a href="" class="link-body-emphasis">
+                <i class="fas fa-brands-twitter"></i>
+              </a>
+            </li>
+            <li class="ms-3">
+              <a href="" class="link-body-emphasis">
+                <i class="fas fa-brands-facebook"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
