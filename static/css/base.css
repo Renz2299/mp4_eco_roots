@@ -47,6 +47,17 @@ body {
     color: #778C68;
 }
 
+.text-bulk {
+    font-family: 'Duru Sans', sans-serif;
+    color: #2E4013;
+}
+
+.text-bulk-sm {
+    font-family: 'Duru Sans', sans-serif;
+    color: #2E4013;
+    font-size: 14px;
+}
+
 /* ----------------------------------------------------- Navbar */
 
 #topnav {
@@ -67,6 +78,7 @@ body {
     background-color: #2E4013;
     border: #2E4013;
     color: #fff;
+    font-family: 'Duru Sans', sans-serif;
 }
 
 .search-btn:hover {
@@ -91,6 +103,34 @@ body {
     color: #2E4013;
 }
 
+.bg-olive {
+    background-color: #2E4013;
+}
+
+/* ----------------------------------------------------- Header */
+
+.header-container {
+    height: 128px;
+}
+
+/* ------------------------------------------------------ Index */
+
+.index-header {
+    background: url('/media/index_header.jpg') no-repeat center top fixed;
+    background-size: cover;
+    height: 250px;
+}
+
+.mt-6 {
+    margin-top: 101px;
+}
+
+.text-subheading {
+    font-family: 'Kite One', sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -111,34 +151,6 @@ body {
 
 .border-black {
     border: 1px solid black !important;
-}
-
-.text-bulk {
-    font-family: 'Duru Sans', sans-serif;
-    color: #2E4013;
-}
-
-.bg-olive {
-    background-color: #2E4013;
-}
-
-.header-container {
-    height: 128px;
-}
-
-.index-header {
-    background: url('/media/index_header.jpg') no-repeat center top fixed;
-    background-size: cover;
-    height: 250px;
-}
-
-.index-content {
-    margin-top: 10px;
-}
-
-.text-subheading {
-    font-family: 'Kite One', sans-serif;
-    text-transform: uppercase;
 }
 
 .btt-button {
@@ -224,28 +236,31 @@ body {
     overflow-y: auto;
 }
 
-/* -------------------------------- Media Queries */
+/* ----------------------------------------------------- Footer */
+
+footer {
+    background-color: #778C68;
+}
+
+.logo-font-footer {
+    font-family: 'Istok Web', sans-serif;
+    color: #fff;
+}
+
+.link-footer {
+    font-family: 'Duru Sans', sans-serif;
+    color: #2E4013;
+    font-size: 14px;
+}
+
+.link-footer:hover {
+    color: #591D0F;
+}
+
+/* ---------------------------------------------- Media Queries */
 
 @media (max-width: 992px) {
     .logo {
         text-align: left;
-    }
-}
-
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
-}
-
-/* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
     }
 }
