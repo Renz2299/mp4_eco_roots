@@ -264,6 +264,26 @@ footer {
     color: #591D0F;
 }
 
+/* ----------------------------------------------- Allauth Form */
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem;
+    color: #2E4013;
+}
+
+.allauth-form-inner-content input {
+    border-color: #778C68;
+    border-radius: 0.25rem;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #2E4013;
+}
+
 /* ---------------------------------------------- Media Queries */
 
 @media (max-width: 992px) {
