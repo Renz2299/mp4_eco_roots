@@ -357,7 +357,9 @@ Finally, within the urls.py file a new account path was required to show the all
 
 ![Allauth account/ url setup within urls.py](readme_imgs/allauth_setup_3.png)
 
-### Base Template (Commits from 23rd Dec)
+### Base Template
+
+Commits from 23rd Dec
 
 Now that allauth is setup and working, the required allauth templates needed adding to the project. To do this the command 'cp -r ../.pip-modules/lib/python3.9/site-packages/allauth/templates/* ./templates/allauth/' was used. This installed the allauth templates and the final section of the command after the space allowed them to be saved in the correct place within the file structure. Only the account and socialaccount templates were required for customising, so the rest were deleted as allauth can access them directly instead.
 
@@ -365,25 +367,123 @@ Next, the base template was created within the project templates folder. This ht
 
 ![Project templates file structure](readme_imgs/templates_setup_1.png)
 
-Finally, the home app was created using the command 'mkdir -p startapp home'. To setup the home app, it was added to the installed apps within the settings.py file and a path was added to the project urls.py file. Then the index.html file was created within the home/templates/home folder including a single h1 saying 'It Works!' simply to test that the home app is setup and working correctly when running the server. To allow the index page to render a view was added to the home/views.py file called 'index' and this path was included within the home/urls.py file.
+Commits from 2nd Jan
+
+base.html updated with base.css, google fonts and fontawesome js
+
+top navbar added to base.html
+
+mobile top navbar and main-nav added to templates includes folder
+
+7th Jan
+
+Navbar styling updated to work on all screen sizes
+
+### Home App (Commits from 23rd Dec & 2nd Jan)
+
+The home app was created using the command 'mkdir -p startapp home'. To setup the home app, it was added to the installed apps within the settings.py file and a path was added to the project urls.py file. Then the index.html file was created within the home/templates/home folder including a single h1 saying 'It Works!' simply to test that the home app is setup and working correctly when running the server. To allow the index page to render a view was added to the home/views.py file called 'index' and this path was included within the home/urls.py file.
 
 ![Index.html rendering correctly](readme_imgs/templates_setup_2.png)
 
-### Home Page
+Media root in settings.py
 
-### Products Setup
+html content and css  added to index.html
 
-### Product Filtering & Searching
+commits from 3rd Jan - fixed header issue pushing main image too far down page
 
-### Product Sorting
+6th Jan
+
+Added new_arrivals and bundles views to be rendered on index.html
+
+### Products App
+
+Commits from 3rd Jan
+
+products app setup and added to installed apps
+
+products and categories models created in models.py and registered in admin.py
+
+fixtures installed via json files
+
+models migrated
+
+admin customised to make products and categories models better in overview
+
+created products view in views.py url added to urls.py
+
+created products template with cards for each product and page breaks depending on screen width
+
+Commits from 4th Jan
+
+created product detail view and template added to urls.py
+
+5th Jan
+
+Back to top button added
+
++/- buttons added to product detail view
+
+7th Jan
+
+Category specific text added to top of products page views
+
+#### Product Filtering & Searching
+
+Commits from 4th Jan
+
+Added search functionality
+
+Added category filtering
+
+#### Product Sorting
+
+Commits from 5th Jan
+
+Added sorting functionality js required
+
+Added product counts to top of products template
 
 ### Basket
+
+Commits from 5th Jan
+
+Created app, urls and template
+
+Added context to view
+
+Added delivery calculation logic
+
+Added add to basket functionality
+
+Adjust basket/ remove from basket functionality added
+
+6th Jan
+
+basket_tools to handle calculating line subtotal
+
+### Messages
+
+6th Jan
+
+Added toast messages
 
 ### Adding Products
 
 ### Modifying Products
 
 ### Checkout
+
+6th Jan
+
+Added checkout views and templates
+
+8th Jan
+
+Stripe elements for handling payments
+
+Basic checkout functionality added
+
+Checkout success logic added
 
 ### Profile
 
