@@ -31,7 +31,7 @@
                 {% if product.category %}
                     <p class="small mt-1 mb-0">
                         <a href="{% url 'products' %}?category={{ product.category.name }}" class="text-muted">
-                            <i class="fas fa-tag mr-1"></i>{{  product.category.friendly_name }}
+                            <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
                         </a>
                     </p>
                 {% endif %}
@@ -88,6 +88,15 @@
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
                 </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                {% for review in reviews %}
+                    <h2>{{ review.title }}</h2>
+                    <p>{{ review.review_rating }}</p>
+                    <p>{{ review.review_content }}</p>
+                {% endfor %}
             </div>
         </div>
     </div>
