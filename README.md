@@ -357,6 +357,14 @@ Finally, within the urls.py file a new account path was required to show the all
 
 ![Allauth account/ url setup within urls.py](readme_imgs/allauth_setup_3.png)
 
+8th Jan
+
+Updated allauth templates to extend base.html - keep site navigation and footer within user authentication pages
+
+![](readme_imgs/allauth_base_template_update.png)
+
+![](readme_imgs/allauth_specific_pages_update.png)
+
 ### Base Template
 
 Commits from 23rd Dec
@@ -375,9 +383,17 @@ top navbar added to base.html
 
 mobile top navbar and main-nav added to templates includes folder
 
+![](readme_imgs/includes_nav_folder.png)
+
 7th Jan
 
 Navbar styling updated to work on all screen sizes
+
+![](readme_imgs/navbar_large.png)
+
+![](readme_imgs/navbar_medium.png)
+
+![](readme_imgs/navbar_small.png)
 
 ### Home App (Commits from 23rd Dec & 2nd Jan)
 
@@ -387,13 +403,21 @@ The home app was created using the command 'mkdir -p startapp home'. To setup th
 
 Media root in settings.py
 
+![](readme_imgs/media_root_dir.png)
+
 html content and css  added to index.html
 
 commits from 3rd Jan - fixed header issue pushing main image too far down page
 
+![](readme_imgs/header_container_fix.png)
+
 6th Jan
 
 Added new_arrivals and bundles views to be rendered on index.html
+
+![](readme_imgs/index_content.png)
+
+![](readme_imgs/index_view_update.png)
 
 ### Products App
 
@@ -403,29 +427,49 @@ products app setup and added to installed apps
 
 products and categories models created in models.py and registered in admin.py
 
+![](readme_imgs/products_model.png)
+
+![](readme_imgs/category_model.png)
+
 fixtures installed via json files
 
-models migrated
+![](readme_imgs/json_fixtures_files.png)
+
+models migrated - use words to explain
 
 admin customised to make products and categories models better in overview
 
+![](readme_imgs/products_models_admin.png)
+
 created products view in views.py url added to urls.py
 
-created products template with cards for each product and page breaks depending on screen width
+![](readme_imgs/all_products_view.png)
+
+created products template with cards for each product
+
+![](readme_imgs/products_card.png)
 
 Commits from 4th Jan
 
 created product detail view and template added to urls.py
 
+![](readme_imgs/product_detail.png)
+
 5th Jan
 
 Back to top button added
 
+![](readme_imgs/bbt_button_js.png)
+
 +/- buttons added to product detail view
+
+![](readme_imgs/+_-_buttons.png)
 
 7th Jan
 
 Category specific text added to top of products page views
+
+![](readme_imgs/category_text_products_view.png)
 
 #### Product Filtering & Searching
 
@@ -433,7 +477,11 @@ Commits from 4th Jan
 
 Added search functionality
 
+![](readme_imgs/search_in_products_view.png)
+
 Added category filtering
+
+![](readme_imgs/category_filter_products_view.png)
 
 #### Product Sorting
 
@@ -441,7 +489,9 @@ Commits from 5th Jan
 
 Added sorting functionality js required
 
-Added product counts to top of products template
+![](readme_imgs/sorting_in_products_view.png)
+
+![](readme_imgs/final_products_view.png)
 
 ### Basket
 
@@ -453,9 +503,17 @@ Added context to view
 
 Added delivery calculation logic
 
+![](readme_imgs/basket_context_delivery_logic.png)
+
 Added add to basket functionality
 
+![](readme_imgs/add_to_basket.png)
+
 Adjust basket/ remove from basket functionality added
+
+![](readme_imgs/update_remove_basket_js.png)
+
+![](readme_imgs/update_remove_basket_view.png)
 
 6th Jan
 
@@ -467,6 +525,12 @@ basket_tools to handle calculating line subtotal
 
 Added toast messages
 
+![](readme_imgs/toast_folder.png)
+
+![](readme_imgs/toasts_base_page.png)
+
+![](readme_imgs/toasts_js.png)
+
 ### Adding Products
 
 ### Modifying Products
@@ -477,15 +541,59 @@ Added toast messages
 
 Added checkout views and templates
 
+![](readme_imgs/checkout_view.png)
+
+![](readme_imgs/checkout_form.png)
+
+![](readme_imgs/order_admin.png)
+
+![](readme_imgs/checkout_signals.png)
+
 8th Jan
 
 Stripe elements for handling payments
+
+![](readme_imgs/stripe_elements_js.png)
+
+![](readme_imgs/stripe_error_handling.png)
+
+![](readme_imgs/stripe_payment_form.png)
+
+![](readme_imgs/stripe_keys_in_settings.png)
 
 Basic checkout functionality added
 
 Checkout success logic added
 
+![](readme_imgs/checkout_urls_success.png)
+
+![](readme_imgs/checkout_success_view.png)
+
+8th Jan
+
+Order summary on checkout success page with loading overlay
+
+![](readme_imgs/loading_overlay_js.png)
+
+![](readme_imgs/loading_overlay.png)
+
+Some webhook handling done - rest will be revisited if time before submission
+
+![](readme_imgs/webhook_handler.png)
+
+![](readme_imgs/webhooks.png)
+
 ### Profile
+
+8th Jan
+
+Profile app, views and template created
+
+Tested working by rendering profile page with username
+
+![](readme_imgs/user_model.png)
+
+![](readme_imgs/profile_view.png)
 
 ## Credits & Acknowledgements
 
