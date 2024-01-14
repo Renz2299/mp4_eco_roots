@@ -337,13 +337,16 @@ During the development of the EcoRoots site, GitHub was used to manage versions 
 
 ## Site Development & Features
 
-### Project Setup (Commits from 22nd Dec)
+### Project Setup
 
-First, the repositiory was created on GitHub using the Code Institute GitPod template and then opened in GitPod. To create a new django project the command 'python3 django-admin startproject' was used to create the project folder and initial python files.
+Commits from 22nd Dec:
 
+- First, the repositiory was created on GitHub using the Code Institute GitPod template and then opened in GitPod. To create a new django project the command 'python3 django-admin startproject' was used to create the project folder and initial python files.
 ![Initial file structure of the project](readme_imgs/project_setup_1.png)
 
-### Authentication & Authorisation (Commits from 22nd Dec)
+### Authentication & Authorisation
+
+**Commits from 22nd Dec:**
 
 For user authenication in this project, django-allauth was used. To setup allauth it first had to be installed used the command 'pip3 install django-allauth'. After installing allauth, all the projects requirements were now installed, therefore the versions were frozen into the requirements.txt file using 'pip3 freeze -r requirements.txt'.
 
@@ -357,17 +360,21 @@ Finally, within the urls.py file a new account path was required to show the all
 
 ![Allauth account/ url setup within urls.py](readme_imgs/allauth_setup_3.png)
 
-8th Jan
+**Commits from 8th Jan:**
 
-Updated allauth templates to extend base.html - keep site navigation and footer within user authentication pages
+Once the base template was complete, the allauth templates were updated to extend the base template so any user authentication pages also had the site navigation and footer to remain in keeping with the rest of the site.
 
-![](readme_imgs/allauth_base_template_update.png)
+This was done by firstly updating the allauth base template to extend the site base template and include the header container to push the page content beneath the navigation. A block called 'inner_content' was added to another container to house the specific allauth template page content.
 
-![](readme_imgs/allauth_specific_pages_update.png)
+![Updated allauth base template](readme_imgs/allauth_base_template_update.png)
+
+All allauth templates were then updated to extend the allauth base template within the allauth/account folder. And the content blocks on these pages were updated to 'inner_content'
+
+![Updated allauth templates](readme_imgs/allauth_specific_pages_update.png)
 
 ### Base Template
 
-Commits from 23rd Dec
+**Commits from 23rd Dec:**
 
 Now that allauth is setup and working, the required allauth templates needed adding to the project. To do this the command 'cp -r ../.pip-modules/lib/python3.9/site-packages/allauth/templates/* ./templates/allauth/' was used. This installed the allauth templates and the final section of the command after the space allowed them to be saved in the correct place within the file structure. Only the account and socialaccount templates were required for customising, so the rest were deleted as allauth can access them directly instead.
 
@@ -375,225 +382,321 @@ Next, the base template was created within the project templates folder. This ht
 
 ![Project templates file structure](readme_imgs/templates_setup_1.png)
 
-Commits from 2nd Jan
+**Commits from 2nd & 7th Jan:**
 
-base.html updated with base.css, google fonts and fontawesome js
+CSS and JavaScript links were added to the top of the base template so they would be available across all site pages. These links were to the base.css file within the project's static folder; the Google Fonts css for the specific fonts that will be used throughout the site and; the script tag for Font Awesome icons.
 
-top navbar added to base.html
+The top navbar was added to the base template including the site logo, the account link, the search bar and the basket along with the grand total.
 
-mobile top navbar and main-nav added to templates includes folder
+The main navigation and mobile top header were added to an includes folder within the site templates folder and they can be accessed via an includes tag in the base template.
 
-![](readme_imgs/includes_nav_folder.png)
+![Includes folder within file structure](readme_imgs/includes_nav_folder.png)
 
-7th Jan
+After focussing on other functionality within the site, bootstrap display classes were used to hide certain elements on certain screen sizes. This was because on small screens the main navigation is accessed via the navbar toggler and the account, search and basket links move down to where the main navigation was on larger screens. Also, the correct site colours were added to the navigation through the base.css file.
 
-Navbar styling updated to work on all screen sizes
+![Navigation on large screens](readme_imgs/navbar_large.png)
 
-![](readme_imgs/navbar_large.png)
+![Navigation on medium screens](readme_imgs/navbar_medium.png)
 
-![](readme_imgs/navbar_medium.png)
+![Navigation on small screens](readme_imgs/navbar_small.png)
 
-![](readme_imgs/navbar_small.png)
+### Home App
 
-### Home App (Commits from 23rd Dec & 2nd Jan)
+**Commits from 23rd Dec:**
 
 The home app was created using the command 'mkdir -p startapp home'. To setup the home app, it was added to the installed apps within the settings.py file and a path was added to the project urls.py file. Then the index.html file was created within the home/templates/home folder including a single h1 saying 'It Works!' simply to test that the home app is setup and working correctly when running the server. To allow the index page to render a view was added to the home/views.py file called 'index' and this path was included within the home/urls.py file.
 
 ![Index.html rendering correctly](readme_imgs/templates_setup_2.png)
 
-Media root in settings.py
+**Commits from 2nd Jan:**
 
-![](readme_imgs/media_root_dir.png)
+Within the settings.py file, the media root was setup so that when any media is required, it could be easily accessed across the site rather than manually including the source for each image element.
 
-html content and css  added to index.html
+![Media root setup in settings.py](readme_imgs/media_root_dir.png)
 
-commits from 3rd Jan - fixed header issue pushing main image too far down page
+**Commits from 3rd Jan:**
 
-![](readme_imgs/header_container_fix.png)
+Once the navigation was setup correctly on each screen width, the header-container could be given a set height so that page content could be pushed below the navigation rather than being hidden behind it.
 
-6th Jan
+![Styling for header-container](readme_imgs/header_container_fix.png)
 
-Added new_arrivals and bundles views to be rendered on index.html
+**Commits from 6th Jan:**
 
-![](readme_imgs/index_content.png)
+Within the index view in views.py two new variables were added to get the products from the new_arrivals and bundles categories. These varibles were then added to the context and passed to the template when the index view is called. They are then rendered within their own sections of the index page.
 
-![](readme_imgs/index_view_update.png)
+![Completed index template](readme_imgs/index_content.png)
+
+![Updated index view in views.py](readme_imgs/index_view_update.png)
 
 ### Products App
 
-Commits from 3rd Jan
+**Commits from 3rd Jan:**
 
-products app setup and added to installed apps
+The products app was created using the command 'python3 manage.py startapp products' in the terminal. It was then added to the installed apps within the settings.py and a path was created witin the product app urls.py file.
 
-products and categories models created in models.py and registered in admin.py
+After setting up the products app, the Product and Category model were created in the products app models.py file.
 
-![](readme_imgs/products_model.png)
+![The Product model](readme_imgs/products_model.png)
 
-![](readme_imgs/category_model.png)
+![The Category model](readme_imgs/category_model.png)
 
-fixtures installed via json files
+To populate these models, json files were created including all the data for the 6 categories and the 47 products that would initially be on the site.
 
-![](readme_imgs/json_fixtures_files.png)
+The categories were manually written. The product details were created using ChatGPT to suggest product names, descriptions and prices. The images for the products were found from a mixture of image sites including Unsplash, Freepik and ...
 
-models migrated - use words to explain
+The data was gathered into an excel file and exported as a CSV before formatting it with an online json formatter.
 
-admin customised to make products and categories models better in overview
+![Fixtures folder within file structure](readme_imgs/json_fixture_files.png)
 
-![](readme_imgs/products_models_admin.png)
+![Product json file](readme_imgs/.png)
 
-created products view in views.py url added to urls.py
+Next, the models could now be migrated. The dry-run and plan flags were used to check the migrations about to be made were correct. These are the commands and order they were used in:
+1. 'python3 manage.py makemigrations --dry-run'
+2. 'python3 manage.py makemigrations'
+3. 'python3 manage.py migrate --plan'
+4. 'python3 manage.py migrate'
 
-![](readme_imgs/all_products_view.png)
+**Details about importing the fixtures**
 
-created products template with cards for each product
+After migrating the models, they were double checked in the site admin to ensure they could be accessed properly. From doing this a few changes were needed to make the admin view of the Product and Category models more user friendly.
 
-![](readme_imgs/products_card.png)
+The list of fields displayed was updated to show the data in the table overview of both models.
 
-Commits from 4th Jan
+![Product and Category models admin update](readme_imgs/product_models_admin.png)
 
-created product detail view and template added to urls.py
+Next, the all_products view was created to send all products to the product template so they could be rendered on the page. The products url was also added to the products app urls.py file.
 
-![](readme_imgs/product_detail.png)
+![All_products view in views.py](readme_imgs/all_products_view.png)
 
-5th Jan
+To render the products appropriately on the page, the products template was updated so that for every product passed to the template it would render a card showing the product image, name, price, rating and category.
 
-Back to top button added
+![Products.html template](readme_imgs/products_card.png)
 
-![](readme_imgs/bbt_button_js.png)
+**Commits from 4th Jan:**
 
-+/- buttons added to product detail view
+A specific product's details can be accessed by clicking the product's image within the all products page. This takes the user to the product_detail page. On this page are two bootstrap columns, the first including the product image and the second showing the product name, description, rating and price.
 
-![](readme_imgs/+_-_buttons.png)
+Within the products views.py a view was added for the product_detail where it would pass the specific product's id to the template.
 
-7th Jan
+This view and url path was also added the products app urls.py file.
 
-Category specific text added to top of products page views
+![Product detail template](readme_imgs/product_detail_view.png)
 
-![](readme_imgs/category_text_products_view.png)
+![Product detail view in views.py](readme_imgs/.png)
+
+**Commits from 5th Jan:**
+
+To enhance the user experience of the site on longer site pages, a back to top button was added to the bottom right-hand corner of the products template. This was done using a small amount of JavaScript at the bottom of the products.html template.
+
+![Back to Top JavaScript](readme_imgs/bbt_button_js.png)
+
+A quantity option was also added to the product detail page so the user could increase or decrease the quantity they would like to add to their basket. This was also done using JavaScript ...
+
+![Quantity option on product detail page](readme_imgs/+_-_buttons.png)
+
+**Commits from 7th Jan:**
+
+The final element of the products app was to show the category title and description at the top of the products page.
+
+To do this an if, elif, else statement was included within the products template to determine which category the user was viewing and render the appropriate title and description for the category.
+
+Looking back at this addition, it would have been easier and cleaner to include a description within the Category model that could be accessed from the products template. If there is time towards the end of the project, this may be implemented.
+
+![Category specific text in products template](readme_imgs/category_text_products_view.png)
+
+**Commits froms 14th Jan:**
+
+A later addition to the products app was the ability to read and add product reviews. For this a Review model was created with the products app models.py file. This model contains the product as the foreign key along with a title, content and rating for the review. This model was then registered in the products admin.py file and a review was created in the site admin to test it was working correctly.
+
+After creating this model, migrations were made to ensure it could be accessed correctly.
+
+![Review model](readme_imgs/review_model.png)
+
+![Review admin](readme_imgs/review_admin.png)
+
+Next, the ability for a user to add a review was added to the products views.py file so that when a user chooses to add a product review from the product detail page they are directed to a review form. The form was added to the forms.py file within the products app and then the view for adding a product was duplicated and customised to fit the function of adding a review.
+
+![Review form in forms.py](readme_imgs/review_form.png)
+
+![Add review view in views.py](readme_imgs/add_review_view.png)
 
 #### Product Filtering & Searching
 
-Commits from 4th Jan
+**Commits from 4th Jan:**
 
-Added search functionality
+Search functionality was added to the products view through a number of if statements looking for a query within the get request and then filtering all products by determining if that query is in the product name or description and returning the filtered products to the template.
 
-![](readme_imgs/search_in_products_view.png)
+![Search functionality in products views.py](readme_imgs/search_in_products_view.png)
 
-Added category filtering
+Category filtering was also done using if statements to first determine if 'category' was in the get request and then taking the category or categories minus any commas and filtering the products based on those categories. They are then passed to the template to be rendered.
 
-![](readme_imgs/category_filter_products_view.png)
+![Category filtering in products view.py](readme_imgs/category_filter_products_view.png)
 
 #### Product Sorting
 
-Commits from 5th Jan
+**Commits from 5th Jan:**
 
-Added sorting functionality js required
+The sort functionality was added to the product view and first looks at what it's being sorted by and assigns it to the sortkey. It then checks if there is a direction to the sort and will arrange the sortkey either ascending or descending.
 
-![](readme_imgs/sorting_in_products_view.png)
+![Sort functionality in products views.py](readme_imgs/sorting_in_products_view.png)
 
-![](readme_imgs/final_products_view.png)
+![Final sort, search and filter functionality in products views.py](readme_imgs/final_products_view.png)
 
 ### Basket
 
-Commits from 5th Jan
+**Commits from 5th Jan:**
 
-Created app, urls and template
+The basket app was created using the command 'python3 manage.py startapp basket' in the terminal. It was then added to the installed apps within the settings.py and a path was created witin the basket app urls.py file.
 
-Added context to view
+A basket_contents view was added to the basket views.py to get the products that the user has added to their basket so they could be added to the context and passed to the basket template.
 
-Added delivery calculation logic
+The delivery logic was also added to this view to determine the free_delivery_delta and inform the customer of whether they have free delivery or how much more they need to spend to get free delivery.
 
-![](readme_imgs/basket_context_delivery_logic.png)
+Finally, the total of the basket content and delivery are added together to get the grand total of the user's basket.
 
-Added add to basket functionality
+![Basket contents view in views.py](readme_imgs/basket_context_delivery_logic.png)
 
-![](readme_imgs/add_to_basket.png)
+Next the add to basket functionality was added to the basket views.py. This view takes the item id of the product being added and looks for the quantity being added. If the item is already in the basket it will update the quantity in the basket, otherwise it will add the item to the basket.
 
-Adjust basket/ remove from basket functionality added
+![Add to basket view](readme_imgs/add_to_basket.png)
 
-![](readme_imgs/update_remove_basket_js.png)
+Within the basket, the update and remove options were added to each product line within the basket. This was done using JavaScript at the bottom of the basket template. The update function takes the quantity value and updates it within the basket. The remove function removes the specific product from the basket.
 
-![](readme_imgs/update_remove_basket_view.png)
+![Update & remove basket JavaScript](readme_imgs/update_remove_basket_js.png)
 
-6th Jan
+![Adjust basket view in views.py](readme_imgs/update_remove_basket_view.png)
+
+**Commits from 6th Jan:**
 
 basket_tools to handle calculating line subtotal
 
+![Basket_tools](readme_imgs/.png)
+
 ### Messages
 
-6th Jan
+**Commits from 6th Jan:**
 
-Added toast messages
+Toast messages were added to signpost users throughout the site based on their actions.
 
-![](readme_imgs/toast_folder.png)
+Within the templates/includes folder, a new folder was created for toasts to include the html files for the four different kinds of toast messages.
 
-![](readme_imgs/toasts_base_page.png)
+![Toasts folder within file structure](readme_imgs/toasts_folder.png)
 
-![](readme_imgs/toasts_js.png)
+At the bottom of the base template an if, elif, else statement was added to determine which toast message should be shown to the user depending on it's level.
+
+![Toast messages if statement in base template](readme_imgs/toast_base_page.png)
+
+Finally, the JavaScript for toasts was added to the very bottom of the base template in the postloadjs block.
+
+![Toast messages JavaScript](readme_imgs/toasts_js.png)
 
 ### Adding Products
 
+**Commits froms 14th Jan:**
+
+Add product form and functionality
+
 ### Modifying Products
+
+**Commits froms 14th Jan:**
+
+Edit product form and functionality
+
+Delete products functionality
+
+Securing add, edit and delete views
 
 ### Checkout
 
-6th Jan
+**Commits from 6th Jan:**
 
-Added checkout views and templates
+The checkout app was created using the command 'python3 manage.py startapp checkout' in the terminal. It was then added to the installed apps within the settings.py and a path was created witin the checkout app urls.py file.
 
-![](readme_imgs/checkout_view.png)
+The checkout view takes the users basket and creates an order form for that basket from the checkout forms.py file.
 
-![](readme_imgs/checkout_form.png)
+![Checkout view in views.py](readme_imgs/checkout_view.png)
 
-![](readme_imgs/order_admin.png)
+The OrderForm is a django form containing the available fields necessary for the user to place an order.
 
-![](readme_imgs/checkout_signals.png)
+![OrderForm in forms.py](readme_imgs/checkout_form.png)
 
-8th Jan
+OrderLineItemAdminInLine and OrderAdmin were added to the checkout admin.py file to ensure the correct fields submitted by the user when they place an order remain read only so they cannot be edited.
 
-Stripe elements for handling payments
+![Order admin in admin .py](readme_imgs/order_admin.png)
 
-![](readme_imgs/stripe_elements_js.png)
+Finally, a signals.py file was created within the checkout app to ensure that the order would be updated or deleted depending on edits made within the site admin.
 
-![](readme_imgs/stripe_error_handling.png)
+![Checkout signals.py file](readme_imgs/checkout_signals.png)
 
-![](readme_imgs/stripe_payment_form.png)
+**Commits from 8th Jan:**
 
-![](readme_imgs/stripe_keys_in_settings.png)
+The payment functionality on the site is handled using Stripe payments. For this a stripe_elements.js file was created within the checkout app to create the stripe elements and mount them to card element within the checkout template.
 
-Basic checkout functionality added
+![Stripe elements JavaScript](readme_imgs/stripe_elements_js.png)
 
-Checkout success logic added
+Error handling was also added to this file to ensure any errors with the card element are signposted to the user.
 
-![](readme_imgs/checkout_urls_success.png)
+![Stripe error handling](readme_imgs/stripe_error_handling.png)
 
-![](readme_imgs/checkout_success_view.png)
+To handle the submit button for the payment form, an event listener was added to the button and upon clicking this the ability to edit the form or click the button again is disabled whilst the details are checked by Stripe.
 
-8th Jan
+If there is an error this is signposted to the user and the form is re-enabled so they can make the required changes.
 
-Order summary on checkout success page with loading overlay
+If this is successful, the form is submitted and the payment is succeeded.
 
-![](readme_imgs/loading_overlay_js.png)
+![Payment form submit handling JavaScript](readme_imgs/stripe_payment_form.png)
 
-![](readme_imgs/loading_overlay.png)
+Finally, the required stripe public key and secret key was added to the settings.py file so it could be accessed across the site.
 
-Some webhook handling done - rest will be revisited if time before submission
+![Stripe keys in settings.py](readme_imgs/stripe_keys_in_settings.png)
 
-![](readme_imgs/webhook_handler.png)
+To get the checkout functionality working, the checkout url and checkout success url were added to checkout urls.py file.
 
-![](readme_imgs/webhooks.png)
+![Checkout urls.py file](readme_imgs/checkout_urls_success.png)
+
+The checkout_success view was created to handle successful checkouts. It gets the order number from the order and returns it to the user in a toast message. And then deletes the basket from the session. It then returns the order context to the template to be rendered on the page.
+
+![Checkout_success view in views.py](readme_imgs/checkout_success_view.png)
+
+**Commits from 9th Jan:**
+
+Upon submitting the payment form an overlay is added to the page with a loading spinner in the centre.
+
+![Loading overlay JavaScript](readme_imgs/loading_overlay_js.png)
+
+A checkout success template was created to take the order information passed to it from the view and render it to the user in a table.
+
+![Checkout success page](readme_imgs/checkout_success.png)
+
+A small amount of webhook handling was included, however this was not specified in the project criteria, therefore will only be revisited if time at the end of the project.
+
+![Webhook_handler.py](readme_imgs/webhook_handler.png)
+
+![Webhooks.py](readme_imgs/webhooks.png)
+
+**Commits from 14th Jan:**
+
+Env variables setup
 
 ### Profile
 
-8th Jan
+**Commits from 9th Jan:**
 
-Profile app, views and template created
+The profile app was created using the command 'python3 manage.py startapp profile' in the terminal. It was then added to the installed apps within the settings.py and a path was created witin the profile app urls.py file.
 
-Tested working by rendering profile page with username
+The UserProfile model was added to the models.py file within the profile app. This model includes a one to one field linking it to the User model. It also includes default delivery fields that the user can add if they wish to save their information for a faster checkout process.
 
-![](readme_imgs/user_model.png)
+![UserProfile model](readme_imgs/user_model.png)
 
-![](readme_imgs/profile_view.png)
+The UserProfile model view was tested by getting the user and sending it to the template. And then rendering the username on the profile.html page.
+
+![Profile view in views.py](readme_imgs/profile_view.png)
+
+**Commits from 14th Jan:**
+
+Added profile form and views
+
+Added order history, save info functionality
 
 ## Credits & Acknowledgements
 

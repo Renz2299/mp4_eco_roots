@@ -96,7 +96,7 @@ body {
 
 .navbar-toggler {
     color: #D9D9D9;
-    text-align: right;
+    margin-top: 10px;
 }
 
 .navbar-toggler:hover {
@@ -105,6 +105,21 @@ body {
 
 .bg-olive {
     background-color: #2E4013;
+}
+
+.mobile-nav-list {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0px 25px;
+    padding: 0;
+}
+
+.mobile-nav-list-items {
+    display: block;
+    flex: 0 1 auto;
+    list-style-type: none;
 }
 
 /* ----------------------------------------------------- Header */
@@ -138,6 +153,14 @@ body {
     margin-right: 5%;
 }
 
+.small-link {
+    color: #778C68;
+}
+
+.small-link:hover {
+    color: #2E4013;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -147,17 +170,12 @@ body {
     width: 1.5rem;
 }
 
-.btn-black {
-    background: black;
-    color: white;
-}
-
 .text-black {
     color: #000 !important;
 }
 
-.border-black {
-    border: 1px solid black !important;
+.border-green {
+    border: 1px solid #2E4013 !important;
 }
 
 .btt-button {
@@ -166,25 +184,21 @@ body {
     position: fixed;
     bottom: 10px;
     right: 10px;
+    background-color: #778C68;
+}
+
+.btt-button:hover {
+    background-color: #2E4013;
+}
+
+.btt-icon {
+    color: #D9D9D9;
 }
 
 .btt-link,
 .update-link,
 .remove-item {
     cursor: pointer;
-}
-
-.btn-outline-black {
-    background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
-    border: 1px solid black;
-}
-
-.btn-outline-black:hover,
-.btn-outline-black:active,
-.btn-outline-black:focus {
-    background: black;
-    color: white !important;
 }
 
 /* -------------------------------- Toasts */

@@ -39,7 +39,7 @@
   <body>
     <header class="container-fluid fixed-top">
       <div id="topnav" class="row pt-lg-2">
-        <div class="col-lg-4 .d-none .d-lg-block"></div>
+        <div class="col-lg-4 d-none d-lg-block"></div>
         <div class="col-6 col-md-6 col-lg-4 my-auto logo">
           <a href="{% url 'home' %}" class="nav-link">
             <h2 class="logo-font my-0"><strong>Eco</strong>Roots</h2>
@@ -97,7 +97,7 @@
                         {% if grand_total %}
                             £{{ grand_total|floatformat:2 }}
                         {% else %}
-                            $0.00
+                            £0.00
                         {% endif %}
                     </p>
                 </div>
@@ -107,7 +107,7 @@
         </div>
         <div class="col-6 d-md-none">
           <nav class="navbar navbar-expand-md w-100">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="toggle-navigation">
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="toggle-navigation">
               <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
             </button>
           </nav>
@@ -172,9 +172,9 @@
           <form action="">
             <h5 class="logo-font-footer">Subscribe to our newsletter</h5>
             <p class="text-bulk-sm">Monthly digest of what's new and exciting from us.</p>
-            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+            <div class="d-flex flex-column flex-sm-row w-100">
               <input type="text" class="form-control" placeholder="Email address">
-              <button class="btn search-btn" type="button">Subscribe</button>
+              <button class="btn search-btn ml-1" type="button">Subscribe</button>
             </div>
           </form>
         </div>
