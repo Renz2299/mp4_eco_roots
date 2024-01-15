@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
-from .models import Contact
+from django.contrib.auth.decorators import login_required
 from products.models import Product
+
+from .models import Contact
 from .forms import ContactForm
 
 def index(request):
@@ -38,3 +40,15 @@ def contact(request):
     }
 
     return render(request, 'home/contact.html', context)
+
+@login_required
+def contact_review(request):
+    """ A view to render all contact requests to a superuser """
+
+    contacts = Contact.objects.all()
+
+    context = {
+        'contacts': contacts,
+    }
+
+    return render(request, 'home/contact_review.html', context)
