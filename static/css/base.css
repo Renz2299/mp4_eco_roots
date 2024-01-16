@@ -130,6 +130,10 @@ body {
     background-color: #2E4013;
 }
 
+.bg-green {
+    background-color: #778C68;
+}
+
 .mobile-nav-list {
     display: flex;
     align-items: stretch;
