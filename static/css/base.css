@@ -80,15 +80,32 @@ body {
     color: #2E4013;
 }
 
-.search-btn {
+.search-btn,
+.subscribe-btn,
+.qty-btn,
+.detail-btn {
     background-color: #2E4013;
-    border: #2E4013;
     color: #fff;
     font-family: 'Duru Sans', sans-serif;
 }
 
-.search-btn:hover {
+.keep-shopping-btn,
+.review-btn {
+    background-color: #778C68;
+    color: #fff;
+    font-family: 'Duru Sans', sans-serif;
+}
+
+.search-btn:hover,
+.subscribe-btn:hover,
+.qty-btn:hover,
+.detail-btn:hover {
     color: #778C68;
+}
+
+.keep-shopping-btn:hover,
+.review-btn:hover {
+    color: #2E4013;
 }
 
 .basket-nav:hover {
@@ -317,5 +334,12 @@ footer {
     .mx-6 {
         margin-left: 15%;
         margin-right: 15%;
+    }
+}
+
+@media (min-width: 1600px) {
+    body {
+        width: 70%;
+        margin-left: 15%;
     }
 }

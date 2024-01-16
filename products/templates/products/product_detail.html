@@ -55,7 +55,7 @@
                             <div class="form-group w-50">
                                 <div class="input-group input-group-{{ product.id }}">
                                     <div class="input-group-prepend">
-                                        <button class="decrement-qty btn btn-black rounded-0 decrement-qty_{{ product.id }}"
+                                        <button class="decrement-qty btn qty-btn decrement-qty_{{ product.id }}"
                                             data-item-id="{{ product.id }}">
                                             <span class="icon">
                                                 <i class="fas fa-minus"></i>
@@ -66,7 +66,7 @@
                                         name="quantity" value="1" min="1" max="99"
                                         data-item_id="{{ product.id }}">
                                     <div class="input-group-append">
-                                        <button class="increment-qty btn btn-black rounded-0 increment-qty_{{ product.id }}"
+                                        <button class="increment-qty btn qty-btn increment-qty_{{ product.id }}"
                                             data-item-id="{{ product.id }}">
                                         <span class="icon">
                                             <i class="fas fa-plus"></i>
@@ -77,31 +77,39 @@
                         </div>
 
                         <div class="col-12">
-                            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
+                            <a href="{% url 'products' %}" class="btn keep-shopping-btn mt-5">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
                                 <span class="text-uppercase">Keep Shopping</span>
                             </a>
-                            <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Basket">
+                            <input type="submit" class="btn detail-btn text-uppercase mt-5" value="Add to Basket">
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
                 </form>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12">
-                <a href="{% url 'add_review' product.id %}" class="btn btn-outline-black rounded-0 mt-5">
+    </div>
+    <div class="row mt-5">
+        <div class="col-12 col-md-6 col-lg-6">
+            <h2 class="text-subheading">Product Reviews</h2>
+        </div>
+        <div class="col-12 col-md-6 col-lg-6 text-right">
+            {% if request.user.is_authenticated %}
+                <a href="{% url 'add_review' product.id %}" class="btn review-btn">
                     <span class="icon">
-                        <i class="fas fa-chevron-left"></i>
+                        <i class="fa-regular fa-pen-to-square"></i>
                     </span>
                     <span class="text-uppercase">Add a Review</span>
                 </a>
-            </div>
-            <div class="col-12">
-                {% for review in reviews %}
-                    <h2 class="test-subheading">{{ review.title }}</h2>
+            {% endif %}
+        </div>
+    </div>
+    <div class="row mt-5">
+            {% for review in reviews %}
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <p class="text-bulk font-weight-bold">{{ review.title }}</p>
                     <p class="text-muted">{{ review.date }}</p>
                     <p class="text-bulk">{{ review.content }}</p>
                     {% if review.rating %}
@@ -109,8 +117,8 @@
                     {% else %}
                         <small class="text-muted">No Rating</small>
                     {% endif %}
-                {% endfor %}
-            </div>
+                </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}
