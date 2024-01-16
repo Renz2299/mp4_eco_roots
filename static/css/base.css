@@ -322,6 +322,11 @@ footer {
     color: #2E4013;
 }
 
+.borderless th,
+.borderless tr {
+    border: none;
+}
+
 /* ---------------------------------------------- Media Queries */
 
 @media (max-width: 992px) {

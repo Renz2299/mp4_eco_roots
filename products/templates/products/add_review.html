@@ -13,8 +13,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-6">
-                <hr>
-                <h2 class="text-subheading mb-4">Add a Review</h2>
+                <h2 class="text-subheading text-green my-4">Add a Review</h2>
                 <hr>
             </div>
         </div>
@@ -24,8 +23,8 @@
                     {% csrf_token %}
                     {{ form|crispy }}
                     <div class="text-right">
-                        <a href="" class="btn">Cancel</a>
-                        <button class="btn" type="submit">Add Review</button>
+                        <a href="" class="btn review-btn">Cancel</a>
+                        <button class="btn detail-btn" type="submit">Add Review</button>
                     </div>
                 </form>
             </div>
