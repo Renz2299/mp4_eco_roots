@@ -315,6 +315,13 @@ footer {
     color: #2E4013;
 }
 
+/* ----------------------------------------------------- Forms */
+
+.form-group label {
+    font-family: 'Duru Sans', sans-serif;
+    color: #2E4013;
+}
+
 /* ---------------------------------------------- Media Queries */
 
 @media (max-width: 992px) {

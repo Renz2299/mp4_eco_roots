@@ -12,18 +12,18 @@
 {% block content %}
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-6">
-                <hr>
-                <h2 class="logo-font mb-4">Contact Requests</h2>
+            <div class="col-12">
+                <h2 class="text-subheading text-green my-4">Contact Requests</h2>
                 <hr>
             </div>
         </div>
         <div class="row">
             <div class="col-12 col-md-6">
                 {% for contact in contacts %}
-                    <h2>{{ contact.name }}</h2>
-                    <h2>{{ contact.email }}</h2>
-                    <p>{{ contact.contact_content }}</p>
+                    <h2 class="text-subheading text-green mb-3 mt-5"><strong>Name:</strong> {{ contact.name }}</h2>
+                    <p class="text-bulk-sm"><strong>Email:</strong> {{ contact.email }}</p>
+                    <p class="text-bulk-sm">Request: {{ contact.contact_content }}</p>
+                    <hr>
                 {% endfor %}
             </div>
         </div>
