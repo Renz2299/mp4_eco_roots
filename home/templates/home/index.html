@@ -24,11 +24,11 @@
                 <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card h-100 border-0">
                         {% if item.image %}
-                        <a href="">
+                        <a href="{% url 'product_detail' item.id %}">
                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}{{ item.image }}" alt="{{ item.name }}">
                         </a>
                         {% else %}
-                        <a href="">
+                        <a href="{% url 'product_detail' item.id %}">
                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}no-image.jpg" alt="{{ item.name }}">
                         </a>
                         {% endif %}
@@ -65,11 +65,11 @@
                 <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card h-100 border-0">
                         {% if item.image %}
-                        <a href="">
+                        <a href="{% url 'product_detail' item.id %}">
                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}{{ item.image }}" alt="{{ item.name }}">
                         </a>
                         {% else %}
-                        <a href="">
+                        <a href="{% url 'product_detail' item.id %}">
                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}no-image.jpg" alt="{{ item.name }}">
                         </a>
                         {% endif %}

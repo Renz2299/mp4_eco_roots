@@ -338,7 +338,7 @@ footer {
 }
 
 @media (min-width: 1600px) {
-    body {
+    .products-container {
         width: 70%;
         margin-left: 15%;
     }

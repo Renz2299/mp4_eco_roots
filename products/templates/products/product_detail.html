@@ -119,6 +119,9 @@
                     {% endif %}
                 </div>
             {% endfor %}
+            {% if forloop.counter == 0 %}
+                <p class="text-bulk">No reviews yet.</p>
+            {% endif %}
         </div>
     </div>
 {% endblock %}
