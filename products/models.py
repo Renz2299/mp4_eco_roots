@@ -27,3 +27,14 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Review(models.Model):
+    product = models.ForeignKey(Product, related_name='reviews', on_delete=models.CASCADE)
+    title = models.CharField(max_length=254, null=False, blank=False)
+    content = models.TextField(null=False, blank=False)
+    rating = models.DecimalField(max_digits=2, decimal_places=1, null=True, blank=True)
+    date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
