@@ -299,6 +299,10 @@ footer {
     color: #591D0F;
 }
 
+.min-vh-90 {
+    min-height: 90vh;
+}
+
 /* ----------------------------------------------- Allauth Form */
 
 .allauth-form-inner-content p {
