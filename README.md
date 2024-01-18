@@ -2,7 +2,7 @@
 
 **Find the final project here:**
 
-![The EcoRoots site shown across multiple displays]()
+![The EcoRoots site shown across multiple displays](readme_imgs/renders_final.png)
 
 ## Table of Contents
 1. [Project Overview](#project-overview)
@@ -11,14 +11,41 @@
 4. [Site Planning](#site-planning)
 5. [Data Schema](#data-schema)
 6. [Project Management](#project-management)
-7. [Site Development](#site-development)
-    * [Site Features](#universal-site-elements)
-    * [Testing During Development](#testing-during-development)
-8. [Credits & Acknowledgements](#credits--acknowledgements)
+7. [Site Development & Features](#site-development--features)
+    * [Project Setup](#project-setup)
+    * [Authentication & Authorisation](#authentication--authorisation)
+    * [Base Template](#the-base-template)
+    * [Home App](#home-app)
+        * [Contact Form](#contact-form)
+    * [Products App](#products-app)
+        * [Product Filtering & Searching](#product-filtering--searching)
+        * [Product Sorting](#product-sorting)
+        * [Adding Products](#adding-products)
+        * [Modifying Products](#modifying-products)
+        * [Product Reviews](#product-reviews)
+    * [Basket App](#basket-app)
+    * [Checkout App](#checkout)
+    * [Messages](#messages)
+    * [Profile](#profile)
+8. [Testing During Development]()
+9. [Pre-Deployment Testing]()
+    * [Responsiveness]()
+    * [Browser Compatibility]()
+    * [Bug Fixes]()
+    * [Code Validation]()
+    * [User Story Testing]()
+    * [Feature Testing]()
+10. [Deployment]()
+11. [Post-Deployment Testing]()
+    * [Responsiveness]()
+    * [Browser Compatibility]()
+    * [Lighthouse Testing]()
+    * [Future Improvements]()
+12. [Credits & Acknowledgements](#credits--acknowledgements)
 
 ## Project Overview
 
-EcoRoots is an e-commerce website dedicated to offering a curated selection of eco-friendly Beauty, Home, Kitchen & Pet products. This project aims to provide users with a seamless and enjoyable shopping experience while promoting environmentally conscious consumerism.
+EcoRoots is an e-commerce website dedicated to offering a curated selection of eco-friendly Beauty, Home, Kitchen & Pet products. The site aims to provide users with a seamless and enjoyable shopping experience while promoting environmentally conscious consumerism.
 
 ## User Experience
 
@@ -43,8 +70,6 @@ EcoRoots has various goals aligned with promoting sustainability, attracting env
 
 - **Continuous Innovation:** Stay at the forefront of eco-friendly trends and technologies, regularly updating the product range to incorporate the latest sustainable innovations.
 
-- **Educate Consumers:** Offer educational content to inform consumers about the environmental impact of their choices and provide insights into sustainable living practices.
-
 ### Persona One
 
 **User:** Emma Green, 32
@@ -67,11 +92,7 @@ Emma is a marketing professional living in Cardiff. She is passionate about envi
 
 - **Detailed Product Information:** Emma values transparency. Providing detailed information about each product, including materials, manufacturing processes, and ethical practices, helps her make informed decisions.
 
-- **Educational Content:** Emma appreciates learning more about sustainable living. The website can include a blog or educational section offering tips, guides, and information on eco-friendly practices, further enhancing her shopping experience.
-
-- **User Ratings:** Emma relies on the opinions of like-minded individuals. Including user ratings allows her to gauge the authenticity and quality of products from a community perspective.
-
-- **Wishlist:** To cater to Emma's busy lifestyle, the site can provide wishlist functionality for her favorite products. This ensures she doesn't lose her favourite items and can come back to them later.
+- **User Ratings & Reviews:** Emma relies on the opinions of like-minded individuals. Including user ratings and reviews allows her to gauge the authenticity and quality of products from a community perspective.
 
 - **Easy Checkout Process:** A streamlined and secure checkout process is crucial for Emma. Offering multiple payment options and efficient shipping ensures a hassle-free experience.
 
@@ -97,9 +118,9 @@ Alex is a parent of two young children, living in the outskirts of Bath. He is a
 
 - **Budget-Friendly Collections:** Offering curated collections of affordable eco-friendly products helps Alex make sustainable choices without exceeding the family budget.
 
-- **Product Bundles:** The site can offer product bundles that cater to family needs, such as a bundle for eco-friendly lunchbox items or a home essentials package.
+- **Product Bundles:** The site can offer product bundles that cater to family needs, such as a bundle for eco-friendly kitchen items or a home essentials package.
 
-- **Green Parenting Guides:** Incorporating guides and blog content on the site that offer tips for green parenting and family sustainability practices provides valuable resources for Alex.
+- **Easy Checkout Process:** A streamlined and secure checkout process is vital for Alex. Offering multiple payment options and efficient shipping ensures a hassle-free experience that fits into his busy schedule.
 
 ## Brand Design
 
@@ -109,23 +130,23 @@ EcoRoots is centered around sustainable living and conscious consumerism, theref
 
 ![Chosen colour scheme](readme_imgs/colour_scheme_final.png)
 
-- **Muted Green (#778C68):** Resembles moss or foliage, adding a natural and calming element to the palette.
+- **Muted Green (#778C68):** Resembles moss or foliage, adding a natural and calming element.
 
-- **Deep Olive (#2E4013):** Reminiscent of rich, earthy tones, provides depth and grounding as well as complements the muted green with its darker hue.
+- **Deep Olive (#2E4013):** Reminiscent of rich, earthy tones, provides depth and compliments the muted green.
 
-- **Light Grey (#D9D9D9):** Introduces a neutral and modern touch to the palette, serving as a versatile background or accent colour.
+- **Light Grey (#D9D9D9):** Introduces a neutral and modern touch, serving as a versatile background or accent colour.
 
-- **Pure White (#FFFFFF):** Adds brightness and crispness to the colour scheme, creating a clean and fresh appearance, enhancing the overall clarity and simplicity.
+- **Pure White (#FFFFFF):** Adds brightness and crispness to the colour scheme, creating a clean and fresh appearance.
 
-- **Rustic Brown (#591D0F):** Adds contrast and richness to the palette, resembling natural wood tones and brings a touch of warmth and earthiness.
+- **Rustic Brown (#591D0F):** Adds contrast and richness, resembling natural wood tones, bringing a touch of warmth.
 
-Before assigning the colours to different elements of the site, the colours were tested using Adobe's contrast checker to check the contrast ratios of different colour combinations.
+Before assigning the colours to elements of the site, the colours were tested using Adobe's contrast checker to check the contrast ratios of different combinations.
 
 **1. Muted Green on Deep Olive:** The muted green works well on deep olive as large text or icons, however small text is illegible.
 
 ![Muted green tested on deep olive](readme_imgs/contrast_check_1.png)
 
-**2. Muted Green on Light Grey:** The muted green does not work on the light grey at all, therefore this combination should not be used anywhere on the site.
+**2. Muted Green on Light Grey:** The muted green does not work well on the light grey, this combination should only be used for large graphic elements.
 
 ![Muted green tested on light grey](readme_imgs/contrast_check_2.png)
 
@@ -133,35 +154,35 @@ Before assigning the colours to different elements of the site, the colours were
 
 ![Muted green tested on pure white](readme_imgs/contrast_check_3.png)
 
-**4. Muted Green on Rustic Brown:** The muted green works well on rustic brown as large text or icons, however small text is illegible, this combination also appears very child-like and therefore will not be used as it doesn't align with the intended appearance of the EcoRoots brand.
+**4. Muted Green on Rustic Brown:** The muted green works well on rustic brown as large text or icons, however small text is illegible.
 
 ![Muted green tested on rustic brown](readme_imgs/contrast_check_4.png)
 
-**5. Deep Olive on Light Grey:** The deep olive works very well on light grey as small text, large text or icons, meaning the deep olive could be a good text colour choice and the light grey could also work as a background colour.
+**5. Deep Olive on Light Grey:** The deep olive works well on light grey as small text, large text or icons, the deep olive could be a good text colour and the light grey could work as a background colour.
 
 ![Deep olive tested on light grey](readme_imgs/contrast_check_5.png)
 
-**6. Deep Olive on Pure White:** The deep olive works very well on pure white as small text, large text or icons, confirming that the deep olive could be a good text colour choice.
+**6. Deep Olive on Pure White:** The deep olive works very well on pure white as small text, large text or icons, confirming that the deep olive could be a good text colour.
 
 ![Deep olive tested on pure white](readme_imgs/contrast_check_6.png)
 
-**7. Deep Olive on Rustic Brown:** The deep olive does not work at all on rustic brown, therefore this combination should not be used anywhere on the site.
+**7. Deep Olive on Rustic Brown:** The deep olive does not work on rustic brown, therefore this combination should not be used.
 
 ![Deep olive tested on rustic brown](readme_imgs/contrast_check_7.png)
 
-**8. Light Grey on Pure White:** The light grey does not work at all on pure white, therefore this combination should not be used anywhere on the site.
+**8. Light Grey on Pure White:** The light grey does not work on pure white, therefore this combination should not be used.
 
 ![Light grey tested on pure white](readme_imgs/contrast_check_8.png)
 
-**9. Light Grey on Rustic Brown:** The light grey works very well on rustic brown as small text, large text or icons, meaning the light grey could be a good option for text colour on coloured backgrounds.
+**9. Light Grey on Rustic Brown:** The light grey works well on rustic brown as small text, large text or icons, the light grey could be a good text colour on coloured backgrounds.
 
 ![Light grey tested on rustic brown](readme_imgs/contrast_check_9.png)
 
-**10. Pure White on Rustic Brown:** The pure white works very well on rustic brown as small text, large text or icons, meaning the pure white could also be a good option for text colour on coloured backgrounds.
+**10. Pure White on Rustic Brown:** The pure white works well on rustic brown as small text, large text or icons, meaning the pure white could also be a good option for text on coloured backgrounds.
 
 ![Pure white tested on rustic brown](readme_imgs/contrast_check_10.png)
 
-The colour scheme was also tested using Adobe's colour blind checker. The checker found that the deep olive and rustic brown were too similar for users with Deuteranopia, meaning those colours should not be used together. Since this colour combination also failed the contrast check, it will not be used anywhere on the site.
+The colour scheme was also tested using Adobe's colour blind checker. The checker found that the deep olive and rustic brown were too similar for users with Deuteranopia. Since this combination also failed the contrast check, it will not be used.
 
 ![Colour blind check of colour scheme](readme_imgs/colour_blind_checker.png)
 
@@ -173,9 +194,9 @@ The colour scheme was also tested using Adobe's colour blind checker. The checke
 - **Rustic Brown (#591D0F):** Accent Colour & Alternative Hover Colour
 
 ### Typography
-The chosen fonts for the EcoRoots site are all Google Fonts as they are readily available across most web browsers, therefore the site will remain consistent.
+The chosen fonts for the EcoRoots site are all Google Fonts as they are readily available across most web browsers.
 
-The font pairing for EcoRoots consists of three different fonts: Istok Web 700, Kite One 400, and Duru Sans 400.
+The font pairing for EcoRoots consists of three different fonts: **Istok Web 700, Kite One 400, and Duru Sans 400.**
 
 - **Istok Web 700:** A bold and robust font with a strong, substantial presence. Well-suited for headlines, banners, and elements that require emphasis.
 
@@ -185,17 +206,9 @@ The font pairing for EcoRoots consists of three different fonts: Istok Web 700, 
 
     ![Kite one font 400](readme_imgs/kite_one_font_400.png)
 
-- **Duru Sans 400:** A sans-serif font with a straightforward and modern design. Can be used for both headings and body text as it's neutral design makes it adaptable.
+- **Duru Sans 400:** A font with a straightforward and modern design. Can be used for both headings and body text as it's neutral design makes it adaptable.
 
     ![Duru sans font 400](readme_imgs/duru_sans_font_400.png)
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Duru+Sans&family=Istok+Web:wght@700&family=Kite+One&display=swap" rel="stylesheet">
-
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Duru+Sans&family=Istok+Web:wght@700&family=Kite+One&display=swap');
-</style>
 
 ## Site Planning
 
@@ -240,30 +253,37 @@ User Story ID | User | I Want To Be Able To... | So That I Can ...
 :--- | :--- | :--- | :---
 **Viewing & Navigation**
 1 | Shopper | View a list of products | Select items to purchase
-2 | Shopper | View a cateygory of products | Easily find products I'm interested in without having to search through all products
-2 | Shopper | View individual product details | Identify the price, description, rating, image, material
-3 | Shopper | View product sustainability credentials | Make an informed decision about purchasing a product
-4 | Shopper | View product maintenance details | Find out how to make my product last longer, be reused or recycled
-5 | Shopper | Identify items on special offers | Take advantage of savings on products I'd like to purchase
+2 | Shopper | View a category of products | Easily find products I'm interested in without having to search through all products
+3 | Shopper | View individual product details | Identify the price, description, rating, image, material
+4 | Shopper | View product sustainability credentials | Make an informed decision about purchasing a product
+5 | Shopper | View product reviews and ratings | Make an informed decision about purchasing a product
 6 | Shopper | Identify new product arrivals to the site | See new products that I may want to purchase, being a returning user
 7 | Shopper | View the total of my purchases at any time | Avoid spending too much money
 8 | Shopper | View bundles of products | Purchase multiple items that are often used together, rather than searching for each individial item
-9 | Site User | Read blog posts about sustainable & eco-friendly topics | Get advice and tips about how to live more sustainably
 **Registration & User Accounts**
-10 | Site User | Easily register for an account | Have a personal account and view my profile
-11 | Site User | Easily login or logout | Access my account information
-12 | Site User | Easily recover my password if it's forgotten | Regain access to my account
-13 | Site User | Receive a confirmation email after registering | Verify that my account was successfully created
-14 | Site User | Have a personalised account profile | View my order history, order confirmations, and save payment information for future purchases
+9 | Site User | Easily register for an account | Have a personal account and view my profile
+10 | Site User | Easily login or logout | Access my account information
+11 | Site User | Easily recover my password if it's forgotten | Regain access to my account
+12 | Site User | Receive a confirmation email after registering | Verify that my account was successfully created
+13 | Site User | Have a personalised account profile | View my order history, order confirmations, and save delivery information for future purchases
 **Sorting & Searching**
-15 | Shopper | Sort the available products | Identify the top rated, best price, and latest products from all categories
-16 | Shopper | Sort a specific category of product | Identify the top rated, best priced or latest products within a specific category
-17 | Shopper | Sort multiple categories of products simultaneously | Find the top rated, best priced or latest products across broader categories
-18 | Shopper | Search for a product by name or description | Find a specific product to purchase
-19 | Shopper | See what I've searched for and the number of results found | Decide whether the product I'm looking for is available
+14 | Shopper | Sort the available products | Identify the top rated, best price, and latest products from all categories
+15 | Shopper | Sort a specific category of product | Identify the top rated, best priced or latest products within a specific category
+16 | Shopper | Sort multiple categories of products simultaneously | Find the top rated, best priced or latest products across broader categories
+17 | Shopper | Search for a product by name or description | Find a specific product to purchase
+18 | Shopper | See what I've searched for and the number of results found | Decide whether the product I'm looking for is available
 **Purchasing & Checkout**
-20 | Shopper | Easily select the quantity, colour, and size of a product when purchasing it | Ensure I don't accidentally purchase the wrong product, quantity, colour or size
-21 | Shopper
+19 | Shopper | Easily select the quantity of a product when purchasing it | Ensure I don't accidentally purchase the wrong product or quantity
+20 | Shopper | View items in my basket | Identify the total cost of my purchase and the items I will receive
+21 | Shopper | Adjust the quantity of individual items in the basket | Make changes to my order before checkout with ease
+22 | Shopper | Remove an item from the basket | Easily change what's in my basket if I change my mind or want to keep my order total low
+23 | Shopper | Easily enter my delivery and payment information | Have a hassle-free checkout process, if I have information saved to my account I would like it to be pre-filled
+24 | Shopper | View an order confirmation after checkout | Verfiy that my order has been processed and is correct
+25 | Shopper | Receive a confirmation email after placing an order | Keep the order confirmation for my records
+**Interacting with the Store**
+26 | Site User | Contact the store with any queries | 
+**Admin & Store Management**
+
 **Future Additions (if time)**
 22 | Site User | Add items to my wishlist | Save products that I'd like to purchase later
 
@@ -339,9 +359,10 @@ During the development of the EcoRoots site, GitHub was used to manage versions 
 
 ### Project Setup
 
-Commits from 22nd Dec:
+**Commits from 22nd Dec:**
 
 - First, the repositiory was created on GitHub using the Code Institute GitPod template and then opened in GitPod. To create a new django project the command 'python3 django-admin startproject' was used to create the project folder and initial python files.
+
 ![Initial file structure of the project](readme_imgs/project_setup_1.png)
 
 ### Authentication & Authorisation
@@ -372,7 +393,7 @@ All allauth templates were then updated to extend the allauth base template with
 
 ![Updated allauth templates](readme_imgs/allauth_specific_pages_update.png)
 
-### Base Template
+### The Base Template
 
 **Commits from 23rd Dec:**
 
@@ -427,6 +448,12 @@ Within the index view in views.py two new variables were added to get the produc
 ![Completed index template](readme_imgs/index_content.png)
 
 ![Updated index view in views.py](readme_imgs/index_view_update.png)
+
+#### Contact Form
+
+**Commits from 14th Jan:**
+
+Contact form, view and template created along with overview for superusers
 
 ### Products App
 
@@ -504,22 +531,6 @@ Looking back at this addition, it would have been easier and cleaner to include 
 
 ![Category specific text in products template](readme_imgs/category_text_products_view.png)
 
-**Commits froms 14th Jan:**
-
-A later addition to the products app was the ability to read and add product reviews. For this a Review model was created with the products app models.py file. This model contains the product as the foreign key along with a title, content and rating for the review. This model was then registered in the products admin.py file and a review was created in the site admin to test it was working correctly.
-
-After creating this model, migrations were made to ensure it could be accessed correctly.
-
-![Review model](readme_imgs/review_model.png)
-
-![Review admin](readme_imgs/review_admin.png)
-
-Next, the ability for a user to add a review was added to the products views.py file so that when a user chooses to add a product review from the product detail page they are directed to a review form. The form was added to the forms.py file within the products app and then the view for adding a product was duplicated and customised to fit the function of adding a review.
-
-![Review form in forms.py](readme_imgs/review_form.png)
-
-![Add review view in views.py](readme_imgs/add_review_view.png)
-
 #### Product Filtering & Searching
 
 **Commits from 4th Jan:**
@@ -542,7 +553,43 @@ The sort functionality was added to the product view and first looks at what it'
 
 ![Final sort, search and filter functionality in products views.py](readme_imgs/final_products_view.png)
 
-### Basket
+#### Adding Products
+
+**Commits froms 14th Jan:**
+
+Add product form and functionality
+
+#### Modifying Products
+
+**Commits froms 14th Jan:**
+
+Edit product form and functionality
+
+Delete products functionality
+
+Securing add, edit and delete views
+
+#### Product Reviews
+
+**Commits froms 14th Jan:**
+
+A later addition to the products app was the ability to read and add product reviews. For this a Review model was created with the products app models.py file. This model contains the product as the foreign key along with a title, content and rating for the review. This model was then registered in the products admin.py file and a review was created in the site admin to test it was working correctly.
+
+After creating this model, migrations were made to ensure it could be accessed correctly.
+
+![Review model](readme_imgs/review_model.png)
+
+![Review admin](readme_imgs/review_admin.png)
+
+Next, the ability for a user to add a review was added to the products views.py file so that when a user chooses to add a product review from the product detail page they are directed to a review form. The form was added to the forms.py file within the products app and then the view for adding a product was duplicated and customised to fit the function of adding a review.
+
+![Review form in forms.py](readme_imgs/review_form.png)
+
+![Add review view in views.py](readme_imgs/add_review_view.png)
+
+Reviews model created - Small bug still to fix
+
+### Basket App
 
 **Commits from 5th Jan:**
 
@@ -571,40 +618,6 @@ Within the basket, the update and remove options were added to each product line
 basket_tools to handle calculating line subtotal
 
 ![Basket_tools](readme_imgs/.png)
-
-### Messages
-
-**Commits from 6th Jan:**
-
-Toast messages were added to signpost users throughout the site based on their actions.
-
-Within the templates/includes folder, a new folder was created for toasts to include the html files for the four different kinds of toast messages.
-
-![Toasts folder within file structure](readme_imgs/toasts_folder.png)
-
-At the bottom of the base template an if, elif, else statement was added to determine which toast message should be shown to the user depending on it's level.
-
-![Toast messages if statement in base template](readme_imgs/toast_base_page.png)
-
-Finally, the JavaScript for toasts was added to the very bottom of the base template in the postloadjs block.
-
-![Toast messages JavaScript](readme_imgs/toasts_js.png)
-
-### Adding Products
-
-**Commits froms 14th Jan:**
-
-Add product form and functionality
-
-### Modifying Products
-
-**Commits froms 14th Jan:**
-
-Edit product form and functionality
-
-Delete products functionality
-
-Securing add, edit and delete views
 
 ### Checkout
 
@@ -678,6 +691,24 @@ A small amount of webhook handling was included, however this was not specified 
 
 Env variables setup
 
+### Messages
+
+**Commits from 6th Jan:**
+
+Toast messages were added to signpost users throughout the site based on their actions.
+
+Within the templates/includes folder, a new folder was created for toasts to include the html files for the four different kinds of toast messages.
+
+![Toasts folder within file structure](readme_imgs/toasts_folder.png)
+
+At the bottom of the base template an if, elif, else statement was added to determine which toast message should be shown to the user depending on it's level.
+
+![Toast messages if statement in base template](readme_imgs/toast_base_page.png)
+
+Finally, the JavaScript for toasts was added to the very bottom of the base template in the postloadjs block.
+
+![Toast messages JavaScript](readme_imgs/toasts_js.png)
+
 ### Profile
 
 **Commits from 9th Jan:**
@@ -698,12 +729,30 @@ Added profile form and views
 
 Added order history, save info functionality
 
+## Bug Fixes
+
+Footer not staying at bottom of page
+
 ## Credits & Acknowledgements
 
 DEBUG = int(os.environ.get("DEVELOPMENT", default=0))
+
+Mockups for renders <a href="https://www.freepik.com/free-vector/digital-device-mockup-set_4122518.htm#query=device%20mockup&position=8&from_view=search&track=ais&uuid=2c6b5773-48a8-4b9a-b8a0-4b83164331af">Image by rawpixel.com</a> on Freepik
 
 No image found image = Image by <a href="https://www.freepik.com/free-vector/realistic-question-box-mockup_28846681.htm#query=mystery&position=1&from_view=search&track=sph&uuid=3ddffba5-4263-4cdb-8308-d88d826b07f6">Freepik</a>
 
 Come back to this for updating anything in json files
 
 reset password page not styled the same
+
+delete product needs pop-up for confirmation - Modal
+
+qty buttons not working
+
+To implement into final deployed database product descriptions:
+
+- **Provide Transparent Information:** Offer transparent and detailed information about product materials, sourcing, and manufacturing processes to build trust with consumers and foster informed decision-making.
+
+- **Encourage Responsible Consumption:** Advocate for responsible consumption by promoting product longevity, reuse, and recycling. Provide information on proper disposal and recycling options for products.
+
+- **Reduce Environmental Impact:** Strive to minimise the environmental impact of the business operations, from sourcing products from local suppliers to reducing the environmental impact of packaging and shipping.

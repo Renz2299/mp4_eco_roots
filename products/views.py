@@ -145,6 +145,7 @@ def add_review(request, product_id):
     """ Add a review to selected product """
 
     product = get_object_or_404(Product, pk=product_id)
+    print(product)
 
     if request.method == 'POST':
         form = ReviewForm(request.POST)
