@@ -21,7 +21,7 @@ class ProductForm(forms.ModelForm):
 class ReviewForm(forms.ModelForm):
     class Meta:
         model = Review
-        fields = ('product', 'title', 'content', 'rating',)
+        fields = ('title', 'content', 'rating',)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

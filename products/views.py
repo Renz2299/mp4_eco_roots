@@ -145,18 +145,22 @@ def add_review(request, product_id):
     """ Add a review to selected product """
 
     product = get_object_or_404(Product, pk=product_id)
-    print(product)
 
-    if request.method == 'POST':
-        form = ReviewForm(request.POST)
-        if form.is_valid():
-            review = form.save()
-            messages.success(request, 'Successfully added review!')
-            return redirect(reverse('product_detail', args=[product.id]))
+    if request.user.is_authenticated:
+        if request.method == 'POST':
+            form = ReviewForm(request.POST)
+            if form.is_valid():
+                review = form.save(commit=False)
+                review.product = product
+                review.save()
+                messages.success(request, 'Successfully added review!')
+                return redirect(reverse('product_detail', args=[product.id]))
+            else:
+                messages.error(request, 'Failed to add review. Please ensure the form is valid.')
         else:
-            messages.error(request, 'Failed to add review. Please ensure the form is valid.')
+            form = ReviewForm()
     else:
-        form = ReviewForm()
+        messages.error(request, 'You must be logged in to add a product review.')
         
     template = 'products/add_review.html'
     context = {
