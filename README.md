@@ -733,6 +733,14 @@ Added order history, save info functionality
 
 Footer not staying at bottom of page
 
+## Deployment
+
+Screenshot creating database in elephantSQL
+
+Screenshot making new app in Heroku
+
+heroku login after procfile
+
 ## Credits & Acknowledgements
 
 DEBUG = int(os.environ.get("DEVELOPMENT", default=0))
@@ -747,7 +755,9 @@ reset password page not styled the same
 
 DONE delete product needs pop-up for confirmation - Modal
 
-qty buttons not working
+DONE qty buttons not working
+
+Qty buttons for subsequent basket items
 
 To implement into final deployed database product descriptions:
 

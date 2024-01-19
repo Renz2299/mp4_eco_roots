@@ -5,7 +5,7 @@
     "fields": {
       "sku": 13839,
       "name": "Recycled Cotton Throw Blanket",
-      "description": "Cozy throw blanket made from recycled cotton fibers.",
+      "description": "Cozy up guilt-free with our Recycled Cotton Throw. Made from reclaimed fibers, it offers warmth and style, embracing sustainable comfort.",
       "price": 25.00,
       "category": 1,
       "rating": 2.8,
@@ -18,7 +18,7 @@
     "fields": {
       "sku": 20166,
       "name": "Cotton Organic Towel Set",
-      "description": "Towels made from organic cotton, promoting sustainable agriculture practices.",
+      "description": "Elevate your bath experience with our Cotton Organic Towel Set. Soft, absorbent, and ethically crafted for a luxurious and eco-friendly touch.",
       "price": 40.00,
       "category": 1,
       "rating": 3.3,
@@ -31,7 +31,7 @@
     "fields": {
       "sku": 36226,
       "name": "Upcycled Throw Pillows",
-      "description": "Throw pillows made from upcycled or recycled materials, reducing textile waste.",
+      "description": "Redefine your decor sustainably with Upcycled Throw Pillows. Each piece tells a story, adding charm and conscience to your stylish space.",
       "price": 25.00,
       "category": 1,
       "rating": 4.7,
@@ -44,7 +44,7 @@
     "fields": {
       "sku": 15400,
       "name": "Cork Coasters",
-      "description": "Coasters made from cork, a renewable and biodegradable material.",
+      "description": "Protect your surfaces with natural elegance using Cork Coasters. Sustainable, durable, and a stylish touch for a conscious home.",
       "price": 15.00,
       "category": 1,
       "rating": 3.3,
@@ -57,7 +57,7 @@
     "fields": {
       "sku": 69539,
       "name": "Soy Wax Candles",
-      "description": "Candles made from soy wax, a renewable and biodegradable alternative to traditional paraffin candles.",
+      "description": "Illuminate your space responsibly with Soy Wax Candles. Clean-burning, fragrant, and crafted from renewable resources for a serene ambiance.",
       "price": 20.00,
       "category": 1,
       "rating": 2.5,
@@ -83,7 +83,7 @@
     "fields": {
       "sku": 96167,
       "name": "Upcycled Glass Vases",
-      "description": "Vases made from upcycled glass, combining aesthetics with sustainability.",
+      "description": "Embrace floral elegance with Upcycled Glass Vases. Beautifully repurposed, each vase adds a touch of eco-conscious luxury to your home.",
       "price": 45.00,
       "category": 1,
       "rating": 3.2,
@@ -96,7 +96,7 @@
     "fields": {
       "sku": 23946,
       "name": "Organic Cotton Tote Bag",
-      "description": "A versatile tote bag made from organic cotton for sustainable shopping.",
+      "description": "Carry consciously with our Organic Cotton Tote Bag. Spacious, durable, and a chic alternative, it's the perfect companion for eco-friendly living.",
       "price": 10.00,
       "category": 1,
       "rating": 3.3,
@@ -109,7 +109,7 @@
     "fields": {
       "sku": 94997,
       "name": "Eco-Friendly Yoga Mat",
-      "description": "Yoga mats made from sustainable materials such as natural rubber or cork.",
+      "description": "Find your zen on an Eco-Friendly Yoga Mat. Non-toxic, non-slip, and designed for sustainability, it enhances your practice with a mindful touch.",
       "price": 30.00,
       "category": 1,
       "rating": 2.6,
@@ -122,7 +122,7 @@
     "fields": {
       "sku": 19627,
       "name": "Recycled Paper Notebooks",
-      "description": "Notebooks made from recycled paper, reducing the demand for new paper production.",
+      "description": "Jot down thoughts sustainably with Recycled Paper Notebooks. Stylish, eco-friendly, and perfect for your ideas—all while minimizing your impact.",
       "price": 10.00,
       "category": 1,
       "rating": 2.6,
@@ -135,7 +135,7 @@
     "fields": {
       "sku": 57245,
       "name": "Bamboo Utensil Set",
-      "description": "Reusable bamboo utensils, an eco-friendly alternative to disposable plastic utensils.",
+      "description": "Dine consciously with our Bamboo Utensil Set. Lightweight, durable, and a sustainable choice for meals on the go, reducing single-use waste.",
       "price": 10.00,
       "category": 2,
       "rating": 2.5,
@@ -148,7 +148,7 @@
     "fields": {
       "sku": 59562,
       "name": "Eco-Friendly Cleaning Brushes",
-      "description": "Cleaning brushes with biodegradable or sustainable materials like bamboo and plant-based fibers.",
+      "description": "Clean green with Eco-Friendly Cleaning Brushes. Durable, compostable, and perfect for a sustainable and effective cleaning routine.",
       "price": 15.00,
       "category": 2,
       "rating": 4.0,
@@ -161,7 +161,7 @@
     "fields": {
       "sku": 94603,
       "name": "Reusable Beeswax Wraps",
-      "description": "Beeswax wraps for food storage, providing a sustainable alternative to plastic wrap.",
+      "description": "Wrap sustainably with Reusable Beeswax Wraps. A natural and versatile alternative to plastic, they keep your food fresh and eco-conscious.",
       "price": 8.00,
       "category": 2,
       "rating": 4.5,
@@ -174,7 +174,7 @@
     "fields": {
       "sku": 43818,
       "name": "Bamboo Cutting Board",
-      "description": "A durable and sustainable cutting board made from bamboo, known for its renewable and fast-growing properties.",
+      "description": "Chop sustainably on a Bamboo Cutting Board. Durable, knife-friendly, and made from a renewable resource, it's an eco-conscious choice for your kitchen.",
       "price": 30.00,
       "category": 2,
       "rating": 3.1,
@@ -187,7 +187,7 @@
     "fields": {
       "sku": 34930,
       "name": "Glass Food Storage Containers",
-      "description": "A set of glass food containers, offering a plastic-free and durable alternative for storing leftovers.",
+      "description": "Store smart with Glass Food Storage Containers. Safe, durable, and an eco-friendly solution for a plastic-free and sustainable kitchen.",
       "price": 40.00,
       "category": 2,
       "rating": 3.4,
@@ -200,7 +200,7 @@
     "fields": {
       "sku": 81450,
       "name": "Organic Cotton Dish Towel Set",
-      "description": "A set of dish towels made from organic cotton, providing an eco-friendly and absorbent option for kitchen use.",
+      "description": "Dry dishes sustainably with an Organic Cotton Dish Towel Set. Absorbent, stylish, and a green addition to your kitchen routine.",
       "price": 15.00,
       "category": 2,
       "rating": 4.0,
@@ -213,7 +213,7 @@
     "fields": {
       "sku": 36878,
       "name": "Cork Trivet Set",
-      "description": "A set of three cork trivets, made from sustainably sourced cork, promoting a zero-waste kitchen whilst protecting your counters.",
+      "description": "Protect your table with Cork Trivets. Heat-resistant, chic, and a sustainable choice, they add a touch of eco-conscious style to your dining experience.",
       "price": 20.00,
       "category": 2,
       "rating": 3.6,
@@ -226,7 +226,7 @@
     "fields": {
       "sku": 91587,
       "name": "Recycled Glass Water Pitcher",
-      "description": "A water pitcher made from recycled glass, combining style with sustainability for serving beverages.",
+      "description": "Hydrate responsibly with a Recycled Glass Water Pitcher. Elegant, eco-friendly, and perfect for any table, it's a sustainable addition to your home.",
       "price": 25.00,
       "category": 2,
       "rating": 3.3,
@@ -239,7 +239,7 @@
     "fields": {
       "sku": 32234,
       "name": "Glass Kitchen Spray Bottles",
-      "description": "Reusable glass spray bottles made from recycled materials, reducing plastic waste by replacing single-use spray bottles.",
+      "description": "Refill consciously with Glass Kitchen Spray Bottles. Reusable, stylish, and a sustainable upgrade for your cleaning routine, reducing single-use plastic.",
       "price": 20.00,
       "category": 2,
       "rating": 3.3,
@@ -252,7 +252,7 @@
     "fields": {
       "sku": 73901,
       "name": "Plant-Based Laundry Detergent.",
-      "description": "Powerful laundry detergent made from plant ingredients.",
+      "description": "Launder with care using Plant-Based Laundry Detergent. Gentle, effective, and kind to fabrics and the environment—a clean start for your clothes and the planet.",
       "price": 10.00,
       "category": 2,
       "rating": 3.9,
@@ -265,7 +265,7 @@
     "fields": {
       "sku": 34268,
       "name": "Reusable Snack Food Tins",
-      "description": "Metal food storage tins for a durable and reusable alternative to disposable plastic bags.",
+      "description": "Snack sustainably with our reusable tins. Perfect for on-the-go munching, they're durable, stylish, and a green alternative to single-use packaging.",
       "price": 15.00,
       "category": 2,
       "rating": 4.7,
@@ -278,7 +278,7 @@
     "fields": {
       "sku": 40815,
       "name": "Organic and Vegan Lip Balm",
-      "description": "A moisturizing lip balm made from organic and vegan ingredients, free from harmful chemicals and animal products.",
+      "description": "Nourish your lips naturally with our organic, vegan lip balm. Cruelty-free and rich in plant-based goodness, it's a guilt-free beauty essential.",
       "price": 8.00,
       "category": 3,
       "rating": 4.8,
@@ -291,7 +291,7 @@
     "fields": {
       "sku": 96114,
       "name": "Bamboo Charcoal Cleansing Bar",
-      "description": "A facial cleansing bar containing bamboo charcoal, known for its detoxifying properties and eco-friendly packaging.",
+      "description": "Cleanse deeply with our bamboo charcoal bar. Naturally detoxifying, it draws out impurities, leaving your skin refreshed and the planet unburdened.",
       "price": 8.00,
       "category": 3,
       "rating": 4.8,
@@ -304,7 +304,7 @@
     "fields": {
       "sku": 91173,
       "name": "Zero-Waste Shampoo Bar",
-      "description": "A shampoo bar with zero-waste packaging, promoting a plastic-free and sustainable hair care routine.",
+      "description": "Elevate your haircare with our zero-waste shampoo bar. Plastic-free, concentrated, and kind to your locks and the environment.",
       "price": 8.00,
       "category": 3,
       "rating": 4.0,
@@ -317,7 +317,7 @@
     "fields": {
       "sku": 26368,
       "name": "Organic and Fair Trade Soap",
-      "description": "Soap made from organic and fair-trade ingredients, supporting ethical and sustainable farming practices.",
+      "description": "Indulge in our organic, fair trade soap. Luxurious, ethical, and crafted with care, it pampers your skin while supporting sustainable practices.",
       "price": 8.00,
       "category": 3,
       "rating": 4.9,
@@ -330,7 +330,7 @@
     "fields": {
       "sku": 93059,
       "name": "Bamboo Toothbrush",
-      "description": "A toothbrush with a bamboo handle, a biodegradable alternative to traditional plastic toothbrushes.",
+      "description": "Brush consciously with our bamboo toothbrush. Biodegradable, stylish, and a sustainable choice for a brighter smile and a greener planet.",
       "price": 4.00,
       "category": 3,
       "rating": 3.0,
@@ -343,7 +343,7 @@
     "fields": {
       "sku": 55297,
       "name": "Natural Deodorant Stick",
-      "description": "A natural deodorant stick free from aluminum and other harmful chemicals, packaged in recyclable materials.",
+      "description": "Stay fresh with our natural deodorant stick. Aluminium-free, cruelty-free, and environmentally friendly—because self-care should care for the Earth too.",
       "price": 5.00,
       "category": 3,
       "rating": 2.8,
@@ -356,7 +356,7 @@
     "fields": {
       "sku": 38490,
       "name": "Organic Cotton Facial Rounds",
-      "description": "Soft and reusable facial rounds made from organic cotton, replacing disposable cotton pads.",
+      "description": "Cleanse sustainably with our organic cotton facial rounds. Reusable, gentle, and a planet-friendly alternative to disposable cotton pads.",
       "price": 10.00,
       "category": 3,
       "rating": 4.2,
@@ -369,7 +369,7 @@
     "fields": {
       "sku": 54353,
       "name": "Fair Trade Shea Butter",
-      "description": "Pure shea butter sourced through fair trade practices, supporting women's cooperatives and sustainable harvesting.",
+      "description": "Nourish your skin with fair trade shea butter. Ethically sourced, ultra-moisturizing, and a pure indulgence with a conscience.",
       "price": 8.00,
       "category": 3,
       "rating": 4.6,
@@ -382,7 +382,7 @@
     "fields": {
       "sku": 42013,
       "name": "Eco-Friendly Hair Conditioner",
-      "description": "Hair conditioner made from eco-friendly and sustainable ingredients, promoting healthy hair without harmful additives.",
+      "description": "Condition your hair with our eco-friendly formula. Free from harmful chemicals, it leaves your locks silky and your environmental impact light.",
       "price": 8.00,
       "category": 3,
       "rating": 2.8,
@@ -395,9 +395,9 @@
     "fields": {
       "sku": 90625,
       "name": "Recycled Coffee Body Scrub",
-      "description": "A body scrub made from recycled coffee grounds, leaving skin sumptiously soft and reducing food waste in the process.",
+      "description": "Invigorate your skin with our recycled coffee body scrub. Upcycled coffee grounds exfoliate, energize, and turn your shower into a sustainable ritual.",
       "price": 10.00,
-      "category": 3,
+      "category": 5,
       "rating": 4.8,
       "image": "recycled-coffee-body-scrub.jpg"
     }
@@ -408,7 +408,7 @@
     "fields": {
       "sku": 43922,
       "name": "Sustainable Toothpaste Tablets",
-      "description": "Toothpaste tablets with recyclable packaging, offering a plastic-free alternative to traditional toothpaste tubes.",
+      "description": "Brush sustainably with our toothpaste tablets. Plastic-free, travel-friendly, and a zero-waste option for a bright smile and a cleaner planet.",
       "price": 4.00,
       "category": 3,
       "rating": 3.5,
@@ -421,7 +421,7 @@
     "fields": {
       "sku": 35420,
       "name": "Organic Cotton Dog Toy",
-      "description": "Squishy dog toy made from organic cotton, providing a loving and sustainable option for play.",
+      "description": "Spoil your furry friend with our organic cotton dog toy. Safe, durable, and planet-friendly, it's a treat for your pet and the environment.",
       "price": 10.00,
       "category": 4,
       "rating": 2.7,
@@ -434,7 +434,7 @@
     "fields": {
       "sku": 54764,
       "name": "Organic Cotton Dog Bandana",
-      "description": "Pet bandana made from organic and natural ingredients.",
+      "description": "Style your pet sustainably with our organic cotton bandana. Fashionable, eco-friendly, and the perfect accessory for your furry companion.",
       "price": 10.00,
       "category": 4,
       "rating": 4.0,
@@ -447,7 +447,7 @@
     "fields": {
       "sku": 74605,
       "name": "Bamboo Pet Bowl",
-      "description": "Pet bowls made from bamboo, a fast-growing and renewable resource, providing a sustainable feeding option.",
+      "description": "Serve your pet in style with our bamboo pet bowl. Lightweight, durable, and a sustainable choice for your pet's dining experience.",
       "price": 15.00,
       "category": 4,
       "rating": 2.7,
@@ -460,7 +460,7 @@
     "fields": {
       "sku": 19688,
       "name": "Natural Dog Treats",
-      "description": "Dog treats made from natural and locally sourced ingredients, promoting healthy and sustainable pet snacks.",
+      "description": "Reward your pup with our natural dog treats. Wholesome, delicious, and free from additives—an eco-conscious snack for your furry friend.",
       "price": 5.00,
       "category": 4,
       "rating": 4.6,
@@ -473,7 +473,7 @@
     "fields": {
       "sku": 46501,
       "name": "Recycled PET Dog Harness",
-      "description": "Dog harness made from recycled PET (polyethylene terephthalate) materials, reducing plastic waste.",
+      "description": "Walk your dog in eco-style with our recycled PET harness. Durable, comfortable, and a green choice for your pet's adventures.",
       "price": 30.00,
       "category": 4,
       "rating": 2.8,
@@ -486,7 +486,7 @@
     "fields": {
       "sku": 53069,
       "name": "Organic Cotton Pet Bed",
-      "description": "Pet bed made from organic cotton, offering a soft and chemical-free sleeping environment.",
+      "description": "Pamper your pet with our organic cotton pet bed. Plush, sustainable, and a cozy retreat for your furry friend.",
       "price": 60.00,
       "category": 4,
       "rating": 3.1,
@@ -499,7 +499,7 @@
     "fields": {
       "sku": 81690,
       "name": "Natural Rubber Ball",
-      "description": "Fetch balls made from natural rubber, free from harmful additives, and designed for safe play.",
+      "description": "Play sustainably with our natural rubber ball. Durable, non-toxic, and a planet-friendly choice for fetch and fun.",
       "price": 5.00,
       "category": 4,
       "rating": 3.2,
@@ -512,7 +512,7 @@
     "fields": {
       "sku": 91169,
       "name": "Sustainable Dog Grooming Brush",
-      "description": "Dog grooming brushes made from sustainable materials, promoting ethical and eco-friendly pet care.",
+      "description": "Groom your pet responsibly with our sustainable grooming brush. Gentle, effective, and a green choice for your pet's care routine.",
       "price": 20.00,
       "category": 4,
       "rating": 2.9,
@@ -525,7 +525,7 @@
     "fields": {
       "sku": 98225,
       "name": "Recycled Glass Tea Cups",
-      "description": "Tea cups made from recycled glass, providing a sustainable and durable option for tea enthusiasts.",
+      "description": "Sip sustainably from our recycled glass tea cups. Elegant, eco-friendly, and crafted from repurposed glass for a conscious tea experience.",
       "price": 40.00,
       "category": 5,
       "rating": 4.6,
@@ -538,7 +538,7 @@
     "fields": {
       "sku": 41881,
       "name": "Bamboo Dustpan & Brush",
-      "description": "Dustpan and brush made from sustainably sourced bamboo, providing a beautiful and eco-friendly alternative to this everyday product.",
+      "description": "Clean green with our bamboo dustpan and brush set. Sustainable, durable, and a stylish addition to your eco-conscious cleaning routine.",
       "price": 15.00,
       "category": 5,
       "rating": 2.9,
@@ -551,7 +551,7 @@
     "fields": {
       "sku": 65111,
       "name": "Bamboo Device Charging Dock",
-      "description": "Bamboo charging dock with compartments for your phone, watch, as well as wallet, keys etc.",
+      "description": "Charge up responsibly with our bamboo dock. Stylish, functional, and a sustainable solution to power up your devices with a green touch.",
       "price": 30.00,
       "category": 5,
       "rating": 4.1,
@@ -577,7 +577,7 @@
     "fields": {
       "sku": 49006,
       "name": "Zero-Waste Kitchen Starter Kit",
-      "description": "A comprehensive zero-waste kitchen kit that includes sustainable brushes, scrubbers, and other essentials for an eco-friendly kitchen.",
+      "description": "Green your kitchen with our starter kit. Reusable, compostable, and sustainable alternatives that make your cooking space more eco-friendly.",
       "price": 40.00,
       "category": 6,
       "rating": 3.4,
@@ -590,7 +590,7 @@
     "fields": {
       "sku": 23013,
       "name": "Zero-Waste Beauty Starter Kit",
-      "description": "A comprehensive zero-waste beaty kit that includes sustainable skincare products, and other essentials for an eco-friendly beauty routine.",
+      "description": "Beautify responsibly with our starter kit. Cruelty-free, plastic-free, and ethical beauty essentials for a sustainable and mindful grooming routine.",
       "price": 40.00,
       "category": 6,
       "rating": 4.1,
@@ -603,7 +603,7 @@
     "fields": {
       "sku": 37836,
       "name": "Zero-Waste Pet Starter Kit",
-      "description": "A comprehensive zero-waste kit for your four-legged friend that includes sustainable everyday essentials for your pooch.",
+      "description": "Pamper your pet sustainably with our starter kit. Eco-friendly toys, grooming essentials, and pet care products that minimize your environmental pawprint.",
       "price": 40.00,
       "category": 6,
       "rating": 2.8,
