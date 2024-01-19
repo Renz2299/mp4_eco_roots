@@ -741,6 +741,8 @@ Screenshot making new app in Heroku
 
 heroku login after procfile
 
+Automatic deployments after pushing to github
+
 ## Credits & Acknowledgements
 
 DEBUG = int(os.environ.get("DEVELOPMENT", default=0))
