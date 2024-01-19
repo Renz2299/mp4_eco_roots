@@ -33,7 +33,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-renz2299-mp4ecoroots-1ey85khnlp3.ws-eu107.gitpod.io',
-    'eco-roots.herokuapp.com',    
+    'eco-roots-182c728a0a19.herokuapp.com',    
 ]
 
 
