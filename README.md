@@ -745,7 +745,7 @@ Come back to this for updating anything in json files
 
 reset password page not styled the same
 
-delete product needs pop-up for confirmation - Modal
+DONE delete product needs pop-up for confirmation - Modal
 
 qty buttons not working
 
