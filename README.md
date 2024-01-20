@@ -761,6 +761,8 @@ DONE qty buttons not working
 
 Qty buttons for subsequent basket items
 
+Emails - future improvment
+
 To implement into final deployed database product descriptions:
 
 - **Provide Transparent Information:** Offer transparent and detailed information about product materials, sourcing, and manufacturing processes to build trust with consumers and foster informed decision-making.
