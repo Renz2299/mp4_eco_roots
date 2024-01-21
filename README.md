@@ -20,8 +20,7 @@
     * [Products App](#products-app)
         * [Product Filtering & Searching](#product-filtering--searching)
         * [Product Sorting](#product-sorting)
-        * [Adding Products](#adding-products)
-        * [Modifying Products](#modifying-products)
+        * [Adding & Modifying Products](#adding--modifying-products)
         * [Product Reviews](#product-reviews)
     * [Basket App](#basket-app)
     * [Checkout App](#checkout)
@@ -49,24 +48,22 @@ EcoRoots is an e-commerce website dedicated to offering a curated selection of e
 
 ## User Experience
 
-The key elements of good user experience on an e-commerce site are simplicity, intuitive navigation, and responsiveness. As a minimum, users should be able to easily browse through products and product categories, add items to their cart, and proceed through a secure checkout process. Features such as product reviews, wishlist creation and blog posts can further enhance the user experience.
+The key elements of good user experience on an e-commerce site are simplicity, intuitive navigation, and responsiveness. As a minimum, users should be able to easily browse through products and product categories, add items to their cart, and proceed through a secure checkout process. Features such as product reviews, wishlist creation, contact forms and blog posts can further enhance the user experience.
 
 ### Site Goals
 EcoRoots has various goals aligned with promoting sustainability, attracting environmentally conscious consumers, and running a successful online business. Here are the site's goals:
 
 - **Promote Sustainable Living:** Encourage and facilitate a more sustainable lifestyle by providing eco-friendly alternatives for everyday beauty, home, kitchen & pet products.
 
-- **Curate a Thoughtful Product Selection:** Create a carefully curated selection of eco-friendly products that meet high standards of sustainability, ethical sourcing, and environmental responsibility.
+- **Curate a Thoughtful Product Selection:** Create a carefully curated selection of eco-friendly products that meet high standards of sustainability and environmental responsibility.
 
 - **Attract Environmentally Conscious Consumers:** Build a customer base of environmentally conscious individuals who prioritise eco-friendly choices and actively seek products that align with their values.
 
-- **Provide Transparent Information:** Offer transparent and detailed information about product materials, sourcing, and manufacturing processes to build trust with consumers and foster informed decision-making.
+- **Provide Transparent Information:** Offer transparent and detailed information about products to build trust with consumers and foster informed decision-making.
 
-- **Encourage Responsible Consumption:** Advocate for responsible consumption by promoting product longevity, reuse, and recycling. Provide information on proper disposal and recycling options for products.
+- **Encourage Responsible Consumption:** Advocate for responsible consumption by promoting product longevity and reuse.
 
 - **Enhance User Experience:** Provide a user-friendly and intuitive online shopping experience that makes it easy for customers to find, purchase, and receive eco-friendly products.
-
-- **Reduce Environmental Impact:** Strive to minimise the environmental impact of the business operations, from sourcing products from local suppliers to reducing the environmental impact of packaging and shipping.
 
 - **Continuous Innovation:** Stay at the forefront of eco-friendly trends and technologies, regularly updating the product range to incorporate the latest sustainable innovations.
 
@@ -90,7 +87,7 @@ Emma is a marketing professional living in Cardiff. She is passionate about envi
 
 - **Curated Selection:** The website can provide Emma with a carefully curated selection of eco-friendly and sustainable products. This helps her discover new and innovative items that align with her values.
 
-- **Detailed Product Information:** Emma values transparency. Providing detailed information about each product, including materials, manufacturing processes, and ethical practices, helps her make informed decisions.
+- **Detailed Sustainability Information:** Emma values transparency. Providing detailed information about the company's product sourcing and ethical practices, helps her make informed decisions.
 
 - **User Ratings & Reviews:** Emma relies on the opinions of like-minded individuals. Including user ratings and reviews allows her to gauge the authenticity and quality of products from a community perspective.
 
@@ -104,21 +101,21 @@ Alex is a parent of two young children, living in the outskirts of Bath. He is a
 
 ### Alex's Goals:
 
-- **Sustainable Family Living:** Alex's primary goal is to integrate eco-friendly practices into the family's daily life. This includes choosing sustainable products for the home, reducing waste, and teaching his children about environmental responsibility.
+- **Sustainable Family Living:** Alex's primary goal is to integrate eco-friendly practices into his family's daily life. This includes choosing sustainable products for the home, reducing waste, and teaching his children about environmental responsibility.
 
 - **Convenience:** With a busy schedule, Alex values efficiency. His goal is to find eco-friendly products quickly without spending too much time browsing through extensive lists.
 
 - **Affordable Options:** While committed to sustainability, Alex is mindful of the budget. Finding affordable eco-friendly alternatives for everyday items is a key consideration.
 
-- **Educational Resources:** Alex wants resources and products that help teach his children about environmental sustainability. Interactive and educational products are of particular interest.
+- **Discover New Products:** Alex is looking for innovative and eco-friendly products within the home & kitchen categories to help teach his children about sustainable living.
 
 ### How the Site Can Help Alex:
-
-- **Family-Focused Categories:** The website can feature family-friendly categories, making it easy for Alex to find eco-friendly products specifically tailored for home, kids, and pets.
 
 - **Budget-Friendly Collections:** Offering curated collections of affordable eco-friendly products helps Alex make sustainable choices without exceeding the family budget.
 
 - **Product Bundles:** The site can offer product bundles that cater to family needs, such as a bundle for eco-friendly kitchen items or a home essentials package.
+
+- **New Products:** Alex can find new products easily from home page, helping him discover new and innovative items that can teach his family about sustinable living.
 
 - **Easy Checkout Process:** A streamlined and secure checkout process is vital for Alex. Offering multiple payment options and efficient shipping ensures a hassle-free experience that fits into his busy schedule.
 
@@ -212,50 +209,14 @@ The font pairing for EcoRoots consists of three different fonts: **Istok Web 700
 
 ## Site Planning
 
-- **Curated Product Selection:**
-- **Detailed Product Information:**
-- **Family-Focused Categories:**
-- **Budget-Friendly Collections:**
-- **Product Bundles:**
-- **User Reviews and Ratings:**
-
-- **Sustainable Living:**
-
-- **Conscious Consumerism:**
-
-- **Enhance User Experience:**
-
-- **Reduce Environmental Impact:**
-
-- **Continuous Innovation:**
-
-- **Convenience:**
-
-- **Wishlist:**
-
-- **Convenience:**
-
-- **Affordable Options:**
-- **User Reviews and Ratings:**
-- **Discover New Products:**
-
-
-- **Green Parenting Guides:**
-- **Sustainable Family Living:**
-- **Community Engagement:**
-- **Educational Content:**
-
-
-- **Easy Checkout Process:**
-
 ### User Stories
 User Story ID | User | I Want To Be Able To... | So That I Can ...
 :--- | :--- | :--- | :---
 **Viewing & Navigation**
 1 | Shopper | View a list of products | Select items to purchase
 2 | Shopper | View a category of products | Easily find products I'm interested in without having to search through all products
-3 | Shopper | View individual product details | Identify the price, description, rating, image, material
-4 | Shopper | View product sustainability credentials | Make an informed decision about purchasing a product
+3 | Shopper | View individual product details | Identify the price, description, rating, image, reviews if available
+4 | Shopper | View product and company sustainability credentials | Make an informed decision about purchasing from the store or purchasing a specific product
 5 | Shopper | View product reviews and ratings | Make an informed decision about purchasing a product
 6 | Shopper | Identify new product arrivals to the site | See new products that I may want to purchase, being a returning user
 7 | Shopper | View the total of my purchases at any time | Avoid spending too much money
@@ -264,28 +225,33 @@ User Story ID | User | I Want To Be Able To... | So That I Can ...
 9 | Site User | Easily register for an account | Have a personal account and view my profile
 10 | Site User | Easily login or logout | Access my account information
 11 | Site User | Easily recover my password if it's forgotten | Regain access to my account
-12 | Site User | Receive a confirmation email after registering | Verify that my account was successfully created
-13 | Site User | Have a personalised account profile | View my order history, order confirmations, and save delivery information for future purchases
+12 | Site User | Have a personalised account profile | View my order history, order confirmations, and save delivery information for future purchases
 **Sorting & Searching**
-14 | Shopper | Sort the available products | Identify the top rated, best price, and latest products from all categories
-15 | Shopper | Sort a specific category of product | Identify the top rated, best priced or latest products within a specific category
-16 | Shopper | Sort multiple categories of products simultaneously | Find the top rated, best priced or latest products across broader categories
-17 | Shopper | Search for a product by name or description | Find a specific product to purchase
-18 | Shopper | See what I've searched for and the number of results found | Decide whether the product I'm looking for is available
+13 | Shopper | Sort the available products | Identify the top rated, best price, and latest products from all categories
+14 | Shopper | Sort a specific category of product | Identify the top rated, best priced or name alphabetically
+15 | Shopper | Sort multiple categories of products simultaneously | Find the top rated, best priced, name or category alphabetically across broader categories
+16 | Shopper | Search for a product by name or description | Find a specific product to purchase
+17 | Shopper | See what I've searched for and the number of results found | Decide whether the product I'm looking for is available
 **Purchasing & Checkout**
-19 | Shopper | Easily select the quantity of a product when purchasing it | Ensure I don't accidentally purchase the wrong product or quantity
-20 | Shopper | View items in my basket | Identify the total cost of my purchase and the items I will receive
-21 | Shopper | Adjust the quantity of individual items in the basket | Make changes to my order before checkout with ease
-22 | Shopper | Remove an item from the basket | Easily change what's in my basket if I change my mind or want to keep my order total low
-23 | Shopper | Easily enter my delivery and payment information | Have a hassle-free checkout process, if I have information saved to my account I would like it to be pre-filled
+18 | Shopper | Add items to my basket and the desired quantity | Purchase the products I would like and multiples of the product I would like
+19 | Shopper | View items in my basket | Identify the total cost of my purchase and the items I will receive
+20 | Shopper | Easily update the quantity of a product in the basket | Make changes to my order before checkout
+21 | Shopper | Remove an item from the basket | Easily change what is in my basket if I change my mind or want to keep my order total low
+22 | Shopper | Easily enter my delivery and payment information | Have a hassle-free checkout process, if I have information saved to my account I would like it to be pre-filled
+23 | Shopper | View details about any errors when handling delivery and payment information | To see if I have entered something incorrectly or to contact the store for more complex problems
 24 | Shopper | View an order confirmation after checkout | Verfiy that my order has been processed and is correct
-25 | Shopper | Receive a confirmation email after placing an order | Keep the order confirmation for my records
 **Interacting with the Store**
-26 | Site User | Contact the store with any queries | 
+25 | Site User | Contact the store with any queries | If I am logged in and have information saved I would like it to be pre-filled in the form
+26 | Shopper | Add reviews to products I have purchased | Help other shoppers make informed decisions before purchasing the product
 **Admin & Store Management**
-
+27 | Store Owner | Add a product | Update the store's product collection and introduce new products to our customers
+28 | Store Owner | Edit a product's details | Update prices to stay competitive and refresh product images, names or descriptions and correct any information if necessary
+29 | Store Owner | Delete a product | Remove a product from the store if it has been discontinued or is out of stock
+30 | Store Owner | View contact requests | Read customer queries and reply to them via email
 **Future Additions (if time)**
-22 | Site User | Add items to my wishlist | Save products that I'd like to purchase later
+31 | Site User | Receive a confirmation email after registering | Verify that my account was successfully created
+32 | Site User | Add items to my wishlist | Save products that I'd like to purchase later
+33 | Shopper | Receive a confirmation email after placing an order | Keep the order confirmation for my records
 
 ### Wireframes
 Considering the site's user stories, wireframes were created of the necessary pages to visualise the user journey through the site as well as plan each page to figure out the amount of work required so the project could be planned accordingly. The decided colour scheme and font pairings were also used in the wireframes to determine a lot of the styling upfront to save time making those decisions during site development.
@@ -302,15 +268,11 @@ Considering the site's user stories, wireframes were created of the necessary pa
 
 ![Wireframes of the EcoRoots category page on mobile, tablet & desktop](readme_imgs/wireframe_category_page.png)
 
-**Product Detail Page:** The product detail page consists of a large product image along with the product name, description and price. It also includes a form allowing the user to input a quantity and size they would like to purchase with a button to add it to their bag.
+**Product Detail Page:** The product detail page consists of a large product image along with the product name, description and price. It also includes a form allowing the user to input a quantity they would like to purchase with a button to add it to their bag or continue shopping. Beneath the product details are the reviews related to that product.
 
 ![Wireframes of the EcoRoots product detail page on mobile, tablet & desktop](readme_imgs/wireframe_product_detail.png)
 
-**Login Page:** The login page consists of a single form aasking the user to enter their email and password to login to the site. If the user does not already have an account, there is a link below the form that will take them to the registration page where they can create an account. The registration page will be very similar to the login page however will also ask for the user's name.
-
-![Wireframes of the EcoRoots login page on mobile, tablet & desktop](readme_imgs/wireframe_login_page.png)
-
-**Profile Page:** The profile page consists of welcome text in the header, followed by three sections: The user's order history, along with a button to track their orders; their primary address, with an option to edit the address and; their account details, including options to edit or delete their account.
+**Profile Page:** The profile page consists of welcome text in the header, followed by three sections: The user's order history; their primary address, with an option to edit the address and; their account details.
 
 ![Wireframes of the EcoRoots profile page on mobile, tablet & desktop](readme_imgs/wireframe_profile_page.png)
 
@@ -322,27 +284,41 @@ Considering the site's user stories, wireframes were created of the necessary pa
 
 ![Wireframes of the EcoRoots checkout page on mobile, tablet & desktop](readme_imgs/wireframe_checkout_page.png)
 
-**Blog Page:** The blog page is a very simple page consisting of multiple blog post previews divided into columns depending on the screen size, each preview can be clicked on to direct the user to the detailed blog posts.
-
-![Wireframes of the EcoRoots blog page on mobile, tablet & desktop](readme_imgs/wireframe_blog_page.png)
+**Authentication & Authorisation Pages:** Django Allauth will be used to handle authenticating and authorising users on the site. Therefore the layout of these pages will remain very similar to the allauth templates however the styling will be updated to match the rest of the site.
 
 ### App Planning
 
 The EcoRoots site will consist of multiple Django apps that allow it to function as desired.
 
-- **Home**: The home app will run the index page.
-- **Products**: The products app will run the product database and any pages that show products on them such as the subcategory pages.
-- **Basket:**
-- **Checkout:**
-- **Blog:**
+- **Home**: The home app will run the index page as well as the contact form and other simple pages linked from the site footer.
+- **Products**: The products app will run the product database and any pages that show products on them as well as handle the CRUD functionality for the product database such as adding a new product or editing an existing product.
+- **Profiles:** The profiles app will handle viewing and interacting with the user profile page and each user's data.
+- **Basket:** The basket app will run the shopping basket and handle CRUD functionality within the basket.
+- **Checkout:** The checkout app will handle checkout functionality using Stripe as well as successful checkouts leading to an order confirmation page.
 
 ### Data Schema
 
 SQL will be used in this project to create a relational database system containing the details needed for the EcoRoots application. The tables that would be needed for the EcoRoots database were planned out before beginning any site development. By doing this thinking upfront rather than during site development this should help visualise the amount of work required on the database working as well as prevent updates being needed after the database has been created.
 
-Below is a visualisation of the tables needed for the minimum viable application. The first table is the categories table, each category will have an id (the primary key), name and a friendly name that is readable to the user. Next is the products table, each product on the site will have a sku (the primary key), category (the foreign key that links the product to the categories table), name, description, price, rating, image url and image. The final table is the users table, this is where user's information from registration will be stored, which is the user id (the primary key), email, password (which will be hashed) and name.
+Below is a visualisation of the tables needed for the minimum viable application.
 
 ![Database schema for the EcoRoots site](readme_imgs/data_schema.png)
+
+**Reviews:** The reviews table houses product reviews added by shoppers that relate to each product. This table consists of a product field (the foreign key that links the review to a product), title, content, rating and the date the review was added to the site.
+
+**Products:** The products table consists of a product id (the primary key), sku, name, description, price, category (the foreign key that links the product to the categories table), rating and image.
+
+**Categories:** The categories table consists of a category id (the primary key), name and friendly name that is readable to the user.
+
+**OrderLineItem:** The orderlineitem table creates a total cost for a single product line on an order. It consists of the order field (the foreign key that links the lineitem_totals to the order table), product (another foreign key that links to the product id on the product table), quantity and lineitem_total.
+
+**Orders:** The orders table contains all order information. This table consists of an order_number (the foreign key that links to the orderlineitem table), userprofile (the foreign key that links to the userprofile table), full name, email (which can be taken from the users table if it exists), delivery information (which can be taken from the userprofile table if it exists), date, delivery cost, order total and grand total.
+
+**UserProfile:** The user profile table allows the user's default delivery information to be saved to their profile. The table consists of the user (the foreign key linking the userprofile to a specific user) and the user's default delivery information.
+
+**Users:** The users table, where user's information from registration will be stored, consists of the user id (the primary key), username, email and password. Since this project will be using Django Allauth, the user passwords will not be stored in the database, therefore cannot be accessed via the admin.
+
+**Contact:** The contact table is intended for users to send contact requests to the store. This table consists of a name field, email field, the contact request content and the date it was sent on.
 
 ## Project Management
 
@@ -359,9 +335,7 @@ During the development of the EcoRoots site, GitHub was used to manage versions 
 
 ### Project Setup
 
-**Commits from 22nd Dec:**
-
-- First, the repositiory was created on GitHub using the Code Institute GitPod template and then opened in GitPod. To create a new django project the command 'python3 django-admin startproject' was used to create the project folder and initial python files.
+**Commits from 22nd Dec:** First, the repository was created on GitHub using the Code Institute GitPod template and opened in GitPod. To create a new django project the command 'python3 django-admin startproject' was used to create the project folder and initial python files.
 
 ![Initial file structure of the project](readme_imgs/project_setup_1.png)
 
@@ -369,27 +343,29 @@ During the development of the EcoRoots site, GitHub was used to manage versions 
 
 **Commits from 22nd Dec:**
 
-For user authenication in this project, django-allauth was used. To setup allauth it first had to be installed used the command 'pip3 install django-allauth'. After installing allauth, all the projects requirements were now installed, therefore the versions were frozen into the requirements.txt file using 'pip3 freeze -r requirements.txt'.
+For user authenication in this project, django-allauth was used. To setup allauth it first had to be installed using the command 'pip3 install django-allauth'. After installing allauth, all the project's requirements were frozen into a requirements.txt file using 'pip3 freeze -r requirements.txt'.
 
-Next, some changes were required to the settings.py and urls.py files. Within the settings.py file, allauth needed adding to the installed apps and some requirements from the allauth documentation was also needed, these were copied directly from the documentation to ensure they were correct.
+The allauth apps needed adding to the installed apps in the settings.py file, and some requirements from the allauth documentation were also needed, these were copied directly from the documentation to ensure they were correct.
 
 ![Required allauth installed apps](readme_imgs/allauth_setup_1.png)
 
-![Allauth requirements within settings.py](readme_imgs/allauth_setup_2.png)
+![Allauth requirements in settings.py](readme_imgs/allauth_setup_2.png)
 
-Finally, within the urls.py file a new account path was required to show the allauth urls. This allows for any allauth templates to be rendered when on the accounts/ path.
+In the urls.py file a new account path was required to show the allauth urls. This allows for any allauth templates to be rendered when on the accounts/ url path.
 
 ![Allauth account/ url setup within urls.py](readme_imgs/allauth_setup_3.png)
 
+**Commits from 23rd Dec:**
+
+The required allauth templates needed adding to the project. To do this the command 'cp -r ../.pip-modules/lib/python3.9/site-packages/allauth/templates/* ./templates/allauth/' was used. This installed the allauth templates and the final section of the command after the space allowed them to be saved in the correctly within the file structure. Only the account and socialaccount templates were required for customising, so the rest were deleted as allauth can access them directly instead.
+
+![Allauth templates within templates folder](readme_imgs/templates_setup_1.png)
+
 **Commits from 8th Jan:**
 
-Once the base template was complete, the allauth templates were updated to extend the base template so any user authentication pages also had the site navigation and footer to remain in keeping with the rest of the site.
-
-This was done by firstly updating the allauth base template to extend the site base template and include the header container to push the page content beneath the navigation. A block called 'inner_content' was added to another container to house the specific allauth template page content.
+Once the base template was complete, the allauth templates were updated to extend the base template so they also had the site navigation and footer. This was done by first updating the allauth base template to extend the site base template and include the header container to push the page content beneath the navigation. A block called 'inner_content' was added to another container for the specific allauth template page content.
 
 ![Updated allauth base template](readme_imgs/allauth_base_template_update.png)
-
-All allauth templates were then updated to extend the allauth base template within the allauth/account folder. And the content blocks on these pages were updated to 'inner_content'
 
 ![Updated allauth templates](readme_imgs/allauth_specific_pages_update.png)
 
@@ -397,13 +373,11 @@ All allauth templates were then updated to extend the allauth base template with
 
 **Commits from 23rd Dec:**
 
-Now that allauth is setup and working, the required allauth templates needed adding to the project. To do this the command 'cp -r ../.pip-modules/lib/python3.9/site-packages/allauth/templates/* ./templates/allauth/' was used. This installed the allauth templates and the final section of the command after the space allowed them to be saved in the correct place within the file structure. Only the account and socialaccount templates were required for customising, so the rest were deleted as allauth can access them directly instead.
-
-Next, the base template was created within the project templates folder. This html file is currently very basic, only containing a head element and within the body a header and single container. Blocks were added to separate out the code so it could be added to within other templates where required. Within the head element the content was split into meta, css and js block along with extra ones for each where required within the project. Within the body, a message container was created within an 'if messages' block followed by two blocks for the page header and content and finally a block for any javascript that can be loaded after the rest of the page.
+The base template was created within the project templates folder. Blocks were added to separate out the code so it could be added to within other templates where required. Within the head element the content was split into meta, css and js block along with extra ones for each where required within the project. Within the body, a message container was created within an 'if messages' block followed by two blocks for the page header and content and finally a block for any javascript that can be loaded after the rest of the page.
 
 ![Project templates file structure](readme_imgs/templates_setup_1.png)
 
-**Commits from 2nd & 7th Jan:**
+**Commits from 2nd Jan:**
 
 CSS and JavaScript links were added to the top of the base template so they would be available across all site pages. These links were to the base.css file within the project's static folder; the Google Fonts css for the specific fonts that will be used throughout the site and; the script tag for Font Awesome icons.
 
@@ -413,7 +387,9 @@ The main navigation and mobile top header were added to an includes folder withi
 
 ![Includes folder within file structure](readme_imgs/includes_nav_folder.png)
 
-After focussing on other functionality within the site, bootstrap display classes were used to hide certain elements on certain screen sizes. This was because on small screens the main navigation is accessed via the navbar toggler and the account, search and basket links move down to where the main navigation was on larger screens. Also, the correct site colours were added to the navigation through the base.css file.
+**Commits from 7th Jan:**
+
+After focussing on other functionality within the site, bootstrap display classes were used to hide certain elements of the navigation on certain screen sizes. This was because on small screens the main navigation is accessed via the navbar toggler and the account, search and basket links move down to where the main navigation is on larger screens. Also, the correct site colours were added to the navigation through the base.css file.
 
 ![Navigation on large screens](readme_imgs/navbar_large.png)
 
@@ -425,7 +401,7 @@ After focussing on other functionality within the site, bootstrap display classe
 
 **Commits from 23rd Dec:**
 
-The home app was created using the command 'mkdir -p startapp home'. To setup the home app, it was added to the installed apps within the settings.py file and a path was added to the project urls.py file. Then the index.html file was created within the home/templates/home folder including a single h1 saying 'It Works!' simply to test that the home app is setup and working correctly when running the server. To allow the index page to render a view was added to the home/views.py file called 'index' and this path was included within the home/urls.py file.
+The home app was created using the command 'mkdir -p startapp home'. To setup the home app, it was added to the installed apps within the settings.py file and a path was added to the project urls.py file. The index.html file was created within the home/templates/home folder including a single h1 saying 'It Works!' simply to test that the home app is setup and working correctly when running the server. To allow the index page to render a view was added to the home/views.py file called 'index' and this path was included within the home/urls.py file.
 
 ![Index.html rendering correctly](readme_imgs/templates_setup_2.png)
 
@@ -437,7 +413,7 @@ Within the settings.py file, the media root was setup so that when any media is 
 
 **Commits from 3rd Jan:**
 
-Once the navigation was setup correctly on each screen width, the header-container could be given a set height so that page content could be pushed below the navigation rather than being hidden behind it.
+The header-container was given a set height so that page content could be pushed below the navigation rather than being hidden behind it.
 
 ![Styling for header-container](readme_imgs/header_container_fix.png)
 
@@ -445,49 +421,65 @@ Once the navigation was setup correctly on each screen width, the header-contain
 
 Within the index view in views.py two new variables were added to get the products from the new_arrivals and bundles categories. These varibles were then added to the context and passed to the template when the index view is called. They are then rendered within their own sections of the index page.
 
-![Completed index template](readme_imgs/index_content.png)
-
 ![Updated index view in views.py](readme_imgs/index_view_update.png)
+
+![Completed index template](readme_imgs/index_content.png)
 
 #### Contact Form
 
-**Commits from 14th Jan:**
+**Commits from 15th Jan:**
 
-Contact form, view and template created along with overview for superusers
+The contact form was created within the home app and it can be accessed from the site footer.
+
+Firstly, a contact model was created within the models.py file following the data schema.
+
+![The Contact model](readme_imgs/contact_model.png)
+
+The contact model was then imported into a forms.py file where a django form was created for the contact model.
+
+![The Contact form](readme_imgs/contact_form.png)
+
+Next, in the home app's views.py file a view was created for rendering the contact form to users as well as a view for rendering all the contact requests to superuser's/ store owners.
+
+![The Contact views](readme_imgs/contact_views.png)
+
+Finally, templates were created for the contact form and contact review page. The contact template is very similar to other templates on the site that render a form.
+
+![Contact reviews rendered](readme_imgs/contact_review.png)
 
 ### Products App
 
 **Commits from 3rd Jan:**
 
-The products app was created using the command 'python3 manage.py startapp products' in the terminal. It was then added to the installed apps within the settings.py and a path was created witin the product app urls.py file.
+The products app was created using the command 'python3 manage.py startapp products' in the terminal. It was then added to the installed apps within the settings.py and a path was created witin the products app urls.py file.
 
-After setting up the products app, the Product and Category model were created in the products app models.py file.
-
-![The Product model](readme_imgs/products_model.png)
+After setting up the products app, the Category and Product model were created in the products app models.py file.
 
 ![The Category model](readme_imgs/category_model.png)
 
+![The Product model](readme_imgs/products_model.png)
+
 To populate these models, json files were created including all the data for the 6 categories and the 47 products that would initially be on the site.
 
-The categories were manually written. The product details were created using ChatGPT to suggest product names, descriptions and prices. The images for the products were found from a mixture of image sites including Unsplash, Freepik and ...
+The categories were manually written. The product details were created using ChatGPT to suggest product names, descriptions and prices. The images for the products were found from a mixture of image sites (Unsplash, Freepik, Pixabay & Pexels). Full acknowledgement for these images can be found in the [Credits & Acknowledgements](#credits--acknowledgements) section.
 
 The data was gathered into an excel file and exported as a CSV before formatting it with an online json formatter.
 
 ![Fixtures folder within file structure](readme_imgs/json_fixture_files.png)
 
-![Product json file](readme_imgs/.png)
+![Product json file](readme_imgs/products_json.png)
 
 Next, the models could now be migrated. The dry-run and plan flags were used to check the migrations about to be made were correct. These are the commands and order they were used in:
 1. 'python3 manage.py makemigrations --dry-run'
 2. 'python3 manage.py makemigrations'
 3. 'python3 manage.py migrate --plan'
 4. 'python3 manage.py migrate'
+5. 'python3 manage.py loaddata categories'
+6. 'python3 manage.py loaddata products'
 
-**Details about importing the fixtures**
+It was important that the categories file was loaded into the models first as the products model contains a foreign key relating the categories model. This would not work correctly if the products were loaded to the models first.
 
-After migrating the models, they were double checked in the site admin to ensure they could be accessed properly. From doing this a few changes were needed to make the admin view of the Product and Category models more user friendly.
-
-The list of fields displayed was updated to show the data in the table overview of both models.
+After migrating the models, the models were registered in the products app admin.py file and a list of fields were added to each models admin to make the admin view of these models more user friendly.
 
 ![Product and Category models admin update](readme_imgs/product_models_admin.png)
 
@@ -501,23 +493,27 @@ To render the products appropriately on the page, the products template was upda
 
 **Commits from 4th Jan:**
 
-A specific product's details can be accessed by clicking the product's image within the all products page. This takes the user to the product_detail page. On this page are two bootstrap columns, the first including the product image and the second showing the product name, description, rating and price.
-
-Within the products views.py a view was added for the product_detail where it would pass the specific product's id to the template.
-
-This view and url path was also added the products app urls.py file.
+A specific product's details can be accessed by clicking the product's image. On this page are two bootstrap columns, the first including the product image and the second showing the product name, description, rating and price.
 
 ![Product detail template](readme_imgs/product_detail_view.png)
 
-![Product detail view in views.py](readme_imgs/.png)
+Within the products app views.py a view was added for the product_detail where it would pass the specific product's id to the template.
+
+This view and url path was also added the products app urls.py file.
+
+![Product detail view in views.py](readme_imgs/product_detail_views.png)
 
 **Commits from 5th Jan:**
 
 To enhance the user experience of the site on longer site pages, a back to top button was added to the bottom right-hand corner of the products template. This was done using a small amount of JavaScript at the bottom of the products.html template.
 
-![Back to Top JavaScript](readme_imgs/bbt_button_js.png)
+![Back to top JavaScript](readme_imgs/bbt_button_js.png)
 
-A quantity option was also added to the product detail page so the user could increase or decrease the quantity they would like to add to their basket. This was also done using JavaScript ...
+![Back to top button](readme_imgs/bbt_button.png)
+
+A quantity option was also added to the product detail page so the user could increase or decrease the quantity they would like to add to their basket. This was also done using JavaScript to first disable the plus and minus buttons when the quantity in the input is at the minimum or maximum (1 and 99). The bottom two functions are for incrementing the decrementing the input quantity when either the plus or minus button is clicked.
+
+![Quantity buttons JavaScript](readme_imgs/qty_buttons_js.png)
 
 ![Quantity option on product detail page](readme_imgs/+_-_buttons.png)
 
@@ -535,7 +531,7 @@ Looking back at this addition, it would have been easier and cleaner to include 
 
 **Commits from 4th Jan:**
 
-Search functionality was added to the products view through a number of if statements looking for a query within the get request and then filtering all products by determining if that query is in the product name or description and returning the filtered products to the template.
+Search functionality was added to the products view through a number of if statements looking for a query within the GET request and then filtering all products by determining if that query is in the product name or description and returning the filtered products to the template.
 
 ![Search functionality in products views.py](readme_imgs/search_in_products_view.png)
 
@@ -551,29 +547,37 @@ The sort functionality was added to the product view and first looks at what it'
 
 ![Sort functionality in products views.py](readme_imgs/sorting_in_products_view.png)
 
+Below is the final all_products view containig the sort, search & filter functionality.
+
 ![Final sort, search and filter functionality in products views.py](readme_imgs/final_products_view.png)
 
-#### Adding Products
+#### Adding & Modifying Products
 
 **Commits froms 14th Jan:**
 
-Add product form and functionality
+To add or modify a product first a product form was needed that could be rendered to the frontend. A new forms.py file was created within the products app and the Product and Category models were imported into it.
 
-#### Modifying Products
+![Product form in forms.py](readme_imgs/product_form.png)
 
-**Commits froms 14th Jan:**
+For adding products, an add product view was created within views.py. This view first looks for if the request is a POST request, if so it will check if the form is valid and either save the new product or throw an error message. If the request is not a POST request it will simply render an empty product for the user to fill out.
 
-Edit product form and functionality
+![Add product view](readme_imgs/add_product_view.png)
 
-Delete products functionality
+To edit a product, an edit product view was created within views.py. This view first sets the product sent from the product detail page and then looks for if the request is a POST request. If so, it will check if the form is valid and either save the updated product information or throw an error message. If the request is not a POST request, it will render the product form with the fields pre-filled with the product's information ready to be updated by the user.
 
-Securing add, edit and delete views
+![Edit product view](readme_imgs/edit_product_view.png)
+
+To delete a product a view was also added to views.py. This view first assigns the product sent from the product detail page to a variable called product and then deletes it providing the user with a message to confirm the product has been deleted.
+
+![Delete product view](readme_imgs/delete_product_view.png)
+
+Finally, the add, edit and delete product views were secured so that only superusers or store owners could access this functionality. This was done by importing the login_required decorator from django.contrib.auth.decorators and using '@login_required' above the add, edit and delete product views.
 
 #### Product Reviews
 
-**Commits froms 14th Jan:**
+**Commits froms 16th Jan:**
 
-A later addition to the products app was the ability to read and add product reviews. For this a Review model was created with the products app models.py file. This model contains the product as the foreign key along with a title, content and rating for the review. This model was then registered in the products admin.py file and a review was created in the site admin to test it was working correctly.
+A later addition to the products app was the ability to read and add product reviews. For this a Review model was created with the products app models.py file following the data schema. This model was then registered in the products app admin.py file.
 
 After creating this model, migrations were made to ensure it could be accessed correctly.
 
@@ -581,13 +585,23 @@ After creating this model, migrations were made to ensure it could be accessed c
 
 ![Review admin](readme_imgs/review_admin.png)
 
-Next, the ability for a user to add a review was added to the products views.py file so that when a user chooses to add a product review from the product detail page they are directed to a review form. The form was added to the forms.py file within the products app and then the view for adding a product was duplicated and customised to fit the function of adding a review.
+Next, the ability for a user to add a review was added to the products app views.py file so that when a user chooses to add a product review from the product detail page they are directed to a review form. The form was added to the forms.py file within the products app and then the view for adding a product was duplicated and customised to fit the function of adding a review.
 
 ![Review form in forms.py](readme_imgs/review_form.png)
 
 ![Add review view in views.py](readme_imgs/add_review_view.png)
 
-Reviews model created - Small bug still to fix
+**Commits from 18th Jan:**
+
+The product detail template was updated to include product reviews at the bottom of the page. An if statement was used to check if the reviews passed to the template exist. If they do a for loop iterates through the reviews and shows each reviews title, data, content and rating. If no reviews are passed to the template text is rendered instead saying 'No reviews yet.'.
+
+![Review template](readme_imgs/review_template.png)
+
+Finally, a bug within the add review functionality was fixed so that when a user creates a review the product from the product detail page they have come from is assigned to their review. This prevents the product field being left as NULL or users being able to assign reviews to any product from the add review form.
+
+To do this the form is first saved however not committed and instead the review.product field is set to the product passed to the view from the product detail page. Then the form is saved and the user is redirected back to the product detail page where they can see their review has been added.
+
+![Update add review view](readme_imgs/updated_add_review_view.png)
 
 ### Basket App
 
@@ -615,31 +629,39 @@ Within the basket, the update and remove options were added to each product line
 
 **Commits from 6th Jan:**
 
-basket_tools to handle calculating line subtotal
+Within the basket app a new file called basket_tools.py was created to handle the calculating the subtotal of each product line within the basket. This was loaded into the basket template by adding the '{% load basket_tools %}' tag at the top of the template.
 
-![Basket_tools](readme_imgs/.png)
+![Basket_tools.py](readme_imgs/basket_tools.png)
 
 ### Checkout
 
 **Commits from 6th Jan:**
 
-The checkout app was created using the command 'python3 manage.py startapp checkout' in the terminal. It was then added to the installed apps within the settings.py and a path was created witin the checkout app urls.py file.
+The checkout app was created using the command 'python3 manage.py startapp checkout'. It was then added to the installed apps within the settings.py and a path was created witin the checkout app urls.py file.
 
-The checkout view takes the users basket and creates an order form for that basket from the checkout forms.py file.
+First, the order and order line item models were created following the data schema.
+
+Within the order model a generate order number function, update function and save function were created to generate an order number using uuid, update the grand total each a line is added to the order and override the original save method to set the order number.
+
+Within the order line item model the save function was also added to override the original save method to set the line item total and update the order total.
+
+![Order models in checkout models.py](readme_imgs/order_models.png)
+
+Next, the order form was created using django forms and only contains the fields necessary for the user to place an order. The rest of the fields are created automatically.
+
+![OrderForm in forms.py](readme_imgs/order_form.png)
+
+A signals.py file was created within the checkout app to ensure that the order would be updated or deleted depending on edits made within the site admin.
+
+![Checkout signals.py file](readme_imgs/checkout_signals.png)
+
+The checkout view was created within the checkout app views.py file, it takes the user's basket and creates an order form for that basket from the checkout forms.py file.
 
 ![Checkout view in views.py](readme_imgs/checkout_view.png)
-
-The OrderForm is a django form containing the available fields necessary for the user to place an order.
-
-![OrderForm in forms.py](readme_imgs/checkout_form.png)
 
 OrderLineItemAdminInLine and OrderAdmin were added to the checkout admin.py file to ensure the correct fields submitted by the user when they place an order remain read only so they cannot be edited.
 
 ![Order admin in admin .py](readme_imgs/order_admin.png)
-
-Finally, a signals.py file was created within the checkout app to ensure that the order would be updated or deleted depending on edits made within the site admin.
-
-![Checkout signals.py file](readme_imgs/checkout_signals.png)
 
 **Commits from 8th Jan:**
 
@@ -651,15 +673,11 @@ Error handling was also added to this file to ensure any errors with the card el
 
 ![Stripe error handling](readme_imgs/stripe_error_handling.png)
 
-To handle the submit button for the payment form, an event listener was added to the button and upon clicking this the ability to edit the form or click the button again is disabled whilst the details are checked by Stripe.
-
-If there is an error this is signposted to the user and the form is re-enabled so they can make the required changes.
-
-If this is successful, the form is submitted and the payment is succeeded.
+To handle the submit button for the payment form, an event listener was added to the button and upon clicking this the ability to edit the form or click the button again is disabled whilst the details are checked by Stripe. If there is an error this is signposted to the user and the form is re-enabled so they can make the required changes. If this is successful, the form is submitted and the payment is succeeded.
 
 ![Payment form submit handling JavaScript](readme_imgs/stripe_payment_form.png)
 
-Finally, the required stripe public key and secret key was added to the settings.py file so it could be accessed across the site.
+Finally, the required stripe public key and secret key were added to the settings.py file so it could be accessed across the site.
 
 ![Stripe keys in settings.py](readme_imgs/stripe_keys_in_settings.png)
 
@@ -673,10 +691,6 @@ The checkout_success view was created to handle successful checkouts. It gets th
 
 **Commits from 9th Jan:**
 
-Upon submitting the payment form an overlay is added to the page with a loading spinner in the centre.
-
-![Loading overlay JavaScript](readme_imgs/loading_overlay_js.png)
-
 A checkout success template was created to take the order information passed to it from the view and render it to the user in a table.
 
 ![Checkout success page](readme_imgs/checkout_success.png)
@@ -689,7 +703,9 @@ A small amount of webhook handling was included, however this was not specified 
 
 **Commits from 14th Jan:**
 
-Env variables setup
+The environment variables required for stripe were added to an env.py file which would be kept out of version control. This meant the variables didn't have to exported to gitpod each time the server was restarted.
+
+![Environment variables in settings.py](readme_imgs/env_variables.png)
 
 ### Messages
 
@@ -713,26 +729,99 @@ Finally, the JavaScript for toasts was added to the very bottom of the base temp
 
 **Commits from 9th Jan:**
 
-The profile app was created using the command 'python3 manage.py startapp profile' in the terminal. It was then added to the installed apps within the settings.py and a path was created witin the profile app urls.py file.
+The profile app was created using the command 'python3 manage.py startapp profile'. It was then added to the installed apps within the settings.py and a path was created witin the profile app urls.py file.
 
-The UserProfile model was added to the models.py file within the profile app. This model includes a one to one field linking it to the User model. It also includes default delivery fields that the user can add if they wish to save their information for a faster checkout process.
+The UserProfile model was added to the models.py file within the profile app following the data schema. A create or update user profile function was added to either create a user profile if the user is new or update an existing profile for existing users.
 
-![UserProfile model](readme_imgs/user_model.png)
-
-The UserProfile model view was tested by getting the user and sending it to the template. And then rendering the username on the profile.html page.
-
-![Profile view in views.py](readme_imgs/profile_view.png)
+![UserProfile model](readme_imgs/user_profile_model.png)
 
 **Commits from 14th Jan:**
 
-Added profile form and views
+A forms.py file was created within the profiles app and a user profile was added to it. This form takes the users default delivery information and allows them to delete or update the information.
 
-Added order history, save info functionality
+![User profile form](readme_imgs/user_profile_form.png)
 
-## Bug Fixes
+The profile view was added to the profiles app views.py. This view first checks if the request is a POST request and will save the form if valid. Else it will render an empty user profile form.
 
-Footer not staying at bottom of page
+![Profile view in views.py](readme_imgs/profile_view.png)
 
+Next, the user's order history was added to the profile page. This was done by creating an order history view within the profiles app views.py. This allows the user to view previous orders (through the checkout_success page) and see an info message telling them they are viewing an old order and not a current order.
+
+![Order history view](readme_imgs/order_history_view.png)
+
+Finally, the save information functionality was setup within the checkout success view to allow users to save their delivery information to their profile. This view takes the delivery information and passes it to the user profile form and saves it to the user's profile.
+
+![Save info in profile view](readme_imgs/save_info.png)
+
+## Testing During Development
+
+During site development the local server was run to check that the site was rendering as expected when new functionality or edits were being implemented. This meant a lot of minor issues to do with functionality and styling were fixed alongside site development. Below are the larger bug fixes that were found when testing the site during development.
+
+**Bug Fix 1:** Site footer not staying at the bottom of pages with less than a full screen height's worth of content.
+
+![Footer bug before](readme_imgs/footer_bug_before.png)
+
+To resolve this bug, the content block in the base.html page which contains the body and footer was wrapped within a container with the class 'min-vh-90'. Then within the base.css the min-vh-90 class was set to a minimum height of 90vh so that the body and footer content would be at least 90% of the vertical screen height, meaning pages with less content still have the footer at the bottom of the page.
+
+![Footer bug after](readme_imgs/footer_bug_after.png)
+
+**Bug Fix 2:** The toast success message always showed the basket if it contained items. Menaing that when a store owner adds or edits a product or when a user adds a review, if they have items in their basket they are also shown the basket along with the success message.
+
+![Toast success bug before](readme_imgs/toast_success_bug_before.png)
+
+Initially to resolve this issue, the 'on_profile_page' variable was also added to the views where the basket was incorrectly rendering in the success message. However this didn't resolve the bug properly. Therefore, for any actions where a success message was used and the basket is not supposed to render, an info message was used instead.
+
+![Toast success bug after](readme_imgs/toast_success_bug_after.png)
+
+**Bug Fix 3:** Deleting a product was too easy, meaning store owners could accidentally delete a product since it only required one click. To confirm that a store owner would like to delete a product, a modal was added so it requires two clicks from the user to delete a product.
+
+![Delete product modal](readme_imgs/delete_product_modal.png)
+
+**Bug Fix 4:** The quantity input buttons on both the product detail and basket page were not working correctly. They were being enabled and disabled correctly, however clicking the buttons did not affect the quantity input. This fix took quite a lot of experimenting and printing different variables to the console to check at what point in the JavaScript the quantity input was failing.
+
+It was found that the 'this' element used when setting the itemId variable was not being recognised. This was changed for the .qty_input class and fixed the problem.
+
+![Quantity button JavaScript before](readme_imgs/qty_buttons_bug_before.png)
+
+![Quantity button JavaScript after](readme_imgs/qty_buttons_bug_after.png)
+
+## Pre-Deployment Testing
+
+A large amount of the required testing was completed prior to deploying the site so that the majority of the problems could be found and resolved on the local server as it is much quicker to check that problems have been resolved and doesn't require a new commit for every minor styling issue.
+
+### Responsiveness
+
+The site was tested on a multitude of screen sizes using Chrome developer tools to check that the site renders correctly on all screens tested and that all images and links work properly.
+
+Screen Width | | | | | Device | | | | |
+---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---:
+| | Galaxy S9+ (320px) | iPhone 6/7/8 (375px) | iPhone XR (414px) | iPad Mini (768px) | iPad Air (820px) | Surface Pro 7 (912px) | iPad Pro (1024px) | Desktop (1201px) | Desktop (2000px)
+<= 576px |  |  |  | NA | NA | NA | NA | NA | NA
+576px < >= 992px | NA | NA | NA |  |  |  | NA | NA | NA
+992px < | NA | NA | NA | NA | NA | NA |  |  | 
+Links/ URLs/ Buttons work |  |  |  |  |  |  |  |  | 
+Images work |  |  |  |  |  |  |  |  | 
+Renders as expected |  |  |  |  |  |  |  |  | 
+
+### Browser Compatibility
+
+The site was tested in multiple browsers to ensure all features worked correctly and the site responded in the intended way no matter what browser was being used.
+
+| | Browser | | | Notes
+:--- | :--- | --- | --- | ---
+| | Chrome | Edge | Firefox
+Intended Appearance? |  |  |  | 
+Intended Responsiveness? |  |  |  | 
+Buttons Work as Expected? |  |  |  |
+Forms Work as Expected? |  |  |  | 
+
+### Bug Fixes
+
+Qty buttons for subsequent basket items
+
+### Code Validation
+### User Story Testing
+### Feature Testing
 ## Deployment
 
 Screenshot creating database in elephantSQL
@@ -743,30 +832,42 @@ heroku login after procfile
 
 Automatic deployments after pushing to github
 
-## Credits & Acknowledgements
-
 DEBUG = int(os.environ.get("DEVELOPMENT", default=0))
+
+## Post-Deployment Testing
+### Responsiveness
+
+Screen Width | | | | | Device | | | | |
+---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---:
+| | Galaxy S9+ (320px) | iPhone 6/7/8 (375px) | iPhone XR (414px) | iPad Mini (768px) | iPad Air (820px) | Surface Pro 7 (912px) | iPad Pro (1024px) | Desktop (1201px) | Desktop (2000px)
+<= 576px |  |  |  | NA | NA | NA | NA | NA | NA
+576px < >= 992px | NA | NA | NA |  |  |  | NA | NA | NA
+992px < | NA | NA | NA | NA | NA | NA |  |  | 
+Links/ URLs/ Buttons work |  |  |  |  |  |  |  |  | 
+Images work |  |  |  |  |  |  |  |  | 
+Renders as expected |  |  |  |  |  |  |  |  | 
+
+### Browser Compatibility
+
+| | Browser | | | Notes
+:--- | :--- | --- | --- | ---
+| | Chrome | Edge | Firefox | Safari | Ecosia
+Intended Appearance? |  |  |  |  |  |
+Intended Responsiveness? |  |  |  |  |  |
+Buttons Work as Expected? |  |  |  |  |  |
+Forms Work as Expected? |  |  |  |  |  |
+
+### Lighthouse Testing
+### Future Improvements
+
+reset password page not styled the same
+
+Emails - future improvment
+
+## Credits & Acknowledgements
 
 Mockups for renders <a href="https://www.freepik.com/free-vector/digital-device-mockup-set_4122518.htm#query=device%20mockup&position=8&from_view=search&track=ais&uuid=2c6b5773-48a8-4b9a-b8a0-4b83164331af">Image by rawpixel.com</a> on Freepik
 
 No image found image = Image by <a href="https://www.freepik.com/free-vector/realistic-question-box-mockup_28846681.htm#query=mystery&position=1&from_view=search&track=sph&uuid=3ddffba5-4263-4cdb-8308-d88d826b07f6">Freepik</a>
 
-Come back to this for updating anything in json files
-
-reset password page not styled the same
-
-DONE delete product needs pop-up for confirmation - Modal
-
-DONE qty buttons not working
-
-Qty buttons for subsequent basket items
-
-Emails - future improvment
-
-To implement into final deployed database product descriptions:
-
-- **Provide Transparent Information:** Offer transparent and detailed information about product materials, sourcing, and manufacturing processes to build trust with consumers and foster informed decision-making.
-
-- **Encourage Responsible Consumption:** Advocate for responsible consumption by promoting product longevity, reuse, and recycling. Provide information on proper disposal and recycling options for products.
-
-- **Reduce Environmental Impact:** Strive to minimise the environmental impact of the business operations, from sourcing products from local suppliers to reducing the environmental impact of packaging and shipping.
+favicon credit: <a href="https://www.flaticon.com/free-icons/leaf" title="leaf icons">Leaf icons created by Pixel perfect - Flaticon</a>

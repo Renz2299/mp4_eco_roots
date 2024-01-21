@@ -45,13 +45,13 @@
                 {% else %}
                     <h2 class="text-subheading text-green my-4">All Products</h2>
                 {% endif %}
-                <hr>
             </div>
         </div>
         <div class="row">
-            <div class="product-container col-10 offset-1">
+            <div class="col-12">
+                <hr>
                 <div class="row mt-1 mb-2">
-                    <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                    <div class="col-12 col-md-5 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                         <div class="sort-select-wrapper w-50">
                             <select id="sort-selector" class="custom-select custom-select-sm border border-{% if current_sorting != 'None_None' %}info{% else %}green{% endif %}">
                                 <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
@@ -66,7 +66,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 order-md-first">
+                    <div class="col-12 col-md-5 offset-1 order-md-first">
                         <p class="text-muted mt-3 text-center text-md-left">
                             {% if search_term or current_categories or current_sorting != 'None_None' %}
                                 <span class="small"><a href="{% url 'products' %}" class="small-link">All Products</a> | </span>
@@ -75,6 +75,9 @@
                         </p>
                     </div>
                 </div>
+                <hr>
+            </div>
+            <div class="col-10 offset-1 product-container">
                 <div class="row mb-5">
                     {% for product in products %}
                         <div class="col-sm-6 col-md-4 col-lg-3 mb-2">
@@ -88,10 +91,10 @@
                                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}no-image.jpg" alt="{{ product.name }}">
                                 </a>
                                 {% endif %}
-                                <div class="card-body pb-0">
+                                <div class="card-body pb-0 pl-0">
                                     <p class="mb-0">{{ product.name }}</p>
                                 </div>
-                                <div class="card-footer bg-white pt-0 border-0 text-left">
+                                <div class="card-footer bg-white pt-0 pl-0 mb-4 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
                                             <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
