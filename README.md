@@ -796,12 +796,57 @@ The site was tested on a multitude of screen sizes using Chrome developer tools 
 Screen Width | | | | | Device | | | | |
 ---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---:
 | | Galaxy S9+ (320px) | iPhone 6/7/8 (375px) | iPhone XR (414px) | iPad Mini (768px) | iPad Air (820px) | Surface Pro 7 (912px) | iPad Pro (1024px) | Desktop (1201px) | Desktop (2000px)
-<= 576px |  |  |  | NA | NA | NA | NA | NA | NA
-576px < >= 992px | NA | NA | NA |  |  |  | NA | NA | NA
-992px < | NA | NA | NA | NA | NA | NA |  |  | 
-Links/ URLs/ Buttons work |  |  |  |  |  |  |  |  | 
-Images work |  |  |  |  |  |  |  |  | 
-Renders as expected |  |  |  |  |  |  |  |  | 
+<= 576px | Good | Good | Good | NA | NA | NA | NA | NA | NA
+576px < >= 992px | NA | NA | NA | Good | Good | Good | NA | NA | NA
+992px < | NA | NA | NA | NA | NA | NA | Good | Good | Good
+Links/ URLs/ Buttons work | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes
+Images work | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes
+Renders as expected | Partially, details below | Partially, details below | Partially, details below | Partially, details below | Partially, details below | Partially, details below | Yes | Yes | Yes
+
+This is the list of issues found when checking the responsiveness of the site on mobile and tablet screens.
+
+Mobile Screens:
+- Home app
+    - [x] Nav icons hover/ click same colour as background
+    - [x] Contact view needs info message rather than success message
+    - [ ] Contact review needs pagination
+    - [ ] Missing page links from footer
+    - [x] Socials missing from footer
+- Products app
+    - [x] Sort by and no. of products not margin/padded very well
+    - [x] Quantity form very narrow
+    - [x] Keep shopping/ add to basket buttons too far apart vertically and not full width
+    - [x] Add review button not full width
+    - [x] Search criteria falling off edge of page
+    - [x] Category descriptions too long - Maybe shorten on all screens or truncate
+    - [ ] Review ratings can be up to 9.9 rather than 5.0
+- Basket app
+    - [ ] Shopping basket requires side scrolling - Needs refactoring on mobile
+- Checkout app
+    - [-] Card number overlaps expiry - Accept this is only on screens beneath 345px
+    - [x] Buttons need margin and not full width
+    - [x] Overlay doing some weird things, needs some work
+    - [x] Order number needs truncating on mobile
+- Profiles app
+    - [ ] Order history is too narrow - May need refactoring similar to shopping basket
+    - [x] Update info button not full width
+- Allauth pages
+    - [x] No margin under buttons
+    - [x] Buttons have no margin between them and not full width
+- Possible issues with dev tools - check on physical mobile screen once deployed
+    - Btt button half off screen on right
+    - Navbar partially hides when scrolling
+    - Very slow scrolling
+    - Dropdown nav doesn't disappear on next click - Have to click on toggler to hide it
+
+Tablet Screens:
+- Basket app
+    - [ ] Shopping basket requires side scrolling - Needs refactoring on tablet too
+- Products app
+    - [x] 768px - 992px wide: Forms only half screen, could be a bit wider
+    - [x] Category descriptions too long - Maybe shorten on all screens or truncate
+
+ The majority of these issues were related to styling and could be resolved quite easily either with a bootstrap or custom css class.
 
 ### Browser Compatibility
 

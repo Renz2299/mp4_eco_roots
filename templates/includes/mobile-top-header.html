@@ -1,6 +1,6 @@
 <ul class="mobile-nav-list d-md-none">
     <li class="list-inline-item dropdown mobile-nav-list-items">
-        <a class="text-grey-nav nav-link d-block d-md-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="mobile-nav-icons nav-link d-block d-md-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <div class="text-center">
               <div><i class="fas fa-user fa-lg"></i></div>
             </div>
@@ -20,7 +20,7 @@
         </div>
     </li>
     <li class="list-inline-item mobile-nav-list-items">
-        <a class="text-grey-nav nav-link d-block d-md-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="mobile-nav-icons nav-link d-block d-md-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <div class="text-center">
               <div><i class="fas fa-search fa-lg"></i></div>
             </div>
@@ -41,7 +41,7 @@
         </div>
     </li>
     <li class="list-inline-item mobile-nav-list-items">
-        <a class="{% if grand_total %}text-light-green basket-nav font-weight-bold{% else %}text-grey-nav{% endif %} nav-link d-block d-md-none" href="{% url 'view_basket' %}">
+        <a class="{% if grand_total %}text-light-green basket-nav font-weight-bold{% else %}mobile-nav-icons{% endif %} nav-link d-block d-md-none" href="{% url 'view_basket' %}">
             <div class="text-center">
                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
             </div>

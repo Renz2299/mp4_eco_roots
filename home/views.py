@@ -28,7 +28,7 @@ def contact(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Successfully sent your request!')
+            messages.info(request, 'Successfully sent your request!')
             return redirect(reverse('home'))
         else:
             messages.error(request, 'Failed to send your request. Please ensure the form is valid.')
