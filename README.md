@@ -26,9 +26,9 @@
     * [Checkout App](#checkout)
     * [Messages](#messages)
     * [Profile](#profile)
-8. [Testing During Development]()
-9. [Pre-Deployment Testing]()
-    * [Responsiveness]()
+8. [Testing During Development](#testing-during-development)
+9. [Pre-Deployment Testing](#pre-deployment-testing)
+    * [Responsiveness](#responsiveness)
     * [Browser Compatibility]()
     * [Bug Fixes]()
     * [Code Validation]()
@@ -754,7 +754,6 @@ Finally, the save information functionality was setup within the checkout succes
 ![Save info in profile view](readme_imgs/save_info.png)
 
 ## Testing During Development
-
 During site development the local server was run to check that the site was rendering as expected when new functionality or edits were being implemented. This meant a lot of minor issues to do with functionality and styling were fixed alongside site development. Below are the larger bug fixes that were found when testing the site during development.
 
 **Bug Fix 1:** Site footer not staying at the bottom of pages with less than a full screen height's worth of content.
@@ -786,11 +785,9 @@ It was found that the 'this' element used when setting the itemId variable was n
 ![Quantity button JavaScript after](readme_imgs/qty_buttons_bug_after.png)
 
 ## Pre-Deployment Testing
-
 A large amount of the required testing was completed prior to deploying the site so that the majority of the problems could be found and resolved on the local server as it is much quicker to check that problems have been resolved and doesn't require a new commit for every minor styling issue.
 
 ### Responsiveness
-
 The site was tested on a multitude of screen sizes using Chrome developer tools to check that the site renders correctly on all screens tested and that all images and links work properly.
 
 Screen Width | | | | | Device | | | | |
@@ -846,27 +843,149 @@ Tablet Screens:
     - [x] 768px - 992px wide: Forms only half screen, could be a bit wider
     - [x] Category descriptions too long - Maybe shorten on all screens or truncate
 
- The majority of these issues were related to styling and could be resolved quite easily either with a bootstrap or custom css class.
+ The majority of these issues were related to styling and could be resolved quite easily either with a bootstrap or custom css class. These bug fixes can be found in commits 87 & ?? in the github repository.
 
 ### Browser Compatibility
-
 The site was tested in multiple browsers to ensure all features worked correctly and the site responded in the intended way no matter what browser was being used.
 
 | | Browser | | | Notes
 :--- | :--- | --- | --- | ---
 | | Chrome | Edge | Firefox
-Intended Appearance? |  |  |  | 
-Intended Responsiveness? |  |  |  | 
-Buttons Work as Expected? |  |  |  |
-Forms Work as Expected? |  |  |  | 
+Intended Appearance? | Yes | Yes | Yes | Site renders as expected on all browsers tested
+Intended Responsiveness? | Yes | Yes | Yes | Site responds as expected on all browsers tested
+Buttons Work as Expected? | Yes | Yes | Yes | Buttons function as expected on all browsers tested
+Forms Work as Expected? | Yes | Yes | Yes | Forms work as expected on all browsers tested
 
-### Bug Fixes
+Almost no issues were found during browser testing. The only issue found was regarding the quantity buttons within the shopping basket page. The buttons only worked correctly on the first item in the basket and the buttons for subsequent items changed the quantity of the first item. This was missed during responsiveness testing because the shopping basket needed refactoring at this point.
 
-Qty buttons for subsequent basket items
+![Basket quantity button JavaScript before](readme_imgs/.png)
+
+![Basket quantity button JavaScript after](readme_imgs/.png)
 
 ### Code Validation
+The HTML, CSS, JavaScript and Python for the site was ran through a validator specific to each language, the results are shown in the table below.
+
+| | Validations | Notes
+---: | --- | ---
+HTML | Checked on: https://validator.w3.org/ | **Errors:**  **Warnings:** 
+CSS | Checked on: https://jigsaw.w3.org/css-validator/ | **Errors:**  **Warnings:** 
+JavaScript | Checked on: https://jshint.com/ | **Errors:**  **Warnings:** 
+Python | Checked on: https://pep8ci.herokuapp.com/ | **Errors:**  **Warnings:** 
+
 ### User Story Testing
+To ensure the site met the original user goal's outlined in the [User Stories](#user-stories) section, each goal was tested to check that it was met by the finished site.
+
+User Story ID | User | I Want To Be Able To... | Testing
+:--- | :--- | :--- | :---
+**Viewing & Navigation**
+1 | Shopper | View a list of products | 
+2 | Shopper | View a category of products | 
+3 | Shopper | View individual product details | 
+4 | Shopper | View product and company sustainability credentials | 
+5 | Shopper | View product reviews and ratings | 
+6 | Shopper | Identify new product arrivals to the site | 
+7 | Shopper | View the total of my purchases at any time | 
+8 | Shopper | View bundles of products | 
+**Registration & User Accounts**
+9 | Site User | Easily register for an account | 
+10 | Site User | Easily login or logout | 
+11 | Site User | Easily recover my password if it's forgotten | 
+12 | Site User | Have a personalised account profile | 
+**Sorting & Searching**
+13 | Shopper | Sort the available products | 
+14 | Shopper | Sort a specific category of product | 
+15 | Shopper | Sort multiple categories of products simultaneously | 
+16 | Shopper | Search for a product by name or description | 
+17 | Shopper | See what I've searched for and the number of results found | 
+**Purchasing & Checkout**
+18 | Shopper | Add items to my basket and the desired quantity | 
+19 | Shopper | View items in my basket | 
+20 | Shopper | Easily update the quantity of a product in the basket | 
+21 | Shopper | Remove an item from the basket | 
+22 | Shopper | Easily enter my delivery and payment information | 
+23 | Shopper | View details about any errors when handling delivery and payment information | 
+24 | Shopper | View an order confirmation after checkout | 
+**Interacting with the Store**
+25 | Site User | Contact the store with any queries | 
+26 | Shopper | Add reviews to products I have purchased | 
+**Admin & Store Management**
+27 | Store Owner | Add a product | 
+28 | Store Owner | Edit a product's details | 
+29 | Store Owner | Delete a product | 
+30 | Store Owner | View contact requests | 
+
 ### Feature Testing
+The site features were tested to ensure they provide the correct user feedback.
+
+Feature | Action | Effect
+--- | --- | ---
+**Navigation**
+Logo (all pages) | Hover over | Cursor changes to a pointer, colour changes to #BF0D38
+| | Click | Direct users to the Home page
+Site Navigation (<993px wide) (all pages) | Hover over toggler | Cursor changes to a pointer, colour changes to #BF0D38
+| | Click toggler | Opens mobile sidenav
+| | Hover over page | Cursor changes to a pointer, background changes to pale grey
+| | Click page | Directs user to selected page
+Site Navigation (>=993px wide) (all pages) | Hover over page | Cursor changes to a pointer, colour changes to #BF0D38 and background changes to darker orange
+| | Click page | Directs user to selected page
+**User Authentication**
+Login Button | Hover over | Cursor changes to a pointer, background colour changes to #DF6D00
+| | Click | Directs user to login page
+Register Button | Hover over | Cursor changes to a pointer, background colour changes to #DF6D00
+| | Click | Directs user to register page
+Login Form | Hover over data fields | Cursor changes to a text cursor
+| | Click in data field | Icon and bottom border change to #BF0D38, label shrinks and moves to above field, typing cursor appears in data field
+| | Click out of data field | If data entered and correct format, bottom border changes to green. If data entered incorrectly or left empty, bottom border changes to red
+| | Hover over 'LOGIN' | Cursor changes to a pointer, background colour changes to #BF0D38
+| | Click 'LOGIN' | If data fields filled in correctly and matches existing user: Directs user to My Recipes page and flashes 'Login Successful!'. If data fields not filled in correctly: Redirects user to login page and flashes 'Incorrect username and/or password'
+Registration Form | Hover over data fields | Cursor changes to a text cursor
+| | Click in data field | Icon and bottom border change to #BF0D38, label shrinks and moves to above field, typing cursor appears in data field
+| | Click out of data field | If data entered and correct format, bottom border changes to green. If data entered incorrectly or left empty, bottom border changes to red
+| | Hover over 'REGISTER' | Cursor changes to a pointer, background colour changes to #BF0D38
+| | Click 'REGISTER' | If data fields filled in correctly and not already existing user: Directs user to My Recipes page and flashes 'Registration Successful!'. If user already exists: Directs user to login page and flashes 'Username already exists'
+**Home App**
+**Products App**
+Add Recipe Button | Hover over | Cursor changes to a pointer, background colour changes to #BF0D38
+| | Click | Directs user to add recipe form
+Add Recipe Form | Hover over data fields | Cursor changes to a text cursor
+| | Click in data field | Icon and bottom border change to #BF0D38, label shrinks and moves to above field, typing cursor appears in data field
+| | Click out of data field | If data entered and correct format, bottom border changes to green. If data entered incorrectly or left empty, bottom border changes to red
+| | Hover over 'ADD RECIPE' | Cursor changes to a pointer, background colour changes to #BF0D38
+| | Click 'ADD RECIPE' | If data fields filled in correctly and photo URL valid: Directs user to My Recipes page and flashes 'Recipe Successfully Added!'. If photo URL invalid: Directs user to My Recipes page and flashes 'Invalid photo URL'
+More Details Button | Hover over | Cursor changes to pointer, background colour changes to #BF0D38
+| | Click | Directs user to individual recipe page
+Edit Recipe Button | Hover over | Cursor changes to pointer, background colour changes to #DF6D00
+| | Click | Directs user to edit recipe page
+Edit Recipe Form | Hover over data fields | Cursor changes to a text cursor
+| | Click in data field | Icon and bottom border change to #BF0D38, label shrinks and moves to above field, typing cursor appears in data field
+| | Click out of data field | If data entered and correct format, bottom border changes to green. If data entered incorrectly or left empty, bottom border changes to red
+| | Hover over 'EDIT RECIPE' | Cursor changes to a pointer, background colour changes to #DF6D00
+| | Click 'EDIT RECIPE' | If data fields filled in correctly and photo URL valid: Directs user to Recipe page and flashes 'Recipe Successfully Updated!'. If photo URL invalid: Directs user to Recipe page and flashes 'Invalid photo URL'
+Delete Recipe Button | Hover over | Cursor changes to pointer, background colour changes to #DF6D00
+| | Click | Opens modal over current page
+Delete Recipe Modal | Hover over 'Yes, delete' button | Cursor changes to a text cursor, background colour changes to dark red
+| | Click on 'Yes, delete' button | Recipe is deleted from database, user is redirected to My Recipes page and flashes 'Recipe Deleted!'
+| | Hover over 'No, go back' button | Cursor changes to a text cursor, background colour changes to dark green
+| | Click on 'No, go back' button | Modal closes, user remains on Recipe page
+**Basket App**
+**Checkout App**
+**Profiles App**
+Edit Account Details Button | Hover over | Cursor changes to pointer, background colour changes to #DF6D00
+| | Click | Directs user to edit account page
+Edit Account Form | Hover over data fields | Cursor changes to a text cursor
+| | Click in data field | Icon and bottom border change to #BF0D38, label shrinks and moves to above field, typing cursor appears in data field
+| | Click out of data field | If data entered and correct format, bottom border changes to green. If data entered incorrectly or left empty, bottom border changes to red
+| | Hover over 'EDIT ACCOUNT DETAILS' | Cursor changes to a pointer, background colour changes to #DF6D00
+| | Click 'EDIT ACCOUNT DETAILS' | If data fields filled in correctly: Directs user to Account page and flashes 'Account Successfully Updated!'
+Delete Account Button | Hover over | Cursor changes to pointer, background colour changes to #DF6D00
+| | Click | Opens modal over current page
+Delete Account Modal | Hover over 'Yes, delete' button | Cursor changes to a text cursor, background colour changes to dark red
+| | Click on 'Yes, delete' button | Account is deleted from database, user is redirected to Home page and flashes 'Account Deleted!'. Any recipes created by deleted user are also removed from database.
+| | Hover over 'No, go back' button | Cursor changes to a text cursor, background colour changes to dark green
+| | Click on 'No, go back' button | Modal closes, user remains on Account page
+Logout | Hover over | Cursor changes to a pointer, colour changes to #BF0D38, background colour changes to dark orange
+| | Click | Directs user to Home page and flashes 'You have been logged out'
+
 ## Deployment
 
 Screenshot creating database in elephantSQL
@@ -880,6 +999,8 @@ Automatic deployments after pushing to github
 DEBUG = int(os.environ.get("DEVELOPMENT", default=0))
 
 ## Post-Deployment Testing
+
+
 ### Responsiveness
 
 Screen Width | | | | | Device | | | | |
@@ -903,11 +1024,37 @@ Buttons Work as Expected? |  |  |  |  |  |
 Forms Work as Expected? |  |  |  |  |  |
 
 ### Lighthouse Testing
+
+#### Index Page
+
+#### Contact Page
+
+#### Products Page
+
+#### Add/ Edit Product
+
+#### Add Review Page
+
+#### Shopping Basket
+
+#### Checkout
+
+#### Checkout Success
+
+#### User Profile
+
+Allauth not done as templates
+
 ### Future Improvements
 
 reset password page not styled the same
 
 Emails - future improvment
+
+**Future Additions (if time)**
+31 | Site User | Receive a confirmation email after registering | Verify that my account was successfully created
+32 | Site User | Add items to my wishlist | Save products that I'd like to purchase later
+33 | Shopper | Receive a confirmation email after placing an order | Keep the order confirmation for my records
 
 ## Credits & Acknowledgements
 
