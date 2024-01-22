@@ -21,42 +21,63 @@
                 <p class="text-bulk text-uppercase">Welcome Back {{ user }}</p>
             </div>
         </div>
-        <div class="row mt-4">
-            <div class="col-12 col-lg-8">
+        <div class="row">
+            <div class="col-12 col-lg-8 my-4">
                 <p class="text-bulk-sm">Order History</p>
                 <hr>
-                <div class="order-history table-responsive">
-                    <table class="table table-sm table borderless">
-                        <thead>
-                            <tr>
-                                <th class="text-bulk-sm text-green">Order Number</th>
-                                <th class="text-bulk-sm text-green">Date</th>
-                                <th class="text-bulk-sm text-green">Items</th>
-                                <th class="text-bulk-sm text-green">Order Total</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for order in orders %}
+                <div class="d-block d-md-none">
+                    {% for order in orders %}
+                        <div class="row">
+                            <div class="col">
+                                <p class="text-bulk-sm text-green">Order Number:
+                                    <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}">{{ order.order_number }}</a>
+                                </p>
+                                <p class="text-bulk-sm text-green">Date: {{ order.date }}</p>
+                                <ul class="list-unstyled text-bulk-sm text-green">
+                                    {% for item in order.lineitems.all %}
+                                        <li class="small">{{ item.product.name }} x{{ item.quantity }}</li>
+                                    {% endfor %}
+                                </ul>
+                                <p class="text-bulk-sm text-green"><strong>Order Total: £{{ order.grand_total }}</strong></p>
+                                <hr>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="d-none d-md-block">
+                    <div class="order-history table-responsive">
+                        <table class="table table-sm table borderless">
+                            <thead>
                                 <tr>
-                                    <td>
-                                        <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}">{{ order.order_number|truncatechars:10 }}</a>
-                                    </td>
-                                    <td class="text-bulk-sm text-green">{{ order.date }}</td>
-                                    <td>
-                                        <ul class="list-unstyled text-bulk-sm text-green">
-                                            {% for item in order.lineitems.all %}
-                                                <li class="small">{{ item.product.name }} x{{ item.quantity }}</li>
-                                            {% endfor %}
-                                        </ul>
-                                    </td>
-                                    <td class="text-bulk-sm text-green">£{{ order.grand_total }}</td>
+                                    <th class="text-bulk-sm text-green">Order Number</th>
+                                    <th class="text-bulk-sm text-green">Date</th>
+                                    <th class="text-bulk-sm text-green">Items</th>
+                                    <th class="text-bulk-sm text-green">Order Total</th>
                                 </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                {% for order in orders %}
+                                    <tr>
+                                        <td>
+                                            <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}">{{ order.order_number|truncatechars:10 }}</a>
+                                        </td>
+                                        <td class="text-bulk-sm text-green">{{ order.date }}</td>
+                                        <td>
+                                            <ul class="list-unstyled text-bulk-sm text-green">
+                                                {% for item in order.lineitems.all %}
+                                                    <li class="small">{{ item.product.name }} x{{ item.quantity }}</li>
+                                                {% endfor %}
+                                            </ul>
+                                        </td>
+                                        <td class="text-bulk-sm text-green">£{{ order.grand_total }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-lg-4 my-4">
                 <p class="text-bulk-sm">Default Delivery Information</p>
                 <hr>
                 <form action="{% url 'profile' %}" method="POST" id="profile-update-form" class="mt-3">
@@ -66,7 +87,7 @@
                 </form>
             </div>
         </div>
-        <div class="row">
+        <div class="row my-4">
             <div class="col-12">
                 <p class="text-bulk-sm mt-4">Account Details</p>
                 <hr>

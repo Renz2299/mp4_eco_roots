@@ -818,7 +818,7 @@ Mobile Screens:
     - [x] Category descriptions too long - Maybe shorten on all screens or truncate
     - [ ] Review ratings can be up to 9.9 rather than 5.0
 - Basket app
-    - [ ] Shopping basket requires side scrolling - Needs refactoring on mobile
+    - [x] Shopping basket requires side scrolling - Needs refactoring on mobile
 - Checkout app
     - [-] Card number overlaps expiry - Accept this is only on screens beneath 345px
     - [x] Buttons need margin and not full width
@@ -838,7 +838,7 @@ Mobile Screens:
 
 Tablet Screens:
 - Basket app
-    - [ ] Shopping basket requires side scrolling - Needs refactoring on tablet too
+    - [x] Shopping basket requires side scrolling - Needs refactoring on tablet too
 - Products app
     - [x] 768px - 992px wide: Forms only half screen, could be a bit wider
     - [x] Category descriptions too long - Maybe shorten on all screens or truncate
