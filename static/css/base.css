@@ -355,6 +355,9 @@ footer {
     .product-number {
         margin-left: 8.3%;
     }
+    .text-page-container{
+        width: 80%;
+    }
 }
 
 @media (max-width: 992px) {
@@ -379,6 +382,9 @@ footer {
     .qty-width {
         width: 50%;
     }
+    .text-page-container{
+        width: 60%;
+    }
 }
 
 @media (min-width: 768px) {
@@ -392,6 +398,9 @@ footer {
     .mx-6 {
         margin-left: 15%;
         margin-right: 15%;
+    }
+    .text-page-container{
+        width: 50%;
     }
 }
 

@@ -52,3 +52,9 @@ def contact_review(request):
     }
 
     return render(request, 'home/contact_review.html', context)
+
+
+def about(request):
+    """ A view to render the about us page """
+
+    return render(request, 'home/about.html')

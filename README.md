@@ -806,8 +806,7 @@ Mobile Screens:
 - Home app
     - [x] Nav icons hover/ click same colour as background
     - [x] Contact view needs info message rather than success message
-    - [ ] Contact review needs pagination
-    - [ ] Missing page links from footer
+    - [-] Missing page links from footer
     - [x] Socials missing from footer
 - Products app
     - [x] Sort by and no. of products not margin/padded very well
@@ -825,7 +824,7 @@ Mobile Screens:
     - [x] Overlay doing some weird things, needs some work
     - [x] Order number needs truncating on mobile
 - Profiles app
-    - [ ] Order history is too narrow - May need refactoring similar to shopping basket
+    - [x] Order history is too narrow - May need refactoring similar to shopping basket
     - [x] Update info button not full width
 - Allauth pages
     - [x] No margin under buttons
@@ -1050,6 +1049,8 @@ Allauth not done as templates
 reset password page not styled the same
 
 Emails - future improvment
+
+Contact review needs pagination
 
 **Future Additions (if time)**
 31 | Site User | Receive a confirmation email after registering | Verify that my account was successfully created
