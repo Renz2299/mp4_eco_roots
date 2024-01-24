@@ -806,7 +806,7 @@ Mobile Screens:
 - Home app
     - [x] Nav icons hover/ click same colour as background
     - [x] Contact view needs info message rather than success message
-    - [-] Missing page links from footer
+    - [x] Missing page links from footer
     - [x] Socials missing from footer
 - Products app
     - [x] Sort by and no. of products not margin/padded very well
@@ -842,7 +842,21 @@ Tablet Screens:
     - [x] 768px - 992px wide: Forms only half screen, could be a bit wider
     - [x] Category descriptions too long - Maybe shorten on all screens or truncate
 
- The majority of these issues were related to styling and could be resolved quite easily either with a bootstrap or custom css class. These bug fixes can be found in commits 87 & ?? in the github repository.
+The majority of these issues were related to styling and could be resolved quite easily either with a bootstrap or custom css class. These bug fixes can be found in commits 87-91 from 21st - 24th Jan 2024 in the github repository.
+
+A larger bug fix that came from responsiveness testing was refactoring the shopping basket and order history pages so they would render better on mobile and not require any sideways scrolling.
+
+For the basket page, this was done by splitting the basket template into multiple elements templates that could be included within the main basket template. On mobile the table that was used is hidden and instead the basket information is rendered as a list. And on tablet screens or larger, the mobile list is hidden and the table is shown and using the include tag to access the same information from the individual basket element templates.
+
+![Basket template refactor for mobile screens](readme_imgs/basket_mobile_refactor.png)
+
+![Basket template refactor for tablet screens and larger](readme_imgs/basket_tablet_refactor.png)
+
+The same thinking was applied to the order history section of the profile page, however the content wasn't split into separate templates since there wasn't as much code as required in the basket template.
+
+![Order history refactor for mobile screens](readme_imgs/order_history_mobile_refactor.png)
+
+![Order history refactor for tablet screens and larger](readme_imgs/order_history_tablet_refactor.png)
 
 ### Browser Compatibility
 The site was tested in multiple browsers to ensure all features worked correctly and the site responded in the intended way no matter what browser was being used.
@@ -855,11 +869,15 @@ Intended Responsiveness? | Yes | Yes | Yes | Site responds as expected on all br
 Buttons Work as Expected? | Yes | Yes | Yes | Buttons function as expected on all browsers tested
 Forms Work as Expected? | Yes | Yes | Yes | Forms work as expected on all browsers tested
 
-Almost no issues were found during browser testing. The only issue found was regarding the quantity buttons within the shopping basket page. The buttons only worked correctly on the first item in the basket and the buttons for subsequent items changed the quantity of the first item. This was missed during responsiveness testing because the shopping basket needed refactoring at this point.
+A lot of the issues with the site were luckily found during responsiveness testing, below is a list of issues found during testing on different browsers.
 
-![Basket quantity button JavaScript before](readme_imgs/.png)
+- Loading overlay on mobile covers the footer rather than main page content - CHeck on physical mobile screen on deployed.
 
-![Basket quantity button JavaScript after](readme_imgs/.png)
+- The quantity buttons within the shopping basket page only work correctly on the first item in the basket. The buttons for subsequent items change the quantity of the first item. This was missed during responsiveness testing because the shopping basket needed refactoring at this point. This bug was actually caused by a typo in the quantity form template... on the button tags, the data-item_id was written with a - rather than an _. This also meant the earlier bug fix for the quantity buttons on the product detail template could now be reverted as well.
+
+    ![Basket quantity form template fix](readme_imgs/qty_buttons_bug_basket.png)
+
+    ![Quantity form JavaScript bug fix](readme_imgs/qty_buttons_js_basket.png)
 
 ### Code Validation
 The HTML, CSS, JavaScript and Python for the site was ran through a validator specific to each language, the results are shown in the table below.
