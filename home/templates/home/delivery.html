@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid text-page-container">
+        <div class="row">
+            <div class="col text-center mt-3">
+                <h2 class="text-subheading text-green my-4">Delivery Policy</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="text-bulk text-green">Currently, we only deliver to addresses within the UK. This is because we source our products
+                    from within the UK and to keep our product's carbon footprints low it does not make sense to ship worldwide.</p>
+                <p class="text-bulk text-green">Delivery is charged at 10% of a customer order, however is free for orders over £50.</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

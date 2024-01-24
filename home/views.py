@@ -58,3 +58,16 @@ def about(request):
     """ A view to render the about us page """
 
     return render(request, 'home/about.html')
+
+
+
+def delivery(request):
+    """ A view to render the delivery policy page """
+
+    return render(request, 'home/delivery.html')
+
+
+def privacy(request):
+    """ A view to render the privacy policy page """
+
+    return render(request, 'home/privacy.html')
