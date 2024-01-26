@@ -11,6 +11,7 @@ from basket.contexts import basket_contents
 
 import stripe
 
+
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
@@ -40,21 +41,22 @@ def checkout(request):
                         )
                         order_line_item.save()
                 except Product.DoesNotExist:
-                    messages.error(request, (
-                        "One of the products in your basket wasn't found in our database.")
-                    )
+                    messages.error(request, ("One of the products \
+                        in your basket wasn't found in our database."))
                     order.delete()
                     return redirect(reverse('view_basket'))
-            
+
             request.session['save-info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(reverse('checkout_success',
+                                    args=[order.order_number]))
         else:
             message.error(request, 'There was an error with your form. \
                 Please double check your information.')
     else:
         basket = request.session.get('basket', {})
         if not basket:
-            messages.error(request, "There's nothing in your basket at the moment.")
+            messages.error(request, "There's nothing in your basket at \
+                           the moment.")
             return redirect(reverse('products'))
 
         current_basket = basket_contents(request)

@@ -880,14 +880,59 @@ A lot of the issues with the site were luckily found during responsiveness testi
     ![Quantity form JavaScript bug fix](readme_imgs/qty_buttons_js_basket.png)
 
 ### Code Validation
-The HTML, CSS, JavaScript and Python for the site was ran through a validator specific to each language, the results are shown in the table below.
+The HTML, CSS, JavaScript and Python for the site was ran through a validator specific to each language, the results are shown in the list below.
 
-| | Validations | Notes
----: | --- | ---
-HTML | Checked on: https://validator.w3.org/ | **Errors:**  **Warnings:** 
-CSS | Checked on: https://jigsaw.w3.org/css-validator/ | **Errors:**  **Warnings:** 
-JavaScript | Checked on: https://jshint.com/ | **Errors:**  **Warnings:** 
-Python | Checked on: https://pep8ci.herokuapp.com/ | **Errors:**  **Warnings:** 
+#### HTML
+
+Checked on: https://validator.w3.org/
+
+HTML code was copied directly from Chrome Developer Tools since the Jinja templating in the actual code would throw validation errors. Not every single site page was validated as most of them are duplicates, for example the individual category pages or the adding/editing product forms.
+
+**Errors:**
+- 'transform: var(--fa-rotate-angle, none) is not a transform value' - This is part of the fontawesome pre-written code and therefore cannot be changed.
+- Duplicate IDs 'user-options' & 'mobile-search' - This is because the base template and mobile-top-header both contain the account and search buttons within the navigation however only one is visible depending on the screen size, therefore the duplicate cannot be removed without impacting the function of the site on different screen sizes.
+- 'An img element must have an alt attribute' - Alt attributes were missing from the shopping basket images, the alt attribute for the products shopping basket images were set to product.name.
+- Duplicate IDs set for the remove from basket button - This is because the shopping basket was refactored using bootstrap display classes so that on mobile it is a list and on tablet or desktop it is a table. This means there are two remove from basket buttons for each product within the HTML code however only one is visible on the rendered site. 
+- Errors regarding the Stripe iframe:
+    - 'Bad value __privateStripeMetricsController2220 for attribute name on element iframe'
+    - 'The frameborder attribute on the iframe element is obsolete'
+    - 'The allowtransparency attribute on the iframe element is obsolete'
+    - 'The scrolling attirbute on the iframe element is obsolete'
+    - The above errors are all part of the stripe pre-written code and therefore cannot be changed.
+
+**Warnings:**
+- The type attribute is unnecessary for JavaScript resources.
+- Empty heading on the h1 tag with the loading overlay class.
+
+#### CSS
+
+Checked on: https://jigsaw.w3.org/css-validator/
+
+**Errors:** No errors
+
+**Warnings:** No warnings
+
+#### JavaScript
+
+Checked on: https://jshint.com/
+
+**Errors:** No errors
+
+**Warnings:** 
+- Various missing semicolons - These were added to the JavaScript where required
+- Template literal syntax is only available in ES6
+
+#### Python
+
+Checked on: https://pep8ci.herokuapp.com/
+
+**Errors:**
+- Expected 2 blank lines before function, found 1
+- Line longer that 79 characters
+- Over/ Under indentation on continuation line
+
+**Warnings:** 
+- No blank newline at end of file
 
 ### User Story Testing
 To ensure the site met the original user goal's outlined in the [User Stories](#user-stories) section, each goal was tested to check that it was met by the finished site.
@@ -1069,6 +1114,8 @@ reset password page not styled the same
 Emails - future improvment
 
 Contact review needs pagination
+
+README - JavaScript or JQuery?
 
 **Future Additions (if time)**
 31 | Site User | Receive a confirmation email after registering | Verify that my account was successfully created

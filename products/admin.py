@@ -14,11 +14,13 @@ class ProductAdmin(admin.ModelAdmin):
 
     ordering = ('sku',)
 
+
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
         'name',
     )
+
 
 class ReviewAdmin(admin.ModelAdmin):
     list_display = (
@@ -29,6 +31,7 @@ class ReviewAdmin(admin.ModelAdmin):
     )
 
     ordering = ('date',)
+
 
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)

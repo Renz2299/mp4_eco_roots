@@ -6,6 +6,7 @@ from products.models import Product
 from .models import Contact
 from .forms import ContactForm
 
+
 def index(request):
     """ A view to return the index page """
 
@@ -31,15 +32,17 @@ def contact(request):
             messages.info(request, 'Successfully sent your request!')
             return redirect(reverse('home'))
         else:
-            messages.error(request, 'Failed to send your request. Please ensure the form is valid.')
+            messages.error(request, 'Failed to send your request. Please \
+                ensure the form is valid.')
     else:
         form = ContactForm()
-        
+
     context = {
         'form': form,
     }
 
     return render(request, 'home/contact.html', context)
+
 
 @login_required
 def contact_review(request):
@@ -58,7 +61,6 @@ def about(request):
     """ A view to render the about us page """
 
     return render(request, 'home/about.html')
-
 
 
 def delivery(request):
