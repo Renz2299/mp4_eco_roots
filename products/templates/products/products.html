@@ -32,6 +32,17 @@
                     <h2 class="text-subheading text-green my-4">Pets</h2>
                     <p class="text-bulk my-4 mx-6">Our pet collection is dedicated to providing your furry companions with the finest in eco-conscious
                         pet products. Our curated collection embodies a commitment to pampering your pets while treading lightly on our planet.</p>
+                {% elif 'new_arrivals' in category %}
+                    <h2 class="text-subheading text-green my-4">New Arrivals</h2>
+                    <p class="text-bulk my-4 mx-6">Explore a world of innovation and responsibility with our new sustainable products. Each item is
+                        carefully selected to align with our commitment to a greener planet. Embrace products designed to minimize environmental impact,
+                        creating a positive change with every purchase.</p>
+                {% elif 'bundles' in category %}
+                    <h2 class="text-subheading text-green my-4">Bundles</h2>
+                    <p class="text-bulk my-4 mx-6">Introducing our sustainable product bundles — a curated selection of eco-friendly essentials. These
+                        bundles are designed to simplify your journey towards sustainability, offering a cohesive set of products that seamlessly integrate
+                        into your daily life. Each bundle is crafted with a purpose—to provide you with the tools you need for a greener, more mindful
+                        lifestyle.</p>
                 {% else %}
                     <h2 class="text-subheading text-green my-4">All Products</h2>
                 {% endif %}

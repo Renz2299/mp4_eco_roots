@@ -29,17 +29,16 @@
 8. [Testing During Development](#testing-during-development)
 9. [Pre-Deployment Testing](#pre-deployment-testing)
     * [Responsiveness](#responsiveness)
-    * [Browser Compatibility]()
-    * [Bug Fixes]()
-    * [Code Validation]()
-    * [User Story Testing]()
-    * [Feature Testing]()
-10. [Deployment]()
-11. [Post-Deployment Testing]()
-    * [Responsiveness]()
-    * [Browser Compatibility]()
-    * [Lighthouse Testing]()
-    * [Future Improvements]()
+    * [Browser Compatibility](#browser-compatibility)
+    * [Code Validation](#code-validation)
+    * [User Story Testing](#user-story-testing)
+    * [Feature Testing](#feature-testing)
+10. [Deployment](#deployment)
+11. [Post-Deployment Testing](#post-deployment-testing)
+    * [Responsiveness](#responsiveness-1)
+    * [Browser Compatibility](#browser-compatibility-1)
+    * [Lighthouse Testing](#lighthouse-testing)
+    * [Future Improvements](#future-improvements)
 12. [Credits & Acknowledgements](#credits--acknowledgements)
 
 ## Project Overview
@@ -926,6 +925,8 @@ Checked on: https://jshint.com/
 
 Checked on: https://pep8ci.herokuapp.com/
 
+Checking the python code on the PEP8 validator found some minor errors relating to indentation, long lines or missing/ additional lines. Most of these errors were fixed easily however a few lines of code that were too long couldn't be shortened without preventing the code from running, therefore these longer lines were left in the code to keep it functioning correctly.
+
 **Errors:**
 - Expected 2 blank lines before function, found 1
 - Line longer that 79 characters
@@ -940,41 +941,47 @@ To ensure the site met the original user goal's outlined in the [User Stories](#
 User Story ID | User | I Want To Be Able To... | Testing
 :--- | :--- | :--- | :---
 **Viewing & Navigation**
-1 | Shopper | View a list of products | 
-2 | Shopper | View a category of products | 
-3 | Shopper | View individual product details | 
-4 | Shopper | View product and company sustainability credentials | 
-5 | Shopper | View product reviews and ratings | 
-6 | Shopper | Identify new product arrivals to the site | 
-7 | Shopper | View the total of my purchases at any time | 
-8 | Shopper | View bundles of products | 
+1 | Shopper | View a list of products | From the 'Shop All' option in the navigation the user can click the 'All Products' option to view all products on one page.
+2 | Shopper | View a category of products | In the main navigation the user can select the category from 'Home', 'Kitchen', 'Beauty' or 'Pets' to view all products within a specific category.
+3 | Shopper | View individual product details | When viewing a list of products either from the index page, the all products view or a product category view, the user can click the product image to be directed to the product detail page where they can view an individual product's details.
+4 | Shopper | View product and company sustainability credentials | From the site footer the user can click the 'About Us' link to view information about EcoRoots and their sustainability efforts.
+5 | Shopper | View product reviews and ratings | When viewing an individual product detail page the product reviews are underneath the product image and information.
+6 | Shopper | Identify new product arrivals to the site | On the index page the new arrivals category is shown in the first section of the page. The user can also click the 'New Arrivals' link under a new product to view the whole category on a single page.
+7 | Shopper | View the total of my purchases at any time | If the user has items in their shopping basket, the grand total is shown beneath the shopping basket link in the site navigation. However, this isn't shown on mobile but the user still receives a success message showing their basket when they add any products to their basket.
+8 | Shopper | View bundles of products | On the index page the bundles category is shown in the second section of the page. The user can also click the 'Bundles' link under a new product to view the whole category on a single page.
 **Registration & User Accounts**
-9 | Site User | Easily register for an account | 
-10 | Site User | Easily login or logout | 
-11 | Site User | Easily recover my password if it's forgotten | 
-12 | Site User | Have a personalised account profile | 
+9 | Site User | Easily register for an account | The 'My Account' link in the site navigation has a 'Regsiter' option if the session user is not already logged in. On the registration page they can register for an account by entering their email address and creating a username and password.
+10 | Site User | Easily login or logout | The 'My Account' link in the site navigation has a 'Login' or 'Logout' option depending on if the session user is already logged in. Clicking 'Login' will take the user to a page where they can enter their username or email and password to login. Clicking 'Logout' will take the user to a confirmation page checking they would like to logout before actually logging them out of the site.
+11 | Site User | Easily recover my password if it's forgotten | If a user has forgotten their password, from the login page they can click the 'Forgott Password?' button and they will directed to a page where they can enter their email address. They can then click the 'Reset My Password' button where they should be sent an email including a link to set a new password. Currently this is as far as the user can get as the site isn't sending emails.
+12 | Site User | Have a personalised account profile | The 'My Account' link has a 'My Profile' option where the user can view their profile page. On this page is their order history, default delivery information and account information.
 **Sorting & Searching**
-13 | Shopper | Sort the available products | 
-14 | Shopper | Sort a specific category of product | 
-15 | Shopper | Sort multiple categories of products simultaneously | 
-16 | Shopper | Search for a product by name or description | 
-17 | Shopper | See what I've searched for and the number of results found | 
+13 | Shopper | Sort the available products | From the site navigation the 'Shop All' option can be sorted by price, rating or category. When viewing all products they can be sorted price, rating, name or category in ascending and descending order.
+14 | Shopper | Sort a specific category of product | When viewing a specific category of products, the available products  can be sorted price, rating, name or category in ascending and descending order.
+15 | Shopper | Sort multiple categories of products simultaneously | When viewing all products from various categories they can be sorted price, rating, name or category in ascending and descending order.
+16 | Shopper | Search for a product by name or description | The 'Search' link in the site navigation allows the user to enter a search term and view all products where that search term is present in either the product name or description.
+17 | Shopper | See what I've searched for and the number of results found | When filtering products by a search term, the number of products returned in the search along with the user's search term is shown above the list of filtered products.
 **Purchasing & Checkout**
-18 | Shopper | Add items to my basket and the desired quantity | 
-19 | Shopper | View items in my basket | 
-20 | Shopper | Easily update the quantity of a product in the basket | 
-21 | Shopper | Remove an item from the basket | 
-22 | Shopper | Easily enter my delivery and payment information | 
-23 | Shopper | View details about any errors when handling delivery and payment information | 
-24 | Shopper | View an order confirmation after checkout | 
+18 | Shopper | Add items to my basket and the desired quantity | When viewing a product detail page, underneath the product information is a form to increase or decrease the quantity of the product (within 1-99) followed by an 'Add To Basket' button. Clicking this button will add the current quantity of that product to the user's basket.
+19 | Shopper | View items in my basket | Clicking the 'Basket' link in the site navigation will direct the user to their shopping basket where they can view all the products in their basket.
+20 | Shopper | Easily update the quantity of a product in the basket | When viewing the shopping basket, each line item has a form allowing the user to increase or decrease the quantity of that specific item within their basket. Once the user has corrected the quantity they can click the 'Update' button underneath to save their changes to the basket.
+21 | Shopper | Remove an item from the basket | Underneath the quantity input form for the line item in the shopping basket is a 'Remove' link, by clicking 'Remove' the user can remove that specific product and quantity from the basket.
+22 | Shopper | Easily enter my delivery and payment information | When on the checkout page, the user is presented with a form where they can enter their delivery information. If they have any delivery information already saved to their profile, this will be pre-filled in the form.
+23 | Shopper | View details about any errors when handling delivery and payment information | When the user attempts to complete checkout any errors will be shown on the specific form field that has caused the error. Any errors with the card details field are handled by Stripe and therefore look slightly different.
+24 | Shopper | View an order confirmation after checkout | Upon successfully checking out the user is directed to the checkout success page showing their order details including their order number, order date, product details, delivery information and order total.
 **Interacting with the Store**
-25 | Site User | Contact the store with any queries | 
-26 | Shopper | Add reviews to products I have purchased | 
+25 | Site User | Contact the store with any queries | From the site footer the user can click the 'Contact Us' link where they are redirected to the contact form. They can fill out this form with their name, email and query which can be reviewed by the store owners.
+26 | Shopper | Add reviews to products I have purchased | After purchasing a product, the user can return to the product detail page and click the 'Add Review' button. This will direct them to the add review form where they can add a review title, content and rating. Upon submitting this form the review will be shown on that individual product's detail page.
 **Admin & Store Management**
-27 | Store Owner | Add a product | 
-28 | Store Owner | Edit a product's details | 
-29 | Store Owner | Delete a product | 
-30 | Store Owner | View contact requests | 
+27 | Store Owner | Add a product | The 'My Account' link in the site navigation has a 'Product Management' option that is only available to a store owner account. On the product management page is a form to add a product, the store owner can include the category, sku, product name, product description, price, rating and image.
+28 | Store Owner | Edit a product's details | When viewing an individual product detail page from a store owner account, above the quantity input form is an 'Edit' button that directs the store owner to a form where they can edit that specific product's details. The current details will already be pre-filled in the form.
+29 | Store Owner | Delete a product | When viewing an individual product detail page from a store owner account, above the quantity input form is a 'Delete' button. Clicking the delete button will open a confirmation modal asking the user to confirm they would like to delete the product or return to the product detail page and close the modal.
+30 | Store Owner | View contact requests | The 'My Account' link in the site navigation has a 'Review Contact Requests' option that is only available to a store owner account. On the review contact requests page the store owner can view a list of contact requests showing the name, email and query that users have submitted.
+
+From user story testing a few minor site elements were found to be missing:
+
+- The new arrivals and bundles categories don't have subheadings or descriptions - These were added to the products.html file.
+- The grand total isn't visible on mobile view - This was experimented with however was decided not to be included because it would make the navigation taller on mobile view which will push every page's content out of alignment because a header container of a specific site is used throughout to push the content below the navigation.
+- Recovering a forgotten password currently can't be done as the site isn't sending emails - Sending emails functionality was tried before beginning the testing process however was not working properly, this functionality will be tried again once the site testing is complete and if their is time prior to the deadline.
 
 ### Feature Testing
 The site features were tested to ensure they provide the correct user feedback.
@@ -1111,6 +1118,8 @@ Allauth not done as templates
 
 reset password page not styled the same
 
+Sort reviews by latest date
+
 Emails - future improvment
 
 Contact review needs pagination
@@ -1123,6 +1132,8 @@ README - JavaScript or JQuery?
 33 | Shopper | Receive a confirmation email after placing an order | Keep the order confirmation for my records
 
 ## Credits & Acknowledgements
+
+Add comments to code where it's not my own or customised from a template
 
 Mockups for renders <a href="https://www.freepik.com/free-vector/digital-device-mockup-set_4122518.htm#query=device%20mockup&position=8&from_view=search&track=ais&uuid=2c6b5773-48a8-4b9a-b8a0-4b83164331af">Image by rawpixel.com</a> on Freepik
 
