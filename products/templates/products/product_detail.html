@@ -78,13 +78,13 @@
                             <div class="form-group qty-width">
                                 <div class="input-group input-group-{{ product.id }}">
                                     <div class="input-group-prepend">
-                                        <label for="minus-button" class="sr-only">Decrease quantity</label>
                                         <button id="minus-button" class="decrement-qty btn qty-btn decrement-qty_{{ product.id }}"
                                             data-item-id="{{ product.id }}">
                                             <span class="icon">
                                                 <i class="fas fa-minus"></i>
                                             </span>
                                         </button>
+                                        <label for="minus-button" class="sr-only">Decrease quantity</label>
                                     </div>
                                     <label for="quantity" class="sr-only">Quantity</label>
                                     <input id="quantity" class="form-control qty_input id_qty_{{ product.id }}" type="number"

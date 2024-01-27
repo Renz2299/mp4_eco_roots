@@ -1389,11 +1389,13 @@ Page specific issues found:
 
 #### Product Detail Page
 
-![Product Detail page lighthouse score 2](readme_imgs/product_1.png)
+![Product Detail page lighthouse score](readme_imgs/product_1.png)
 
 Page specific issues found:
 - Buttons do not have accessible names: Label tags were added to the quantity buttons with the bootstrap 'sr-only' class.
 - Form elements do not have associated labels: A label tag was added to the input tag with the bootstrap 'sr-only' class.
+
+![Product Detail page lighthouse score 2](readme_imgs/product_2.png)
 
 #### Add/ Edit Product
 
@@ -1410,6 +1412,8 @@ Page specific issues found:
 Page specific issues found:
 - Buttons do not have accessible names: Label tags were added to the quantity buttons with the bootstrap 'sr-only' class.
 - Form elements do not have associated labels: A label tag was added to the input tag with the bootstrap 'sr-only' class.
+
+![Shopping Basket page lighthouse score 2](readme_imgs/basket_2.png)
 
 #### Checkout
 
