@@ -1185,15 +1185,137 @@ No bugs were found from feature testing the messages.
 
 ## Deployment
 
-Screenshot creating database in elephantSQL
+This site was deployed on Heroku using an ElephantSQL database.
 
-Screenshot making new app in Heroku
+### Creating a new ElephantSQL database
 
-heroku login after procfile
+1. From the ElephantSQL dashboard, click 'Create Instance'.
 
-Automatic deployments after pushing to github
+    ![Creating instance in ESQL](readme_imgs/esql_create_instance.png)
 
-DEBUG = int(os.environ.get("DEVELOPMENT", default=0))
+2. Give the instance a name, select a suitable plan (for this project the Tiny Turtle plan was used) and add any tags if desired, then click 'Select Region'.
+
+    ![Giving instance a name in ESQL](readme_imgs/esql_instance_name.png)
+
+3. Select the closest available data center, then click 'Review'.
+
+    ![Selecting region in ESQL](readme_imgs/esql_select_region.png)
+
+4. Review the instance details and click 'Create Instance' if everything is correct.
+
+    ![Confirming instance in ESQL](readme_imgs/esql_confirm_instance.png)
+
+5. Open the instance details from the ESQL dashboard, keep this page open for later.
+
+    ![Reviewing instance details in ESQL](readme_imgs/esql_instance_details.png)
+
+### Creating a new Heroku app
+
+1. From the Heroku dashboard click 'New' and then 'Create new app'.
+
+    ![Create a new app in Heroku](readme_imgs/esql_deployment_12.png)
+
+2. Give the app a name and select the closest region, the click 'Create app'.
+
+    ![Naming the new Heroku app](readme_imgs/esql_deployment_13.png)
+
+3. Within the new Heroku app, select the 'Settings' tab.
+
+    ![Heroku settings tab](readme_imgs/heroku_settings_tab.png)
+
+4. Click 'Reveal Config Vars', then add a new key called 'DATABASE_URL' with the value as the URL from the new ElephantSQL database.
+
+    ![Heroku database_url key](readme_imgs/heroku_config_vars_1.png)
+
+### Connecting ESQL database to the local development server
+
+1. To connect the ElephantSQL database to the development server, dj_database_url and psycopg2 are required. These can be installed by typing 'pip3 install dj_database_url psycopg2' into the terminal.
+
+2. Once they are installed, the requirements.txt file can be updated by typing 'pip freeze > requirements.txt' in the terminal.
+
+3. Next, in the settings.py file dj_database_url needs importing. This can be added under the 'import os' line.
+
+    ![Importing dj_database_url in settings.py](readme_imgs/importing_dj_database_url.png)
+
+4. Still within the settings.py file, the databases section should be commented out and a new database section should be added underneath with the database url from ElephantSQL. This now means the development server is looking at the ElephantSQL database rather than the local sqlite3 database. Code should not be committed with this database url in, this will be updated later on in the deployment process to keep the url secret.
+
+    ![Databases section in settings.py](readme_imgs/db_url_in_settings.png)
+
+5. Now, run 'python3 manage.py showmigrations' in the terminal. If you are successfully connected to the ElephantSQL database you should see a list of migrations, however none of them should be checked off. This is the point where any known updates to models or fixtures should be done as they will be migrated/ loaded in the next steps, so updating them now can prevent having to do more work later.
+
+    ![Show migrations in the terminal](readme_imgs/migrations_showing_connected_to_db.png)
+
+6. In the terminal run 'python3 manage.py migrate' to migrate the database models to the new database, run this with the plan flag to check the migrations first if desired.
+
+7. Run 'python3 manage.py loaddata [fixture name] to load the data into the new database. Be sure to load fixtures files in the correct order if any of them have data tat relies on the other, for this project, the categories data needed loading first.
+
+8. Run 'python3 manage.py createsuperuser' in the terminal to create a superuser for the new database. Follow the steps in the terminal to enter email, username and password.
+
+9. Finally, the database url from step 4 can be removed and the commented out code can be added back in to prevent the database url being pushed to github. This section will be reviewed again later on in the deployment process.
+
+### Confirming the database
+
+1. On the ElephantSQL page for the database, select 'Browser' from the left side navigation.
+
+    ![ElephantSQL browser tab](readme_imgs/esql_browser_tab.png)
+
+2. Click the 'Table queries' button and select 'auth_user'.
+
+    ![ElephantSQL table queries](readme_imgs/esql_table_queries.png)
+
+3. Click 'Execute'. The newly created superuser details should be displayed.
+
+    ![ElephantSQL auth user](readme_imgs/esql_auth_user.png)
+
+### Deploying to Heroku
+
+1. First, install gunicorn which will act as the web server for the deployed site. To do this run 'pip3 install gunicorn' in the terminal. And then freeze the requirements.txt file with 'pip freeze > requirements.txt'
+
+2. Next, update the databases section of the settings.py to the following. The if statement is looking for a DATABASE_URL in the environment variables, if it finds one then it will use that url. Else, it will use the local sqlite3 database.
+
+    ![Updated databases section in settings.py](readme_imgs/if_else_database_url.png)
+
+3. Create a Procfile within the root directory and type the following line in the file.
+
+    ![Heroku Procfile](readme_imgs/procfile.png)
+
+4. Login to Heroku from the terminal by typing 'heroku login'. Follow the steps for logging into Heroku.
+
+5. Next, temporarily disable COLLECTSTATIC by typing 'heroku config:set DISABLE_COLLECTSTATIC=1 --app [app name]' in the terminal. This prevents Heroku from trying to collect static files when first deploying.
+
+6. Add the host name of the Heroku app to the allowed hosts section of the settings.py file.
+
+    ![Allowed hosts in settings.py](readme_imgs/allowed_hosts.png)
+
+7. Next, commit the changes to github with 'git add.', 'git commit -m "[commit message]"' followed by 'git push'.
+
+8. Initialise the Heroku git remote by typing 'heroku git:remote -a [app name]' in the terminal.
+
+9. Then the app can be deployed to Heroku by typing 'git push heroku main' in the terminal. Note that main may be something different depending on the repository, it should be the name of the main/master branch in github.
+
+### Setup automatic deployments
+
+1. In the deploy tab within the Heroku app select GitHub as the deployment method. Search for the respository within the search bar.
+
+    ![Connecting to GitHub from Heroku](readme_imgs/connect_to_github.png)
+
+2. In the automatic deploys section ensure the correct branch is selected in the dropdown menu and then click 'Enable Automatic Deploys'.
+
+    ![Enabling automatic deploys](readme_imgs/automatic_deploys.png)
+
+3. To test automatic deployments are working a new commit is needed, this could be updating the secret key to an environment variable. To do this, create a secret key that is unique to this project and add it as a config var in the Heroku app's settings tab.
+
+    ![Secret key variable in Heroku](readme_imgs/secret_key_variable.png)
+
+4. Next, the secret key in the settings.py can be removed and replaced with the following code. The debug variable has also been set to be the same as the development variable in the environment.
+
+    ![Updated secret key in settings.py](readme_imgs/secret_key_debug.png)
+
+5. Commit these changes to github and check the activity tab in the Heroku app, if automatic deploys are setup correctly there should be a build in progress.
+
+### Storing static files with AWS S3
+
+1. 
 
 ## Post-Deployment Testing
 
@@ -1253,6 +1375,8 @@ Emails - future improvment
 Contact review needs pagination
 
 README - JavaScript or JQuery?
+
+DEBUG = int(os.environ.get("DEVELOPMENT", default=0))
 
 **Future Additions (if time)**
 31 | Site User | Receive a confirmation email after registering | Verify that my account was successfully created
