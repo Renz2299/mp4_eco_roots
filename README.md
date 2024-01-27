@@ -1321,6 +1321,7 @@ This site was deployed on Heroku using an ElephantSQL database.
 
 
 ### Responsiveness
+The deployed site was tested on a multitude of screen sizes using Chrome developer tools and physically on iPhone 6/7/8 to check that the site renders correctly on all screens tested and that all images and links work properly.
 
 Screen Width | | | | | Device | | | | |
 ---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---:
@@ -1350,22 +1351,40 @@ The following issues were checked on a physical mobile screen to test whether th
 - Dropdown nav doesn't disappear on next click - Have to click on toggler to hide it
 
 ### Browser Compatibility
+The deployed site was tested in multiple browsers to ensure all features worked correctly and the site responded in the intended way no matter what browser was being used.
 
 | | Browser | | | Notes
 :--- | :--- | --- | --- | ---
-| | Chrome | Edge | Firefox | Safari | Ecosia
-Intended Appearance? |  |  |  |  |  |
-Intended Responsiveness? |  |  |  |  |  |
-Buttons Work as Expected? |  |  |  |  |  |
-Forms Work as Expected? |  |  |  |  |  |
+| | Chrome | Edge | Firefox | Safari (only on mobile)
+Intended Appearance? | Yes | Yes | Yes | Yes | Yes
+Intended Responsiveness? | Yes | Yes | Yes | Yes
+Buttons Work as Expected? | Yes | Yes | Yes | Yes
+Forms Work as Expected? | Yes | Yes | Yes | Yes
 
 ### Lighthouse Testing
 
 #### Index Page
 
+![Index page lighthouse score](readme_imgs/index_1.png)
+
+- Render-blocking resources: All required add-ins such as Stripe, font awesome, AWS.
+- Images could be in WEBP format
+- Insufficient contrast colours: This was checked using Adobe's contrast checker before setting on a colour scheme and no clashing colours have been used.
+
 #### Contact Page
 
+![Contact page lighthouse score](readme_imgs/contact_1.png)
+
+- Insufficient contrast colours: This was checked using Adobe's contrast checker before setting on a colour scheme and no clashing colours have been used.
+- Sort by element missing label element: This was added and given the bootstrap 'sr-only' class to hide it on the page.
+- Heading elements not in sequential order: This is because the heading element out of order is in the footer and therefore can't always be in order on every page.
+- Missing meta description tag: This was added as a generic description to the base template so it would be present on every page of the site.
+
+#### About Page
+
 #### Products Page
+
+![Products page lighthouse score](readme_imgs/products_1.png)
 
 #### Add/ Edit Product
 
