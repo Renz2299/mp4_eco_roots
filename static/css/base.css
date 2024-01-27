@@ -149,12 +149,13 @@ body {
     list-style-type: none;
 }
 
-.mobile-nav-icons {
+.mobile-nav-icons,
+.mobile-nav-basket {
     color: #D9D9D9;
 }
 
 .mobile-nav-icons:hover {
-    color: #591D0F;
+    color: #778C68;
 }
 
 /* ----------------------------------------------------- Header */
@@ -328,6 +329,14 @@ footer {
 }
 
 .allauth-form-inner-content input::placeholder {
+    color: #2E4013;
+}
+
+#hint_id_password a {
+    color: #778C68;
+}
+
+#hint_id_password a:hover {
     color: #2E4013;
 }
 

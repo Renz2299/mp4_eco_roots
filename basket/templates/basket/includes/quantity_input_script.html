@@ -25,7 +25,7 @@
     // Increment quantity
     $('.increment-qty').click(function(e) {
         e.preventDefault();
-        var itemId = $('.qty_input').data('item_id');
+        var itemId = $(this).data('item_id');
         var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
         var allQuantityInputs = $(`.input-group-${itemId} input[name='quantity']`);
         var currentValue = parseInt($(closestInput).val());
@@ -36,7 +36,7 @@
     // Decrement quantity
     $('.decrement-qty').click(function(e) {
         e.preventDefault();
-        var itemId = $('.qty_input').data('item_id');
+        var itemId = $(this).data('item_id');
         var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
         var allQuantityInputs = $(`.input-group-${itemId} input[name='quantity']`);
         var currentValue = parseInt($(closestInput).val());

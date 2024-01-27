@@ -984,76 +984,151 @@ From user story testing a few minor site elements were found to be missing:
 - Recovering a forgotten password currently can't be done as the site isn't sending emails - Sending emails functionality was tried before beginning the testing process however was not working properly, this functionality will be tried again once the site testing is complete and if their is time prior to the deadline.
 
 ### Feature Testing
-The site features were tested to ensure they provide the correct user feedback.
+The site features were tested to ensure they provide the correct user feedback. They were tested in sections depending on the area of the site being tested, this was so any bugs could be fixed quicky after being spotted and the list of bug fixes did not become too large to tackle in one go.
 
 Feature | Action | Effect
 --- | --- | ---
 **Navigation**
-Logo (all pages) | Hover over | Cursor changes to a pointer, colour changes to #BF0D38
-| | Click | Direct users to the Home page
-Site Navigation (<993px wide) (all pages) | Hover over toggler | Cursor changes to a pointer, colour changes to #BF0D38
-| | Click toggler | Opens mobile sidenav
-| | Hover over page | Cursor changes to a pointer, background changes to pale grey
-| | Click page | Directs user to selected page
-Site Navigation (>=993px wide) (all pages) | Hover over page | Cursor changes to a pointer, colour changes to #BF0D38 and background changes to darker orange
-| | Click page | Directs user to selected page
+Logo (all pages) | Hover over | Cursor changes to a pointer, colour changes to deep olive
+| | Click | Direct users to the site home
+Main Navigation (<768px wide) (all pages) | Hover over toggler | Cursor changes to a pointer, colour changes to deep olive
+| | Click toggler | Opens mobile main navigation as dropdown menu
+| | Hover over category | Cursor changes to a pointer, colour changes to muted green
+| | Click category | Directs user to selected category
+| | Click shop all | Opens dropdown menu of sort options
+| | Hover over shop all option | Background colour changes to light grey
+| | Click shop all option | Directs user to all products page with chosen sorting applied
+Main Navigation (>=768px wide) (all pages) | Hover over my account, search or basket (when no grand total) | Cursor changes to a pointer, colour changes to deep olive
+| | Hover over basket (when grand total is >0) | Cursor changes to a pointer, colour changes to rustic brown
+| | Click my account | Opens account dropdown
+| | Hover over account option | Background colour changes to light grey
+| | Click account option | Directs user to chosen account page
+| | Click search from navigation | Opens search bar in dropdown
+| | Click search from search bar | If search criteria - Directs user to all products page, with products filtered by search criteria shown above the products view. If no search criteria - Directs user to all products page and shows error message: 'You did not enter any search criteria'
+| | Click basket | Directs user to the shopping basket page
+Top navigation (<768px wide) (all pages) | Hover over my account, search or basket (when no grand total) | Cursor changes to a pointer, colour changes to rustic brown
+| | Hover over basket (when grand total is >0) | Cursor changes to a pointer, colour changes to rustic brown
+| | Click my account | Opens account dropdown
+| | Hover over account option | Background colour changes to light grey
+| | Click account option | Directs user to chosen account page
+| | Click search from navigation | Opens search bar in dropdown
+| | Click search from search bar | If search criteria - Directs user to all products page, with products filtered by search criteria shown above the products view. If no search criteria - Directs user to all products page and shows error message: 'You did not enter any search criteria'
+Top navigation (>=768px wide) (all pages) | Hover over product category | Cursor changes to a pointer, colour changes to muted green
+| | Click category | Directs user to selected category
+| | Click shop all | Opens dropdown menu of sort options
+| | Hover over shop all option | Background colour changes to light grey
+| | Click shop all option | Directs user to all products page with chosen sorting applied
+
+From feature testing the site navigation, the below bug was found:
+- Top navigation hover colour should be muted green except for the basket when grand total is >0 - This was caused by the CSS missing a muted green hover class for the mobile nav items, therefore all three were using the basket hover CSS.
+
+Feature | Action | Effect
+--- | --- | ---
 **User Authentication**
-Login Button | Hover over | Cursor changes to a pointer, background colour changes to #DF6D00
-| | Click | Directs user to login page
-Register Button | Hover over | Cursor changes to a pointer, background colour changes to #DF6D00
-| | Click | Directs user to register page
-Login Form | Hover over data fields | Cursor changes to a text cursor
-| | Click in data field | Icon and bottom border change to #BF0D38, label shrinks and moves to above field, typing cursor appears in data field
-| | Click out of data field | If data entered and correct format, bottom border changes to green. If data entered incorrectly or left empty, bottom border changes to red
-| | Hover over 'LOGIN' | Cursor changes to a pointer, background colour changes to #BF0D38
-| | Click 'LOGIN' | If data fields filled in correctly and matches existing user: Directs user to My Recipes page and flashes 'Login Successful!'. If data fields not filled in correctly: Redirects user to login page and flashes 'Incorrect username and/or password'
-Registration Form | Hover over data fields | Cursor changes to a text cursor
-| | Click in data field | Icon and bottom border change to #BF0D38, label shrinks and moves to above field, typing cursor appears in data field
-| | Click out of data field | If data entered and correct format, bottom border changes to green. If data entered incorrectly or left empty, bottom border changes to red
-| | Hover over 'REGISTER' | Cursor changes to a pointer, background colour changes to #BF0D38
-| | Click 'REGISTER' | If data fields filled in correctly and not already existing user: Directs user to My Recipes page and flashes 'Registration Successful!'. If user already exists: Directs user to login page and flashes 'Username already exists'
+Registration page | Current form field | Border highlighted in blue, type cursor in field
+| | Hover over back to login button | Cursor changes to a pointer, text colour changes to deep olive
+| | Click back to login button | Directs user to the login page
+| | Hover over the register button | Cursor changes to a pointer, text colour changes to muted green
+| | Click register button | If form is valid - Directs user to site home page, success message shows 'Successfully logged in as [username]. If form is not valid - Error is shown on the affected form field.
+Login page | Current form field | Border highlighted in blue, type cursor in field
+| | Hover over home button | Cursor changes to a pointer, text colour changes to deep olive
+| | Click home button | Directs user to the site home page
+| | Hover over the login button | Cursor changes to a pointer, text colour changes to muted green
+| | Click login button | If form is valid - Directs user to site home page, success message shows 'Successfully logged in as [username]. If form is not valid - Error is shown on the affected form field.
+| | Hover over forgot password? | Cursor changes to pointer, colour changes to deep olive, text is underlined
+| | Click forgot password? | Directs user to forgot password page
+Forgot password page | Current form field | Border highlighted in blue, type cursor in field
+| | Hover over back to login button | Cursor changes to a pointer
+| | Click back to login button | Directs user to the login page
+| | Hover over the reset my password button | Cursor changes to a pointer
+| | Click reset my password button | If form is valid - Form is hidden and text informs user an email has been sent to them. If form is not valid - Error is shown on the affected form field.
+Logout page | Hover over cancel button | Cursor changes to a pointer, text colour changes to deep olive
+| | Click cancel button | Directs user to the site home page
+| | Hover over sign out button | Cursor changes to a pointer, text colour changes to muted green
+| | Click sign out button | Directs user to site home page, success message shows: 'You have signed out'
+
+From feature testing the user authentication, the following bugs were found:
+- Successful login message also shows the basket if grand total is >0 - Since this is controlled within the allauth code, it cannot be easily fixed, therefore will be revisited during future improvements if time prior to the deadline.
+- Two forgot password links on login page - The second link was removed and the first was styled appropriately with the page.
+- Forgot password page is not styled correctly - The password reset template was styled using the same bootstrap classes as used on other allauth templates.
+- Site is not sending emails for email verification or password reset - Sending emails functionality was tried before beginning the testing process however was not working properly, this functionality will be tried again once the site testing is complete and if their is time prior to the deadline.
+
+Feature | Action | Effect
+--- | --- | ---
 **Home App**
+New Arrivals & Bundles sections | Hover over product image | Cursor changes to a pointer
+| | Click product image | Directs user to product details page
+| | Hover over product category | Cursor changes to a pointer, text is underlined
+| | Click product category | Directs user to selected category page
+Site Footer | Hover over any useful links | Cursor changes to a pointer, colour changes to rustic brown
+| | Click any useful link | Directs user to selected page
+| | Hover over any social links | Cursor changes to a pointer, colour changes to rustic brown
+| | Click any social link | Opens the selected social page in a new tab
+
+No bugs were found from feature testing the home app.
+
+Feature | Action | Effect
+--- | --- | ---
 **Products App**
-Add Recipe Button | Hover over | Cursor changes to a pointer, background colour changes to #BF0D38
-| | Click | Directs user to add recipe form
-Add Recipe Form | Hover over data fields | Cursor changes to a text cursor
-| | Click in data field | Icon and bottom border change to #BF0D38, label shrinks and moves to above field, typing cursor appears in data field
-| | Click out of data field | If data entered and correct format, bottom border changes to green. If data entered incorrectly or left empty, bottom border changes to red
-| | Hover over 'ADD RECIPE' | Cursor changes to a pointer, background colour changes to #BF0D38
-| | Click 'ADD RECIPE' | If data fields filled in correctly and photo URL valid: Directs user to My Recipes page and flashes 'Recipe Successfully Added!'. If photo URL invalid: Directs user to My Recipes page and flashes 'Invalid photo URL'
-More Details Button | Hover over | Cursor changes to pointer, background colour changes to #BF0D38
-| | Click | Directs user to individual recipe page
-Edit Recipe Button | Hover over | Cursor changes to pointer, background colour changes to #DF6D00
-| | Click | Directs user to edit recipe page
-Edit Recipe Form | Hover over data fields | Cursor changes to a text cursor
-| | Click in data field | Icon and bottom border change to #BF0D38, label shrinks and moves to above field, typing cursor appears in data field
-| | Click out of data field | If data entered and correct format, bottom border changes to green. If data entered incorrectly or left empty, bottom border changes to red
-| | Hover over 'EDIT RECIPE' | Cursor changes to a pointer, background colour changes to #DF6D00
-| | Click 'EDIT RECIPE' | If data fields filled in correctly and photo URL valid: Directs user to Recipe page and flashes 'Recipe Successfully Updated!'. If photo URL invalid: Directs user to Recipe page and flashes 'Invalid photo URL'
-Delete Recipe Button | Hover over | Cursor changes to pointer, background colour changes to #DF6D00
-| | Click | Opens modal over current page
-Delete Recipe Modal | Hover over 'Yes, delete' button | Cursor changes to a text cursor, background colour changes to dark red
-| | Click on 'Yes, delete' button | Recipe is deleted from database, user is redirected to My Recipes page and flashes 'Recipe Deleted!'
-| | Hover over 'No, go back' button | Cursor changes to a text cursor, background colour changes to dark green
-| | Click on 'No, go back' button | Modal closes, user remains on Recipe page
+All Products view | Click sort by | Opens dropdown of sorting options
+| | Hover over sort option | Background colour changes to blue
+|  | Click sort option | Sorts all products by selected sorting, outline of soty by box turns blue
+| | Hover over product image | Cursor changes to a pointer
+| | Click product image | Directs user to product details page
+| | Hover over product category | Cursor changes to a pointer, text is underlined
+| | Click product category | Directs user to selected category page
+Product Category view | Hover over all products link | Cursor changes to a pointer, text is underlined
+| | Click all products link | Directs user to all products view
+Product Detail page | Hover over product category | Cursor changes to a pointer, text is underlined
+| | Click product category | Directs user to selected category page
+| | Hover over edit link | Cursor changes to a pointer, colour changes to deep olive, text is underlined
+| | Click edit button | Directs user to edit product page
+| | Hover over delete button | Cursor changes to a pointer, colour changes to darker red, text is underlined
+| | Click delete button | Opens modal at top of the page
+| | Hover over close button | Cursor changes to a pointer, text colour changes to deep olive
+| | Click close button | Closes modal
+| | Hover over yes, delete button | Cursor changes to a pointer, button colour changes to darker red
+| | Click yes, delete button | Directs user to all products view, message shows product has been deleted
+| | Hover over plus or minus button | Plus or minus colour changes to muted green
+| | Click plus or minus button | Does not increase or decrease the product quantity
+| | Hover over keep shopping button | Cursor changes to a pointer, colour changes to deep olive
+| | Click keep shopping button | Directs user to all products view
+| | Hover over add to basket button | Cursor changes to a pointer, colour changes to muted green
+| | Click add to basket button | Success message shows: 'Added [product name] to your basket, grand total in site navigation updated
+| | Hover over add review button | Cursor changes to a pointer, colour changes to deep olive
+| | Click add review button | Directs user to add review page
+Add Product page | Current form field | Border highlighted in blue, type cursor in field
+| | Hover over cancel button | Cursor changes to a pointer, text colour changes to deep olive
+| | Click cancel button | Directs user to the all products view
+| | Hover over add product button | Cursor changes to a pointer, text colour changes to muted green
+| | Click add product button | If form is valid - Directs user to the product detail page for the new product, info message shows 'Successfully added product'. If form is not valid - Error is shown on the affected form field.
+Edit Product page | When page loaded | Info message shows: 'You are editing [product name]
+| | Current form field | Border highlighted in blue, type cursor in field
+| | Hover over cancel button | Cursor changes to a pointer, text colour changes to deep olive
+| | Click cancel button | Directs user to the product detail page
+| | Hover over update product button | Cursor changes to a pointer, text colour changes to muted green
+| | Click update product button | If form is valid - Directs user to the product detail page for the updated product, info message shows 'Successfully updated product'. If form is not valid - Error is shown on the affected form field.
+Add Review page | Current form field | Border highlighted in blue, type cursor in field
+| | Hover over cancel button | Cursor changes to a pointer, text colour changes to deep olive
+| | Click cancel button | Directs user back to the product detail page
+| | Hover over add review button | Cursor changes to a pointer, text colour changes to muted green
+| | Click add review button | If form is valid - Directs user to the product detail page, info message shows 'Successfully added review'. If form is not valid - Error is shown on the affected form field.
+
+From feature testing the products app, the following bugs were found:
+- Quantity input buttons no longer work on product detail page - This bug reappeared after fixing the quantity button problem with the shopping basket. Therefore, to fix this problem, the script was duplicated and reverted to it's old version for the product detail page but the kept as the latest version for the shopping basket page.
+- Keep shopping button directs user to all products view even when coming from a category page
+
+Feature | Action | Effect
+--- | --- | ---
 **Basket App**
+
+Feature | Action | Effect
+--- | --- | ---
 **Checkout App**
+
+Feature | Action | Effect
+--- | --- | ---
 **Profiles App**
-Edit Account Details Button | Hover over | Cursor changes to pointer, background colour changes to #DF6D00
-| | Click | Directs user to edit account page
-Edit Account Form | Hover over data fields | Cursor changes to a text cursor
-| | Click in data field | Icon and bottom border change to #BF0D38, label shrinks and moves to above field, typing cursor appears in data field
-| | Click out of data field | If data entered and correct format, bottom border changes to green. If data entered incorrectly or left empty, bottom border changes to red
-| | Hover over 'EDIT ACCOUNT DETAILS' | Cursor changes to a pointer, background colour changes to #DF6D00
-| | Click 'EDIT ACCOUNT DETAILS' | If data fields filled in correctly: Directs user to Account page and flashes 'Account Successfully Updated!'
-Delete Account Button | Hover over | Cursor changes to pointer, background colour changes to #DF6D00
-| | Click | Opens modal over current page
-Delete Account Modal | Hover over 'Yes, delete' button | Cursor changes to a text cursor, background colour changes to dark red
-| | Click on 'Yes, delete' button | Account is deleted from database, user is redirected to Home page and flashes 'Account Deleted!'. Any recipes created by deleted user are also removed from database.
-| | Hover over 'No, go back' button | Cursor changes to a text cursor, background colour changes to dark green
-| | Click on 'No, go back' button | Modal closes, user remains on Account page
-Logout | Hover over | Cursor changes to a pointer, colour changes to #BF0D38, background colour changes to dark orange
-| | Click | Directs user to Home page and flashes 'You have been logged out'
 
 ## Deployment
 
