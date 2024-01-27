@@ -189,6 +189,11 @@ body {
 
 .small-link:hover {
     color: #2E4013;
+    text-decoration: underline;
+}
+
+.remove-item:hover {
+    text-decoration: underline;
 }
 
 /* from Bulma */
@@ -226,7 +231,7 @@ body {
 }
 
 .btt-link,
-.update-link,
+.small-link,
 .remove-item {
     cursor: pointer;
 }

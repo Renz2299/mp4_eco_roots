@@ -1116,19 +1116,72 @@ Add Review page | Current form field | Border highlighted in blue, type cursor i
 
 From feature testing the products app, the following bugs were found:
 - Quantity input buttons no longer work on product detail page - This bug reappeared after fixing the quantity button problem with the shopping basket. Therefore, to fix this problem, the script was duplicated and reverted to it's old version for the product detail page but the kept as the latest version for the shopping basket page.
-- Keep shopping button directs user to all products view even when coming from a category page
+- Keep shopping button directs user to all products view even when coming from a category page - Updating the keep shopping button to return to a certain category would require refactoring the product views, therefore will be looked at in more detail if time prior to the deadline.
 
 Feature | Action | Effect
 --- | --- | ---
 **Basket App**
+Shopping Basket Page | Hover over plus or minus buttons | Cursor changes to a pointer, colour changes to muted green
+| | Click plus or minus buttons | Quantity of product line item increases or decreases appropriately
+| | Hover over update link | Cursor changes to a pointer
+| | Click update link | Quantity of product line item in basket updates, success message reads: 'Updated [product name] quantity to [quantity]'.
+| | Hover over delete link | Cursor changes to a pointer, colour changes to dark red
+| | Click delete link | Product line item is removed from basket, success message reads: Removed [product name] from your basket.
+| | Hover over keep shopping button | Cursor changes to a pointer, colour changes to deep olive
+| | Click keep shopping button | Directs user to all products page
+| | Hover of secure checkout button | Cursor changes to apointer, colour changes to muted green
+| | Click secure checkout button | Directs user to the checkout page
+
+From feature testing the basket app, the following bugs were found:
+- Update link doesn't change colour or have underline when hovered - This was fixed by moving the small-link class into the small tag as opposed to the a tag.
+- Delete button doesn't have underline when hovered - This was fixed by moving the remove-item class into the small tag as opposed to the a tag and creating a remove-item hover class for the text-decoration.
 
 Feature | Action | Effect
 --- | --- | ---
 **Checkout App**
+Checkout page | Current form field | Border highlighted in grey, type cursor in field
+| | Hover over save info checkbbox | Colour changes to darker blue or border changes to black depending on current toggle state
+| | Click save info checkbox | Checkbox is toggled to either checked or unchecked
+| | Stripe card details field | If valid card details entered - Card type shown on far left of field. If invalid card details entered - Error shows underneath reading: 'Your card number is invalid', text in field changes to red.
+| | Hover over adjust bag button | Cursor changes to a pointer, text colour changes to deep olive
+| | Click adjust bag button | Directs user back to the shopping basket page
+| | Hover over complete order button | Cursor changes to a pointer, text colour changes to muted green
+| | Click complete order button | If form is valid - Form is hidden and loading overlay spinner appears. User is directed to checkout success page with order details, success message reads: 'Order successfully processed! Your order number is [order number]. A confirmation email will be sent to [user email]. If form is not valid - Error is shown on the affected form field.
+Checkout Success page | Hover over now check out the latest deals! button | Cursor changes to a pointer, colour changes to muted green
+| | Click now check out the latest deals! buttons | Directs user to new arrivals category page
+
+From feature testing the checkout app, the following bug was found:
+- Upon successful checkout the page shrinks because the form is hidden, therefore the loading overlay spinner is showing on top of the footer - This was fixed by adding the bootstrap class 'bg-white' to the div containing the loading overlay spinner, this now means the whole page is covered whilst the order is being submitted and the checkout success page is loading.
 
 Feature | Action | Effect
 --- | --- | ---
 **Profiles App**
+Order History section | Hover over order number | Cursor changes to a pointer, colour changes to darker blue
+| | Click order number | Directs user to past order confirmation page, alert message reads: 'This is a past confirmation for order number: [order number]
+| | Hover over back to profile button | Cursor changes to a pointer, colour changes to deep olive
+| | Click back to profile button | Directs user back to their profile page
+Default Delivering Information section | Current form field | Border highlighted in blue, type cursor in field
+| | Hover over update information button | Cursor changes to a pointer, text colour changes to muted green
+| | Click update information button | If form is valid - Success message reads: 'Profile updated successfully'. If form is not valid - Error message reads: 'Update failed. Please ensure the form is valid'.
+
+No bugs were found from feature testing the profiles app.
+
+Feature | Action | Effect
+--- | --- | ---
+**Messages**
+Success message | Hover over 'x' in top right | Cursor changes to a pointer, colour changes to darker grey
+| | Click 'x' in top right | Message is dismissed
+| | Scroll basket items (if more than two items in basket) | Reveals other items in basket
+| | Hover over go to secure checkout button | Cursor changes to a pointer, colour changes to muted green
+| | Click go to secure checkout button | Directs user to their shopping basket
+Info message | Hover over 'x' in top right | Cursor changes to a pointer, colour changes to darker grey
+| | Click 'x' in top right | Message is dismissed
+Warning message Hover over 'x' in top right | Cursor changes to a pointer, colour changes to darker grey
+| | Click 'x' in top right | Message is dismissed
+Error message | Hover over 'x' in top right | Cursor changes to a pointer, colour changes to darker grey
+| | Click 'x' in top right | Message is dismissed
+
+No bugs were found from feature testing the messages.
 
 ## Deployment
 
