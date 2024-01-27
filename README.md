@@ -1367,38 +1367,69 @@ Forms Work as Expected? | Yes | Yes | Yes | Yes
 
 ![Index page lighthouse score](readme_imgs/index_1.png)
 
-- Render-blocking resources: All required add-ins such as Stripe, font awesome, AWS.
+Page specific issues found:
 - Images could be in WEBP format
-- Insufficient contrast colours: This was checked using Adobe's contrast checker before setting on a colour scheme and no clashing colours have been used.
 
 #### Contact Page
 
-![Contact page lighthouse score](readme_imgs/contact_1.png)
-
-- Insufficient contrast colours: This was checked using Adobe's contrast checker before setting on a colour scheme and no clashing colours have been used.
-- Sort by element missing label element: This was added and given the bootstrap 'sr-only' class to hide it on the page.
-- Heading elements not in sequential order: This is because the heading element out of order is in the footer and therefore can't always be in order on every page.
-- Missing meta description tag: This was added as a generic description to the base template so it would be present on every page of the site.
+![Contact page lighthouse score](readme_imgs/contact_2.png)
 
 #### About Page
+
+![About page lighthouse score](readme_imgs/about_1.png)
 
 #### Products Page
 
 ![Products page lighthouse score](readme_imgs/products_1.png)
 
+Page specific issues found:
+- Sort by element missing label element: This was added and given the bootstrap 'sr-only' class to hide it on the page.
+
+![Products page lighthouse score 2](readme_imgs/products_2.png)
+
+#### Product Detail Page
+
+![Product Detail page lighthouse score 2](readme_imgs/product_1.png)
+
+Page specific issues found:
+- Buttons do not have accessible names: Label tags were added to the quantity buttons with the bootstrap 'sr-only' class.
+- Form elements do not have associated labels: A label tag was added to the input tag with the bootstrap 'sr-only' class.
+
 #### Add/ Edit Product
+
+![Add Product page lighthouse score](readme_imgs/add_product_1.png)
 
 #### Add Review Page
 
+![Add Review page lighthouse score](readme_imgs/add_review_1.png)
+
 #### Shopping Basket
+
+![Shopping Basket page lighthouse score](readme_imgs/basket_1.png)
+
+Page specific issues found:
+- Buttons do not have accessible names: Label tags were added to the quantity buttons with the bootstrap 'sr-only' class.
+- Form elements do not have associated labels: A label tag was added to the input tag with the bootstrap 'sr-only' class.
 
 #### Checkout
 
+![Checkout page lighthouse score](readme_imgs/checkout_1.png)
+
 #### Checkout Success
+
+![Checkout Success page lighthouse score](readme_imgs/checkout_success_1.png)
 
 #### User Profile
 
+![Profile page lighthouse score](readme_imgs/profile_1.png)
+
 Allauth not done as templates
+
+Sitewide issues found:
+- Render-blocking resources: All required add-ins such as Stripe, font awesome, AWS.
+- Insufficient contrast colours: This was checked using Adobe's contrast checker before setting on a colour scheme and no clashing colours have been used.
+- Missing meta description tag: This was added as a generic description to the base template so it would be present on every page of the site.
+- Heading elements not in sequential order: This is because the heading element out of order is in the footer and therefore can't always be in order on every page.
 
 ### Future Improvements
 
@@ -1415,6 +1446,8 @@ README - JavaScript or JQuery?
 DEBUG = int(os.environ.get("DEVELOPMENT", default=0))
 
 - [ ] Deleting a product that is in the basket will cause a 404 error.
+
+Performance issues related to lighthouse testing
 
 **Future Additions (if time)**
 31 | Site User | Receive a confirmation email after registering | Verify that my account was successfully created
