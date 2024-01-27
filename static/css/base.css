@@ -232,6 +232,7 @@ body {
 
 .btt-link,
 .small-link,
+.update-link,
 .remove-item {
     cursor: pointer;
 }
@@ -314,7 +315,7 @@ footer {
 }
 
 .min-vh-90 {
-    min-height: 90vh;
+    min-height: 91vh;
 }
 
 /* ----------------------------------------------- Allauth Form */

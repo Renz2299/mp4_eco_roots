@@ -1325,12 +1325,29 @@ This site was deployed on Heroku using an ElephantSQL database.
 Screen Width | | | | | Device | | | | |
 ---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---:
 | | Galaxy S9+ (320px) | iPhone 6/7/8 (375px) | iPhone XR (414px) | iPad Mini (768px) | iPad Air (820px) | Surface Pro 7 (912px) | iPad Pro (1024px) | Desktop (1201px) | Desktop (2000px)
-<= 576px |  |  |  | NA | NA | NA | NA | NA | NA
-576px < >= 992px | NA | NA | NA |  |  |  | NA | NA | NA
-992px < | NA | NA | NA | NA | NA | NA |  |  | 
-Links/ URLs/ Buttons work |  |  |  |  |  |  |  |  | 
-Images work |  |  |  |  |  |  |  |  | 
-Renders as expected |  |  |  |  |  |  |  |  | 
+<= 576px | Good | Good | Good | NA | NA | NA | NA | NA | NA
+576px < >= 992px | NA | NA | NA | Good | Good | Good | NA | NA | NA
+992px < | NA | NA | NA | NA | NA | NA | Yes | Yes | Yes
+Links/ URLs/ Buttons work | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes
+Images work | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes
+Renders as expected | Partially, details below | Partially, details below | Partially, details below | Partially, details below | Partially, details below | Partially, details below | Partially, details below | Yes | Yes
+
+This is the list of issues found when checking the responsiveness of the deployed site on mobile and tablet screens.
+
+Mobile screens:
+- [x] 'Yes, Delete' button on modal not full width.
+
+Tablet screens
+- [x] Footer not touching bottom of screen on pages with less content.
+
+All screens:
+- [x] Remove/ update links in basket not working.
+
+The following issues were checked on a physical mobile screen to test whether they were issues with viewing the site in dev tools. Thankfully, all the issues were not present on the deployed site on mobile, therefore didn't require any bug fixes.
+- Btt button half off screen on right
+- Navbar partially hides when scrolling
+- Very slow scrolling
+- Dropdown nav doesn't disappear on next click - Have to click on toggler to hide it
 
 ### Browser Compatibility
 
@@ -1377,6 +1394,8 @@ Contact review needs pagination
 README - JavaScript or JQuery?
 
 DEBUG = int(os.environ.get("DEVELOPMENT", default=0))
+
+- [ ] Deleting a product that is in the basket will cause a 404 error.
 
 **Future Additions (if time)**
 31 | Site User | Receive a confirmation email after registering | Verify that my account was successfully created
