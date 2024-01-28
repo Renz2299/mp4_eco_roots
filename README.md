@@ -1,6 +1,8 @@
 # EcoRoots - *Milestone Project Four*
 
-**Find the final project here:**
+[**Link to final project**](https://eco-roots-182c728a0a19.herokuapp.com/)
+
+[**Link to GitHub repository**](https://github.com/Renz2299/mp4_eco_roots)
 
 ![The EcoRoots site shown across multiple displays](readme_imgs/renders_final.png)
 
@@ -279,9 +281,9 @@ Considering the site's user stories, wireframes were created of the necessary pa
 
 ![Wireframes of the EcoRoots shopping basket on mobile, tablet & desktop](readme_imgs/wireframe_basket.png)
 
-**Checkout Page:** Add this after doing the checkout walkthrough tutorial
+**Checkout Page:** The checkout page has a header followed by two columns, one for the user to enter their delivery and payment details and another summarising their order details. Below these two columns are buttons to either adjust the shopping basket or complete order.
 
-![Wireframes of the EcoRoots checkout page on mobile, tablet & desktop](readme_imgs/wireframe_checkout_page.png)
+![Wireframes of the EcoRoots checkout page on mobile, tablet & desktop](readme_imgs/wireframe_checkout.png)
 
 **Authentication & Authorisation Pages:** Django Allauth will be used to handle authenticating and authorising users on the site. Therefore the layout of these pages will remain very similar to the allauth templates however the styling will be updated to match the rest of the site.
 
@@ -784,10 +786,10 @@ It was found that the 'this' element used when setting the itemId variable was n
 ![Quantity button JavaScript after](readme_imgs/qty_buttons_bug_after.png)
 
 ## Pre-Deployment Testing
-A large amount of the required testing was completed prior to deploying the site so that the majority of the problems could be found and resolved on the local server as it is much quicker to check that problems have been resolved and doesn't require a new commit for every minor styling issue.
+A large amount of the required testing was completed prior to deploying the site so that the majority of the problems could be found and resolved on the local server as it is much quicker to check that problems have been resolved and does not require a new commit for every minor styling issue.
 
 ### Responsiveness
-The site was tested on a multitude of screen sizes using Chrome developer tools to check that the site renders correctly on all screens tested and that all images and links work properly.
+The site was tested on a multitude of screen sizes using Chrome Developer Tools to check that the site renders correctly on all screens tested and that all images and links work properly.
 
 Screen Width | | | | | Device | | | | |
 ---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---:
@@ -801,57 +803,57 @@ Renders as expected | Partially, details below | Partially, details below | Part
 
 This is the list of issues found when checking the responsiveness of the site on mobile and tablet screens.
 
-Mobile Screens:
+#### Mobile Screens:
 - Home app
-    - [x] Nav icons hover/ click same colour as background
-    - [x] Contact view needs info message rather than success message
-    - [x] Missing page links from footer
-    - [x] Socials missing from footer
+    - Nav icons hover/ click same colour as background
+    - Contact view needs info message rather than success message
+    - Missing page links from footer
+    - Socials missing from footer
 - Products app
-    - [x] Sort by and no. of products not margin/padded very well
-    - [x] Quantity form very narrow
-    - [x] Keep shopping/ add to basket buttons too far apart vertically and not full width
-    - [x] Add review button not full width
-    - [x] Search criteria falling off edge of page
-    - [x] Category descriptions too long - Maybe shorten on all screens or truncate
-    - [ ] Review ratings can be up to 9.9 rather than 5.0
+    - Sort by and no. of products not margin/padded very well
+    - Quantity form very narrow
+    - Keep shopping/ add to basket buttons too far apart vertically and not full width
+    - Add review button not full width
+    - Search criteria falling off edge of page
+    - Category descriptions too long - Maybe shorten on all screens or truncate
+    - Review ratings can be up to 9.9 rather than 5.0 - Review during [future improvements](#future-improvements)
 - Basket app
-    - [x] Shopping basket requires side scrolling - Needs refactoring on mobile
+    - Shopping basket requires side scrolling - Needs refactoring on mobile
 - Checkout app
-    - [-] Card number overlaps expiry - Accept this is only on screens beneath 345px
-    - [x] Buttons need margin and not full width
-    - [x] Overlay doing some weird things, needs some work
-    - [x] Order number needs truncating on mobile
+    - Card number overlaps expiry - Accept this is only on screens beneath 345px
+    - Buttons need margin and not full width
+    - Overlay doing some weird things, needs some work
+    - Order number needs truncating on mobile
 - Profiles app
-    - [x] Order history is too narrow - May need refactoring similar to shopping basket
-    - [x] Update info button not full width
+    - Order history is too narrow - May need refactoring similar to shopping basket
+    - Update info button not full width
 - Allauth pages
-    - [x] No margin under buttons
-    - [x] Buttons have no margin between them and not full width
+    - No margin under buttons
+    - Buttons have no margin between them and not full width
 - Possible issues with dev tools - check on physical mobile screen once deployed
     - Btt button half off screen on right
     - Navbar partially hides when scrolling
     - Very slow scrolling
     - Dropdown nav doesn't disappear on next click - Have to click on toggler to hide it
 
-Tablet Screens:
+#### Tablet Screens:
 - Basket app
-    - [x] Shopping basket requires side scrolling - Needs refactoring on tablet too
+    - Shopping basket requires side scrolling - Needs refactoring on tablet too
 - Products app
-    - [x] 768px - 992px wide: Forms only half screen, could be a bit wider
-    - [x] Category descriptions too long - Maybe shorten on all screens or truncate
+    - 768px - 992px wide: Forms only half screen, could be a bit wider
+    - Category descriptions too long - Maybe shorten on all screens or truncate
 
 The majority of these issues were related to styling and could be resolved quite easily either with a bootstrap or custom css class. These bug fixes can be found in commits 87-91 from 21st - 24th Jan 2024 in the github repository.
 
 A larger bug fix that came from responsiveness testing was refactoring the shopping basket and order history pages so they would render better on mobile and not require any sideways scrolling.
 
-For the basket page, this was done by splitting the basket template into multiple elements templates that could be included within the main basket template. On mobile the table that was used is hidden and instead the basket information is rendered as a list. And on tablet screens or larger, the mobile list is hidden and the table is shown and using the include tag to access the same information from the individual basket element templates.
+For the basket page, this was done by splitting the basket template into multiple elements templates that could be included within the main basket template. On mobile the table is hidden and instead the basket information is rendered as a list. And on tablet screens or larger, the mobile list is hidden and the table is shown and using the include tag to access the same information from the individual basket element templates.
 
 ![Basket template refactor for mobile screens](readme_imgs/basket_mobile_refactor.png)
 
 ![Basket template refactor for tablet screens and larger](readme_imgs/basket_tablet_refactor.png)
 
-The same thinking was applied to the order history section of the profile page, however the content wasn't split into separate templates since there wasn't as much code as required in the basket template.
+The same thinking was applied to the order history section of the profile page, however the content was not split into separate templates since there wasn't as much code as required in the basket template.
 
 ![Order history refactor for mobile screens](readme_imgs/order_history_mobile_refactor.png)
 
@@ -868,11 +870,9 @@ Intended Responsiveness? | Yes | Yes | Yes | Site responds as expected on all br
 Buttons Work as Expected? | Yes | Yes | Yes | Buttons function as expected on all browsers tested
 Forms Work as Expected? | Yes | Yes | Yes | Forms work as expected on all browsers tested
 
-A lot of the issues with the site were luckily found during responsiveness testing, below is a list of issues found during testing on different browsers.
-
-- Loading overlay on mobile covers the footer rather than main page content - CHeck on physical mobile screen on deployed.
-
-- The quantity buttons within the shopping basket page only work correctly on the first item in the basket. The buttons for subsequent items change the quantity of the first item. This was missed during responsiveness testing because the shopping basket needed refactoring at this point. This bug was actually caused by a typo in the quantity form template... on the button tags, the data-item_id was written with a - rather than an _. This also meant the earlier bug fix for the quantity buttons on the product detail template could now be reverted as well.
+A lot of the issues with the site were found during responsiveness testing, below is a list of issues found during testing on different browsers:
+- Loading overlay on mobile covers the footer rather than main page content - Check this on physical mobile screen after being deployed.
+- The quantity buttons within the shopping basket page only work correctly for the first item in the basket, the buttons for subsequent items change the quantity of the first item - This was missed during responsiveness testing because the shopping basket needed refactoring at this point. This bug was actually caused by a typo in the quantity form template. On the button tags, the 'data-item_id' was written with a '-' rather than an '_'. This also meant the earlier bug fix for the quantity buttons on the product detail template could be reverted.
 
     ![Basket quantity form template fix](readme_imgs/qty_buttons_bug_basket.png)
 
@@ -885,13 +885,13 @@ The HTML, CSS, JavaScript and Python for the site was ran through a validator sp
 
 Checked on: https://validator.w3.org/
 
-HTML code was copied directly from Chrome Developer Tools since the Jinja templating in the actual code would throw validation errors. Not every single site page was validated as most of them are duplicates, for example the individual category pages or the adding/editing product forms.
+HTML code was copied directly from dev tools since the Jinja templating in the actual code would throw unnecessary errors. Not every single site page was validated as most of them are duplicates, for example the individual category pages or the adding/editing product forms.
 
 **Errors:**
 - 'transform: var(--fa-rotate-angle, none) is not a transform value' - This is part of the fontawesome pre-written code and therefore cannot be changed.
-- Duplicate IDs 'user-options' & 'mobile-search' - This is because the base template and mobile-top-header both contain the account and search buttons within the navigation however only one is visible depending on the screen size, therefore the duplicate cannot be removed without impacting the function of the site on different screen sizes.
-- 'An img element must have an alt attribute' - Alt attributes were missing from the shopping basket images, the alt attribute for the products shopping basket images were set to product.name.
-- Duplicate IDs set for the remove from basket button - This is because the shopping basket was refactored using bootstrap display classes so that on mobile it is a list and on tablet or desktop it is a table. This means there are two remove from basket buttons for each product within the HTML code however only one is visible on the rendered site. 
+- Duplicate IDs 'user-options' & 'mobile-search' - This is because the base template and mobile-top-header both contain the account and search buttons within the navigation however only one is visible depending on the screen size, therefore the duplicate cannot be removed without impacting the function of the site.
+- 'An img element must have an alt attribute' - Alt attributes were missing from the shopping basket images, these were added and set to product.name.
+- Duplicate IDs set for the remove from basket link - This is because the shopping basket was refactored using bootstrap display classes so that on mobile it is a list and on tablet or desktop it is a table. This means there are two remove from basket link for each product within the HTML however only one is visible on the rendered site. 
 - Errors regarding the Stripe iframe:
     - 'Bad value __privateStripeMetricsController2220 for attribute name on element iframe'
     - 'The frameborder attribute on the iframe element is obsolete'
@@ -936,7 +936,7 @@ Checking the python code on the PEP8 validator found some minor errors relating 
 - No blank newline at end of file
 
 ### User Story Testing
-To ensure the site met the original user goal's outlined in the [User Stories](#user-stories) section, each goal was tested to check that it was met by the finished site.
+To ensure the site met the original user goals outlined in the [User Stories](#user-stories) section, each goal was tested to check that it was met by the finished site.
 
 User Story ID | User | I Want To Be Able To... | Testing
 :--- | :--- | :--- | :---
@@ -947,115 +947,117 @@ User Story ID | User | I Want To Be Able To... | Testing
 4 | Shopper | View product and company sustainability credentials | From the site footer the user can click the 'About Us' link to view information about EcoRoots and their sustainability efforts.
 5 | Shopper | View product reviews and ratings | When viewing an individual product detail page the product reviews are underneath the product image and information.
 6 | Shopper | Identify new product arrivals to the site | On the index page the new arrivals category is shown in the first section of the page. The user can also click the 'New Arrivals' link under a new product to view the whole category on a single page.
-7 | Shopper | View the total of my purchases at any time | If the user has items in their shopping basket, the grand total is shown beneath the shopping basket link in the site navigation. However, this isn't shown on mobile but the user still receives a success message showing their basket when they add any products to their basket.
-8 | Shopper | View bundles of products | On the index page the bundles category is shown in the second section of the page. The user can also click the 'Bundles' link under a new product to view the whole category on a single page.
+7 | Shopper | View the total of my purchases at any time | If the user has items in their shopping basket, the grand total is shown beneath the shopping basket link in the site navigation. However, this is not shown on mobile but the user still receives a success message showing their basket when they add any products to their basket.
+8 | Shopper | View bundles of products | On the index page the bundles category is shown in the second section of the page. The user can also click the 'Bundles' link under a product to view the whole category on a single page.
 **Registration & User Accounts**
 9 | Site User | Easily register for an account | The 'My Account' link in the site navigation has a 'Regsiter' option if the session user is not already logged in. On the registration page they can register for an account by entering their email address and creating a username and password.
-10 | Site User | Easily login or logout | The 'My Account' link in the site navigation has a 'Login' or 'Logout' option depending on if the session user is already logged in. Clicking 'Login' will take the user to a page where they can enter their username or email and password to login. Clicking 'Logout' will take the user to a confirmation page checking they would like to logout before actually logging them out of the site.
-11 | Site User | Easily recover my password if it's forgotten | If a user has forgotten their password, from the login page they can click the 'Forgott Password?' button and they will directed to a page where they can enter their email address. They can then click the 'Reset My Password' button where they should be sent an email including a link to set a new password. Currently this is as far as the user can get as the site isn't sending emails.
+10 | Site User | Easily login or logout | The 'My Account' link in the site navigation has a 'Login' or 'Logout' option depending if the session user is already logged in. Clicking 'Login' will take the user to a page where they can enter their username or email and password to login. Clicking 'Logout' will take the user to a confirmation page checking they would like to logout before logging them out of the site.
+11 | Site User | Easily recover my password if it's forgotten | If a user has forgotten their password, from the login page they can click the 'Forgot Password?' link and they will directed to a page where they can enter their email address. They can then click the 'Reset My Password' button where they should be sent an email including a link to set a new password. Currently this is as far as the user can get as the site is not sending emails.
 12 | Site User | Have a personalised account profile | The 'My Account' link has a 'My Profile' option where the user can view their profile page. On this page is their order history, default delivery information and account information.
 **Sorting & Searching**
 13 | Shopper | Sort the available products | From the site navigation the 'Shop All' option can be sorted by price, rating or category. When viewing all products they can be sorted price, rating, name or category in ascending and descending order.
-14 | Shopper | Sort a specific category of product | When viewing a specific category of products, the available products  can be sorted price, rating, name or category in ascending and descending order.
-15 | Shopper | Sort multiple categories of products simultaneously | When viewing all products from various categories they can be sorted price, rating, name or category in ascending and descending order.
-16 | Shopper | Search for a product by name or description | The 'Search' link in the site navigation allows the user to enter a search term and view all products where that search term is present in either the product name or description.
+14 | Shopper | Sort a specific category of product | When viewing a specific category of products, the available products can be sorted by price, rating, name or category in ascending and descending order.
+15 | Shopper | Sort multiple categories of products simultaneously | When viewing all products from various categories they can be sorted by price, rating, name or category in ascending and descending order.
+16 | Shopper | Search for a product by name or description | The search button in the site navigation allows the user to enter a search term and view all products where that search term is present in either the product name or description.
 17 | Shopper | See what I've searched for and the number of results found | When filtering products by a search term, the number of products returned in the search along with the user's search term is shown above the list of filtered products.
 **Purchasing & Checkout**
 18 | Shopper | Add items to my basket and the desired quantity | When viewing a product detail page, underneath the product information is a form to increase or decrease the quantity of the product (within 1-99) followed by an 'Add To Basket' button. Clicking this button will add the current quantity of that product to the user's basket.
-19 | Shopper | View items in my basket | Clicking the 'Basket' link in the site navigation will direct the user to their shopping basket where they can view all the products in their basket.
-20 | Shopper | Easily update the quantity of a product in the basket | When viewing the shopping basket, each line item has a form allowing the user to increase or decrease the quantity of that specific item within their basket. Once the user has corrected the quantity they can click the 'Update' button underneath to save their changes to the basket.
+19 | Shopper | View items in my basket | Clicking the basket in the site navigation will direct the user to their shopping basket where they can view all the products in their basket.
+20 | Shopper | Easily update the quantity of a product in the basket | When viewing the shopping basket, each line item has a form allowing the user to increase or decrease the quantity of that specific item within their basket. Once the user has corrected the quantity they can click the 'Update' link underneath to save their changes to the basket.
 21 | Shopper | Remove an item from the basket | Underneath the quantity input form for the line item in the shopping basket is a 'Remove' link, by clicking 'Remove' the user can remove that specific product and quantity from the basket.
 22 | Shopper | Easily enter my delivery and payment information | When on the checkout page, the user is presented with a form where they can enter their delivery information. If they have any delivery information already saved to their profile, this will be pre-filled in the form.
 23 | Shopper | View details about any errors when handling delivery and payment information | When the user attempts to complete checkout any errors will be shown on the specific form field that has caused the error. Any errors with the card details field are handled by Stripe and therefore look slightly different.
 24 | Shopper | View an order confirmation after checkout | Upon successfully checking out the user is directed to the checkout success page showing their order details including their order number, order date, product details, delivery information and order total.
 **Interacting with the Store**
-25 | Site User | Contact the store with any queries | From the site footer the user can click the 'Contact Us' link where they are redirected to the contact form. They can fill out this form with their name, email and query which can be reviewed by the store owners.
+25 | Site User | Contact the store with any queries | From the site footer the user can click the 'Contact Us' link where they are redirected to the contact form. They can fill out this form with their name, email and query which can be reviewed by store owners.
 26 | Shopper | Add reviews to products I have purchased | After purchasing a product, the user can return to the product detail page and click the 'Add Review' button. This will direct them to the add review form where they can add a review title, content and rating. Upon submitting this form the review will be shown on that individual product's detail page.
 **Admin & Store Management**
-27 | Store Owner | Add a product | The 'My Account' link in the site navigation has a 'Product Management' option that is only available to a store owner account. On the product management page is a form to add a product, the store owner can include the category, sku, product name, product description, price, rating and image.
-28 | Store Owner | Edit a product's details | When viewing an individual product detail page from a store owner account, above the quantity input form is an 'Edit' button that directs the store owner to a form where they can edit that specific product's details. The current details will already be pre-filled in the form.
-29 | Store Owner | Delete a product | When viewing an individual product detail page from a store owner account, above the quantity input form is a 'Delete' button. Clicking the delete button will open a confirmation modal asking the user to confirm they would like to delete the product or return to the product detail page and close the modal.
-30 | Store Owner | View contact requests | The 'My Account' link in the site navigation has a 'Review Contact Requests' option that is only available to a store owner account. On the review contact requests page the store owner can view a list of contact requests showing the name, email and query that users have submitted.
+27 | Store Owner | Add a product | The 'My Account' link in the site navigation has a 'Product Management' option that is only available to a store owner account. On the 'Product Management' page is a form to add a product, the store owner can include the category, sku, product name, product description, price, rating and image.
+28 | Store Owner | Edit a product's details | When viewing an individual product detail page from a store owner account, above the quantity input form is an 'Edit' link that directs the store owner to a form where they can edit that specific product's details. The current details will already be pre-filled in the form.
+29 | Store Owner | Delete a product | When viewing an individual product detail page from a store owner account, above the quantity input form is a 'Delete' link that will open a confirmation modal asking the store owner to confirm they would like to delete the product or return to the product detail page and close the modal.
+30 | Store Owner | View contact requests | The 'My Account' link in the site navigation has a 'Review Contact Requests' option that is only available to a store owner account. On the 'Review Contact Requests' page the store owner can view a list of contact requests showing the name, email and query that users have submitted.
 
 From user story testing a few minor site elements were found to be missing:
-
-- The new arrivals and bundles categories don't have subheadings or descriptions - These were added to the products.html file.
-- The grand total isn't visible on mobile view - This was experimented with however was decided not to be included because it would make the navigation taller on mobile view which will push every page's content out of alignment because a header container of a specific site is used throughout to push the content below the navigation.
-- Recovering a forgotten password currently can't be done as the site isn't sending emails - Sending emails functionality was tried before beginning the testing process however was not working properly, this functionality will be tried again once the site testing is complete and if their is time prior to the deadline.
+- The new arrivals and bundles categories did not have subheadings or descriptions - These were added to the products template.
+- The grand total is not visible on mobile view - This was experimented with, however was decided not to be included because it would make the navigation taller on mobile view which would push every page's content out of alignment since a header container of a specific height is used to push the site content below the navigation.
+- Recovering a forgotten password cannot currently be done as the site is not sending emails - Sending emails functionality was tried before beginning the testing process however was not working properly, this functionality will be reviewed during [future improvements](#future-improvements).
 
 ### Feature Testing
-The site features were tested to ensure they provide the correct user feedback. They were tested in sections depending on the area of the site being tested, this was so any bugs could be fixed quicky after being spotted and the list of bug fixes did not become too large to tackle in one go.
+The site features were tested to ensure they provide the correct user feedback. They were tested in sections depending on the area of the site being tested, this was so any bugs could be fixed quicky after being spotted.
+
+#### Navigation
 
 Feature | Action | Effect
 --- | --- | ---
-**Navigation**
 Logo (all pages) | Hover over | Cursor changes to a pointer, colour changes to deep olive
 | | Click | Direct users to the site home
 Main Navigation (<768px wide) (all pages) | Hover over toggler | Cursor changes to a pointer, colour changes to deep olive
 | | Click toggler | Opens mobile main navigation as dropdown menu
 | | Hover over category | Cursor changes to a pointer, colour changes to muted green
 | | Click category | Directs user to selected category
-| | Click shop all | Opens dropdown menu of sort options
-| | Hover over shop all option | Background colour changes to light grey
-| | Click shop all option | Directs user to all products page with chosen sorting applied
-Main Navigation (>=768px wide) (all pages) | Hover over my account, search or basket (when no grand total) | Cursor changes to a pointer, colour changes to deep olive
-| | Hover over basket (when grand total is >0) | Cursor changes to a pointer, colour changes to rustic brown
-| | Click my account | Opens account dropdown
-| | Hover over account option | Background colour changes to light grey
-| | Click account option | Directs user to chosen account page
-| | Click search from navigation | Opens search bar in dropdown
-| | Click search from search bar | If search criteria - Directs user to all products page, with products filtered by search criteria shown above the products view. If no search criteria - Directs user to all products page and shows error message: 'You did not enter any search criteria'
-| | Click basket | Directs user to the shopping basket page
-Top navigation (<768px wide) (all pages) | Hover over my account, search or basket (when no grand total) | Cursor changes to a pointer, colour changes to rustic brown
-| | Hover over basket (when grand total is >0) | Cursor changes to a pointer, colour changes to rustic brown
-| | Click my account | Opens account dropdown
-| | Hover over account option | Background colour changes to light grey
-| | Click account option | Directs user to chosen account page
-| | Click search from navigation | Opens search bar in dropdown
-| | Click search from search bar | If search criteria - Directs user to all products page, with products filtered by search criteria shown above the products view. If no search criteria - Directs user to all products page and shows error message: 'You did not enter any search criteria'
+| | Click 'shop all' | Opens dropdown menu of sort options
+| | Hover over shop all menu option | Background colour changes to light grey
+| | Click shop all menu option | Directs user to all products page with chosen sorting applied
+Main Navigation (>=768px wide) (all pages) | Hover over 'my account', 'search' or 'basket' (when no grand total) | Cursor changes to a pointer, colour changes to deep olive
+| | Hover over 'basket' (when grand total is >0) | Cursor changes to a pointer, colour changes to rustic brown
+| | Click 'my account' | Opens account dropdown
+| | Hover over account menu option | Background colour changes to light grey
+| | Click account menu option | Directs user to chosen account page
+| | Click 'search' from navigation | Opens search bar in dropdown
+| | Click search from search bar | If search criteria - Directs user to all products page, with products filtered by search criteria shown above the products view. If no search criteria - Directs user to all products page and error message reads: 'You did not enter any search criteria'
+| | Click 'basket' | Directs user to the shopping basket page
+Top navigation (<768px wide) (all pages) | Hover over 'my account', 'search' or 'basket' (when no grand total) | Cursor changes to a pointer, colour changes to rustic brown
+| | Hover over 'basket' (when grand total is >0) | Cursor changes to a pointer, colour changes to rustic brown
+| | Click 'my account' | Opens account dropdown
+| | Hover over account menu option | Background colour changes to light grey
+| | Click account menu option | Directs user to chosen account page
+| | Click 'search' from navigation | Opens search bar in dropdown
+| | Click search from search bar | If search criteria - Directs user to all products page, with products filtered by search criteria shown above the products view. If no search criteria - Directs user to all products page and error message reads: 'You did not enter any search criteria'
 Top navigation (>=768px wide) (all pages) | Hover over product category | Cursor changes to a pointer, colour changes to muted green
 | | Click category | Directs user to selected category
-| | Click shop all | Opens dropdown menu of sort options
-| | Hover over shop all option | Background colour changes to light grey
-| | Click shop all option | Directs user to all products page with chosen sorting applied
+| | Click 'shop all' | Opens dropdown menu of sort options
+| | Hover over shop all menu option | Background colour changes to light grey
+| | Click shop all menu option | Directs user to all products page with chosen sorting applied
 
 From feature testing the site navigation, the below bug was found:
-- Top navigation hover colour should be muted green except for the basket when grand total is >0 - This was caused by the CSS missing a muted green hover class for the mobile nav items, therefore all three were using the basket hover CSS.
+- Top navigation hover colour should be muted green except for the basket when grand total is >0 - This was caused by the CSS missing a muted green hover class for the 'mobile-nav-items', therefore all three were using the basket hover CSS.
+
+#### User Authentication
 
 Feature | Action | Effect
 --- | --- | ---
-**User Authentication**
 Registration page | Current form field | Border highlighted in blue, type cursor in field
-| | Hover over back to login button | Cursor changes to a pointer, text colour changes to deep olive
-| | Click back to login button | Directs user to the login page
-| | Hover over the register button | Cursor changes to a pointer, text colour changes to muted green
-| | Click register button | If form is valid - Directs user to site home page, success message shows 'Successfully logged in as [username]. If form is not valid - Error is shown on the affected form field.
+| | Hover over 'back to login' button | Cursor changes to a pointer, text colour changes to deep olive
+| | Click 'back to login' button | Directs user to the login page
+| | Hover over 'register' button | Cursor changes to a pointer, text colour changes to muted green
+| | Click 'register' button | If form is valid - Directs user to site home page, success message reads: 'Successfully logged in as [username]'. If form is not valid - Error is shown on the affected form field.
 Login page | Current form field | Border highlighted in blue, type cursor in field
-| | Hover over home button | Cursor changes to a pointer, text colour changes to deep olive
-| | Click home button | Directs user to the site home page
-| | Hover over the login button | Cursor changes to a pointer, text colour changes to muted green
-| | Click login button | If form is valid - Directs user to site home page, success message shows 'Successfully logged in as [username]. If form is not valid - Error is shown on the affected form field.
-| | Hover over forgot password? | Cursor changes to pointer, colour changes to deep olive, text is underlined
-| | Click forgot password? | Directs user to forgot password page
+| | Hover over 'home' button | Cursor changes to a pointer, text colour changes to deep olive
+| | Click 'home' button | Directs user to the site home page
+| | Hover over 'login' button | Cursor changes to a pointer, text colour changes to muted green
+| | Click 'login' button | If form is valid - Directs user to site home page, success message reads: 'Successfully logged in as [username]'. If form is not valid - Error is shown on the affected form field.
+| | Hover over 'forgot password?' | Cursor changes to pointer, colour changes to deep olive, text is underlined
+| | Click 'forgot password?' | Directs user to forgot password page
 Forgot password page | Current form field | Border highlighted in blue, type cursor in field
-| | Hover over back to login button | Cursor changes to a pointer
-| | Click back to login button | Directs user to the login page
-| | Hover over the reset my password button | Cursor changes to a pointer
-| | Click reset my password button | If form is valid - Form is hidden and text informs user an email has been sent to them. If form is not valid - Error is shown on the affected form field.
-Logout page | Hover over cancel button | Cursor changes to a pointer, text colour changes to deep olive
-| | Click cancel button | Directs user to the site home page
-| | Hover over sign out button | Cursor changes to a pointer, text colour changes to muted green
-| | Click sign out button | Directs user to site home page, success message shows: 'You have signed out'
+| | Hover over 'back to login' button | Cursor changes to a pointer
+| | Click 'back to login' button | Directs user to the login page
+| | Hover over the 'reset my password' button | Cursor changes to a pointer
+| | Click 'reset my password' button | If form is valid - Form is hidden and text informs user an email has been sent to them. If form is not valid - Error is shown on the affected form field.
+Logout page | Hover over 'cancel' button | Cursor changes to a pointer, text colour changes to deep olive
+| | Click 'cancel' button | Directs user to the site home page
+| | Hover over 'sign out' button | Cursor changes to a pointer, text colour changes to muted green
+| | Click 'sign out' button | Directs user to site home page, success message reads: 'You have signed out'
 
 From feature testing the user authentication, the following bugs were found:
-- Successful login message also shows the basket if grand total is >0 - Since this is controlled within the allauth code, it cannot be easily fixed, therefore will be revisited during future improvements if time prior to the deadline.
-- Two forgot password links on login page - The second link was removed and the first was styled appropriately with the page.
-- Forgot password page is not styled correctly - The password reset template was styled using the same bootstrap classes as used on other allauth templates.
-- Site is not sending emails for email verification or password reset - Sending emails functionality was tried before beginning the testing process however was not working properly, this functionality will be tried again once the site testing is complete and if their is time prior to the deadline.
+- Successful login message also shows the basket if grand total is >0 - Since this is controlled within the allauth code, it cannot be easily fixed, therefore will be revisited during [future improvements](#future-improvements).
+- There are two forgot password links on login page - The second link was removed and the first was styled appropriately with the page.
+- Forgot password page is not styled correctly - The password reset template was styled using the same bootstrap classes as on other allauth templates.
+- Site is not sending emails for email verification or password reset - Sending emails functionality was tried before beginning the testing process however was not working properly, this functionality will be reviewed during [future improvements](#future-improvements).
+
+#### Home App
 
 Feature | Action | Effect
 --- | --- | ---
-**Home App**
 New Arrivals & Bundles sections | Hover over product image | Cursor changes to a pointer
 | | Click product image | Directs user to product details page
 | | Hover over product category | Cursor changes to a pointer, text is underlined
@@ -1067,113 +1069,120 @@ Site Footer | Hover over any useful links | Cursor changes to a pointer, colour 
 
 No bugs were found from feature testing the home app.
 
+#### Products App
+
 Feature | Action | Effect
 --- | --- | ---
-**Products App**
-All Products view | Click sort by | Opens dropdown of sorting options
+All Products view | Click 'sort by' | Opens dropdown of sorting options
 | | Hover over sort option | Background colour changes to blue
 |  | Click sort option | Sorts all products by selected sorting, outline of soty by box turns blue
 | | Hover over product image | Cursor changes to a pointer
 | | Click product image | Directs user to product details page
 | | Hover over product category | Cursor changes to a pointer, text is underlined
 | | Click product category | Directs user to selected category page
-Product Category view | Hover over all products link | Cursor changes to a pointer, text is underlined
-| | Click all products link | Directs user to all products view
+Product Category view | Hover over 'all products' link | Cursor changes to a pointer, text is underlined
+| | Click 'all products' link | Directs user to all products view
 Product Detail page | Hover over product category | Cursor changes to a pointer, text is underlined
 | | Click product category | Directs user to selected category page
-| | Hover over edit link | Cursor changes to a pointer, colour changes to deep olive, text is underlined
-| | Click edit button | Directs user to edit product page
-| | Hover over delete button | Cursor changes to a pointer, colour changes to darker red, text is underlined
-| | Click delete button | Opens modal at top of the page
-| | Hover over close button | Cursor changes to a pointer, text colour changes to deep olive
-| | Click close button | Closes modal
-| | Hover over yes, delete button | Cursor changes to a pointer, button colour changes to darker red
-| | Click yes, delete button | Directs user to all products view, message shows product has been deleted
-| | Hover over plus or minus button | Plus or minus colour changes to muted green
-| | Click plus or minus button | Does not increase or decrease the product quantity
-| | Hover over keep shopping button | Cursor changes to a pointer, colour changes to deep olive
-| | Click keep shopping button | Directs user to all products view
-| | Hover over add to basket button | Cursor changes to a pointer, colour changes to muted green
-| | Click add to basket button | Success message shows: 'Added [product name] to your basket, grand total in site navigation updated
-| | Hover over add review button | Cursor changes to a pointer, colour changes to deep olive
-| | Click add review button | Directs user to add review page
+| | Hover over 'edit' link | Cursor changes to a pointer, colour changes to deep olive, text is underlined
+| | Click 'edit' link | Directs user to edit product page
+| | Hover over 'delete' link | Cursor changes to a pointer, colour changes to darker red, text is underlined
+| | Click 'delete' link | Opens modal at top of the page
+| | Hover over 'x' in top right corner | Cursor changes to a pointer, text colour changes to black
+| | Click 'x' in top right corner | Closes modal
+| | Hover over 'close' button | Cursor changes to a pointer, text colour changes to deep olive
+| | Click 'close' button | Closes modal
+| | Hover over 'yes, delete' button | Cursor changes to a pointer, button colour changes to darker red
+| | Click 'yes, delete' button | Directs user to all products view, message reads: 'Product has been deleted'
+| | Hover over plus or minus buttons | Plus or minus colour changes to muted green
+| | Click plus or minus buttons | Does not increase or decrease the product quantity
+| | Hover over 'keep shopping' button | Cursor changes to a pointer, colour changes to deep olive
+| | Click 'keep shopping' button | Directs user to all products view
+| | Hover over 'add to basket' button | Cursor changes to a pointer, colour changes to muted green
+| | Click 'add to basket' button | Success message reads: 'Added [product name] to your basket', grand total in site navigation updated
+| | Hover over 'add review' button | Cursor changes to a pointer, colour changes to deep olive
+| | Click 'add review' button | Directs user to add review page
 Add Product page | Current form field | Border highlighted in blue, type cursor in field
-| | Hover over cancel button | Cursor changes to a pointer, text colour changes to deep olive
-| | Click cancel button | Directs user to the all products view
-| | Hover over add product button | Cursor changes to a pointer, text colour changes to muted green
-| | Click add product button | If form is valid - Directs user to the product detail page for the new product, info message shows 'Successfully added product'. If form is not valid - Error is shown on the affected form field.
-Edit Product page | When page loaded | Info message shows: 'You are editing [product name]
+| | Hover over 'cancel' button | Cursor changes to a pointer, text colour changes to deep olive
+| | Click 'cancel' button | Directs user to the all products view
+| | Hover over 'add product' button | Cursor changes to a pointer, text colour changes to muted green
+| | Click 'add product' button | If form is valid - Directs user to the product detail page for the new product, info message reads: 'Successfully added product'. If form is not valid - Error is shown on the affected form field.
+Edit Product page | When page loaded | Info message reads: 'You are editing [product name]'.
 | | Current form field | Border highlighted in blue, type cursor in field
-| | Hover over cancel button | Cursor changes to a pointer, text colour changes to deep olive
-| | Click cancel button | Directs user to the product detail page
-| | Hover over update product button | Cursor changes to a pointer, text colour changes to muted green
-| | Click update product button | If form is valid - Directs user to the product detail page for the updated product, info message shows 'Successfully updated product'. If form is not valid - Error is shown on the affected form field.
+| | Hover over 'cancel' button | Cursor changes to a pointer, text colour changes to deep olive
+| | Click 'cancel' button | Directs user to the product detail page
+| | Hover over 'update product' button | Cursor changes to a pointer, text colour changes to muted green
+| | Click 'update product' button | If form is valid - Directs user to the product detail page for the updated product, info message reads: 'Successfully updated product'. If form is not valid - Error is shown on the affected form field.
 Add Review page | Current form field | Border highlighted in blue, type cursor in field
-| | Hover over cancel button | Cursor changes to a pointer, text colour changes to deep olive
-| | Click cancel button | Directs user back to the product detail page
-| | Hover over add review button | Cursor changes to a pointer, text colour changes to muted green
-| | Click add review button | If form is valid - Directs user to the product detail page, info message shows 'Successfully added review'. If form is not valid - Error is shown on the affected form field.
+| | Hover over 'cancel' button | Cursor changes to a pointer, text colour changes to deep olive
+| | Click 'cancel' button | Directs user back to the product detail page
+| | Hover over 'add review' button | Cursor changes to a pointer, text colour changes to muted green
+| | Click 'add review' button | If form is valid - Directs user to the product detail page, info message reads: 'Successfully added review'. If form is not valid - Error is shown on the affected form field.
 
 From feature testing the products app, the following bugs were found:
-- Quantity input buttons no longer work on product detail page - This bug reappeared after fixing the quantity button problem with the shopping basket. Therefore, to fix this problem, the script was duplicated and reverted to it's old version for the product detail page but the kept as the latest version for the shopping basket page.
-- Keep shopping button directs user to all products view even when coming from a category page - Updating the keep shopping button to return to a certain category would require refactoring the product views, therefore will be looked at in more detail if time prior to the deadline.
+- Quantity input buttons no longer work on product detail page - This bug reappeared after fixing the quantity button problem with the shopping basket. To fix this problem, the script was duplicated and reverted to it's old version for the product detail page but the kept as the latest version for the shopping basket page.
+- The keep shopping button directs the user to the all products view even when coming from a category page - Updating the keep shopping button to return to a certain category would require refactoring the product views, therefore will be looked at in more detail in the [future improvements](#future-improvements).
+
+#### Basket App
 
 Feature | Action | Effect
 --- | --- | ---
-**Basket App**
 Shopping Basket Page | Hover over plus or minus buttons | Cursor changes to a pointer, colour changes to muted green
 | | Click plus or minus buttons | Quantity of product line item increases or decreases appropriately
-| | Hover over update link | Cursor changes to a pointer
-| | Click update link | Quantity of product line item in basket updates, success message reads: 'Updated [product name] quantity to [quantity]'.
-| | Hover over delete link | Cursor changes to a pointer, colour changes to dark red
-| | Click delete link | Product line item is removed from basket, success message reads: Removed [product name] from your basket.
-| | Hover over keep shopping button | Cursor changes to a pointer, colour changes to deep olive
-| | Click keep shopping button | Directs user to all products page
-| | Hover of secure checkout button | Cursor changes to apointer, colour changes to muted green
-| | Click secure checkout button | Directs user to the checkout page
+| | Hover over 'update' link | Cursor changes to a pointer
+| | Click 'update' link | Quantity of product line item in basket updates, success message reads: 'Updated [product name] quantity to [quantity]'.
+| | Hover over 'remove' link | Cursor changes to a pointer, colour changes to dark red
+| | Click 'remove' link | Product line item is removed from basket, success message reads: 'Removed [product name] from your basket'.
+| | Hover over 'keep shopping' button | Cursor changes to a pointer, colour changes to deep olive
+| | Click 'keep shopping' button | Directs user to all products page
+| | Hover of 'secure checkout' button | Cursor changes to apointer, colour changes to muted green
+| | Click 'secure checkout' button | Directs user to the checkout page
 
 From feature testing the basket app, the following bugs were found:
-- Update link doesn't change colour or have underline when hovered - This was fixed by moving the small-link class into the small tag as opposed to the a tag.
-- Delete button doesn't have underline when hovered - This was fixed by moving the remove-item class into the small tag as opposed to the a tag and creating a remove-item hover class for the text-decoration.
+- The update link does no't change colour or have underline when hovered - This was fixed by moving the 'small-link' class into the small tag as opposed to the link tag.
+- The remove link does not have an underline when hovered - This was fixed by moving the 'remove-item' class into the small tag as opposed to the link tag and creating a 'remove-item:hover' class in the css for the underline.
+
+#### Checkout App
 
 Feature | Action | Effect
 --- | --- | ---
-**Checkout App**
 Checkout page | Current form field | Border highlighted in grey, type cursor in field
-| | Hover over save info checkbbox | Colour changes to darker blue or border changes to black depending on current toggle state
-| | Click save info checkbox | Checkbox is toggled to either checked or unchecked
+| | Hover over 'save this delivery information to my profile' checkbbox | Colour changes to darker blue or border changes to black depending on current toggle state
+| | Click 'save this delivery information to my profile' checkbox | Checkbox is toggled to either checked or unchecked
 | | Stripe card details field | If valid card details entered - Card type shown on far left of field. If invalid card details entered - Error shows underneath reading: 'Your card number is invalid', text in field changes to red.
-| | Hover over adjust bag button | Cursor changes to a pointer, text colour changes to deep olive
-| | Click adjust bag button | Directs user back to the shopping basket page
-| | Hover over complete order button | Cursor changes to a pointer, text colour changes to muted green
-| | Click complete order button | If form is valid - Form is hidden and loading overlay spinner appears. User is directed to checkout success page with order details, success message reads: 'Order successfully processed! Your order number is [order number]. A confirmation email will be sent to [user email]. If form is not valid - Error is shown on the affected form field.
-Checkout Success page | Hover over now check out the latest deals! button | Cursor changes to a pointer, colour changes to muted green
-| | Click now check out the latest deals! buttons | Directs user to new arrivals category page
+| | Hover over 'adjust bag' button | Cursor changes to a pointer, text colour changes to deep olive
+| | Click 'adjust bag' button | Directs user back to the shopping basket page
+| | Hover over 'complete order' button | Cursor changes to a pointer, text colour changes to muted green
+| | Click 'complete order' button | If form is valid - Form is hidden and loading overlay spinner appears. User is directed to checkout success page with order details, success message reads: 'Order successfully processed! Your order number is [order number]. A confirmation email will be sent to [user email]. If form is not valid - Error is shown on the affected form field.
+Checkout Success page | Hover over 'now check out the latest deals!' button | Cursor changes to a pointer, colour changes to muted green
+| | Click 'now check out the latest deals!' buttons | Directs user to new arrivals category page
 
 From feature testing the checkout app, the following bug was found:
-- Upon successful checkout the page shrinks because the form is hidden, therefore the loading overlay spinner is showing on top of the footer - This was fixed by adding the bootstrap class 'bg-white' to the div containing the loading overlay spinner, this now means the whole page is covered whilst the order is being submitted and the checkout success page is loading.
+- Upon successful checkout the page shrinks because the form is hidden, therefore the loading overlay spinner is showing on top of the site footer - This was fixed by adding the bootstrap class 'bg-white' to the div containing the loading overlay spinner, this now means the whole page is covered whilst the order is being submitted and the checkout success page is loading.
+
+#### Profiles App
 
 Feature | Action | Effect
 --- | --- | ---
-**Profiles App**
 Order History section | Hover over order number | Cursor changes to a pointer, colour changes to darker blue
-| | Click order number | Directs user to past order confirmation page, alert message reads: 'This is a past confirmation for order number: [order number]
-| | Hover over back to profile button | Cursor changes to a pointer, colour changes to deep olive
-| | Click back to profile button | Directs user back to their profile page
-Default Delivering Information section | Current form field | Border highlighted in blue, type cursor in field
-| | Hover over update information button | Cursor changes to a pointer, text colour changes to muted green
-| | Click update information button | If form is valid - Success message reads: 'Profile updated successfully'. If form is not valid - Error message reads: 'Update failed. Please ensure the form is valid'.
+| | Click order number | Directs user to past order confirmation page, alert message reads: 'This is a past confirmation for order number: [order number]'
+| | Hover over 'back to profile' button | Cursor changes to a pointer, colour changes to deep olive
+| | Click 'back to profile' button | Directs user back to their profile page
+Default Delivery Information section | Current form field | Border highlighted in blue, type cursor in field
+| | Hover over 'update information' button | Cursor changes to a pointer, text colour changes to muted green
+| | Click 'update information' button | If form is valid - Success message reads: 'Profile updated successfully'. If form is not valid - Error message reads: 'Update failed. Please ensure the form is valid'.
 
 No bugs were found from feature testing the profiles app.
 
+#### Messages
+
 Feature | Action | Effect
 --- | --- | ---
-**Messages**
 Success message | Hover over 'x' in top right | Cursor changes to a pointer, colour changes to darker grey
 | | Click 'x' in top right | Message is dismissed
 | | Scroll basket items (if more than two items in basket) | Reveals other items in basket
-| | Hover over go to secure checkout button | Cursor changes to a pointer, colour changes to muted green
-| | Click go to secure checkout button | Directs user to their shopping basket
+| | Hover over 'go to secure checkout' button | Cursor changes to a pointer, colour changes to muted green
+| | Click 'go to secure checkout' button | Directs user to their shopping basket
 Info message | Hover over 'x' in top right | Cursor changes to a pointer, colour changes to darker grey
 | | Click 'x' in top right | Message is dismissed
 Warning message Hover over 'x' in top right | Cursor changes to a pointer, colour changes to darker grey
@@ -1318,7 +1327,7 @@ This site was deployed on Heroku using an ElephantSQL database.
 1. 
 
 ## Post-Deployment Testing
-
+Once the site was deployed and appeared to be working correctly, manual testing of the site responsiveness and browser compatibilty was carried out again to ensure the deployed site was also functioning correctly. Lighthouse testing was also carried out as part of this process to ensure the site's performance, accessibility, best practices and SEO were all adequate.
 
 ### Responsiveness
 The deployed site was tested on a multitude of screen sizes using Chrome developer tools and physically on iPhone 6/7/8 to check that the site renders correctly on all screens tested and that all images and links work properly.
@@ -1335,111 +1344,145 @@ Renders as expected | Partially, details below | Partially, details below | Part
 
 This is the list of issues found when checking the responsiveness of the deployed site on mobile and tablet screens.
 
-Mobile screens:
-- [x] 'Yes, Delete' button on modal not full width.
+#### Mobile screens:
+- 'Yes, Delete' button on modal not full width - The 'btn-danger' class on this button was added to the media query that makes all buttons full width on screens less than 992px wide.
 
-Tablet screens
-- [x] Footer not touching bottom of screen on pages with less content.
+#### Tablet screens
+- Footer not touching bottom of screen on pages with less content - The 'min-vh-90' class that sets the minimum height of the page content was changed to 91vh to remove the small gap of whitespace at the bottom of the page.
 
-All screens:
-- [x] Remove/ update links in basket not working.
+#### All screens:
+- Remove/ update links in basket not working - This was due to an earlier bug fix that added the correct styling to these links, the 'update-link' and 'remove-item' classes were added again to the link tags rather than just the small tags.
 
-The following issues were checked on a physical mobile screen to test whether they were issues with viewing the site in dev tools. Thankfully, all the issues were not present on the deployed site on mobile, therefore didn't require any bug fixes.
+The following issues were checked on a physical mobile screen to test whether they were issues with viewing the site in dev tools. Thankfully, none of the issues were present, therefore did not require any changes.
 - Btt button half off screen on right
 - Navbar partially hides when scrolling
 - Very slow scrolling
-- Dropdown nav doesn't disappear on next click - Have to click on toggler to hide it
+- Dropdown nav does not disappear on next click - Have to click on toggler to hide it
 
 ### Browser Compatibility
 The deployed site was tested in multiple browsers to ensure all features worked correctly and the site responded in the intended way no matter what browser was being used.
 
-| | Browser | | | Notes
-:--- | :--- | --- | --- | ---
+| | Browser | | | | Notes
+:--- | :--- | --- | --- | --- | ---
 | | Chrome | Edge | Firefox | Safari (only on mobile)
-Intended Appearance? | Yes | Yes | Yes | Yes | Yes
-Intended Responsiveness? | Yes | Yes | Yes | Yes
-Buttons Work as Expected? | Yes | Yes | Yes | Yes
-Forms Work as Expected? | Yes | Yes | Yes | Yes
+Intended Appearance? | Yes | Yes | Yes | Yes | Site renders as expected on all browsers tested 
+Intended Responsiveness? | Yes | Yes | Yes | Yes | Site responds as expected on all browsers tested
+Buttons Work as Expected? | Yes | Yes | Yes | Yes | Buttons function as expected on all browsers tested
+Forms Work as Expected? | Yes | Yes | Yes | Yes | Forms work as expected on all browsers tested
+
+No issues were found with the deployed site during browser compatibility testing.
 
 ### Lighthouse Testing
 
+Lighthouse testing was carried out on most site pages, it was not carried out on pages that are simply duplicates of other pages with page-specific content being the only difference.
+
+Below is a list of the sitewide issues that were found during lighthouse testing:
+- Render-blocking resources - These were all for required add-ins such as Stripe, fontawesome & AWS, therefore could not be removed.
+- Insufficient contrast colours - This was checked using Adobe's contrast checker before setting on a colour scheme, no clashing colours have been used.
+- Missing meta description tag - This was added as a generic description to the base template so it would be present on every page of the site, this issue was found when the products page was tested, therefore after adding this description the site was redeployed and tested again, hence why some pages only have one test completed and others have two.
+- Heading elements not in sequential order - This is because the heading element that is out of order is located in the site footer, therefore it cannot always be in order on every page.
+
 #### Index Page
+
+The index page had very good best practices and SEO scores, meaning no changes were required. The performance and accessibilty scores were slightly lower, within 4 points from being green, however none of the changes required were within the scope of this project.
 
 ![Index page lighthouse score](readme_imgs/index_1.png)
 
 Page specific issues found:
-- Images could be in WEBP format
+- Images could be in WEBP format - The images could be exchanged for WEBP file types, however this would take quite a long time to change, therefore could be looked at again in the [future improvements](#future-improvements).
 
 #### Contact Page
+
+The contact page had very good performance, best practices and SEO scores, indicating no changes were required. The accessibilty score was 3 points away from being green, however none of the changes required were within the scope of this project.
 
 ![Contact page lighthouse score](readme_imgs/contact_2.png)
 
 #### About Page
 
+The about page had very good performance, best practices and SEO scores, showing no changes were required. The accessibilty was slightly lower, however none of the changes required were within the scope of this project.
+
 ![About page lighthouse score](readme_imgs/about_1.png)
 
 #### Products Page
 
+The products page had very good performance and best practices scores, indicating no changes were required. The accessibilty and SEO scores were slightly lower, showing that some changes could be made to improve this.
+
 ![Products page lighthouse score](readme_imgs/products_1.png)
 
 Page specific issues found:
-- Sort by element missing label element: This was added and given the bootstrap 'sr-only' class to hide it on the page.
+- Sort by element missing label element - This was added and given the bootstrap 'sr-only' class to hide it on the page.
+
+After making this change, along with adding a meta description, the SEO score is now in the green and the accessibility score went up by 5 points.
 
 ![Products page lighthouse score 2](readme_imgs/products_2.png)
 
 #### Product Detail Page
 
+The product detail page had very good performance, best practices and SEO scores, showing no changes were required. The accessibilty score was quite poor, indicating that some changes could be made to improve this.
+
 ![Product Detail page lighthouse score](readme_imgs/product_1.png)
 
 Page specific issues found:
-- Buttons do not have accessible names: Label tags were added to the quantity buttons with the bootstrap 'sr-only' class.
-- Form elements do not have associated labels: A label tag was added to the input tag with the bootstrap 'sr-only' class.
+- Buttons do not have accessible names - Label tags were added to the quantity buttons with the bootstrap 'sr-only' class.
+- Form elements do not have associated labels - A label tag was added to the input tag with the bootstrap 'sr-only' class.
+
+After making these changes to the product detail page, the performance score actaully dropped by 2 points and the accessibility score increased by 4 points. This accessibility score is still quite low, however all changes within the scope of this project had been made.
 
 ![Product Detail page lighthouse score 2](readme_imgs/product_2.png)
 
 #### Add/ Edit Product
 
+The add/edit product pages had very good performance, best practices and SEO scores, indicating no changes were required. The accessibilty score was slightly lower, only 2 points away from being green and all changes within the scope of this project had already been made.
+
 ![Add Product page lighthouse score](readme_imgs/add_product_1.png)
 
 #### Add Review Page
+
+The add review page had very good performance, best practices and SEO scores, showing no changes were required. The accessibilty score was slightly lower, however within 3 points of being green and all changes within the scope of this project had already been made.
 
 ![Add Review page lighthouse score](readme_imgs/add_review_1.png)
 
 #### Shopping Basket
 
+The shopping basket page had very good performance, best practices and SEO scores, indiciating no changes are required. The accessibility score was quite poor, showing that some changes could be made to improve this.
+
 ![Shopping Basket page lighthouse score](readme_imgs/basket_1.png)
 
 Page specific issues found:
-- Buttons do not have accessible names: Label tags were added to the quantity buttons with the bootstrap 'sr-only' class.
-- Form elements do not have associated labels: A label tag was added to the input tag with the bootstrap 'sr-only' class.
+- Buttons do not have accessible names - Label tags were added to the quantity buttons with the bootstrap 'sr-only' class.
+- Form elements do not have associated labels - A label tag was added to the input tag with the bootstrap 'sr-only' class.
+
+After making these changes to the shopping basket page, the performance score increased by 1 point and the accessibility score increased by 4 points. This accessibility score is still quite low, however all changes within the scope of this project had been made.
 
 ![Shopping Basket page lighthouse score 2](readme_imgs/basket_2.png)
 
 #### Checkout
 
+The checkout page had good performance and accessibility scores, all changes within the scope of this project had already been made. The best practices and SEO score are very good, showing no changes are required.
+
 ![Checkout page lighthouse score](readme_imgs/checkout_1.png)
 
 #### Checkout Success
+
+The checkout success page had a rather low performance score due to multiple sitewide issues being present on this page that could not be altered. The accessibility score is 3 points away from being green and all changes within the scope of this project have been made. The best practices and SEO score are very high, indicating no changes are required.
 
 ![Checkout Success page lighthouse score](readme_imgs/checkout_success_1.png)
 
 #### User Profile
 
+The profile page also had a rather low performance score due to multiple sitewide issues being present on this page that could not be altered. The accessibility score is 1 point away from being green and all changes within the scope of this project have been made. The best practices and SEO score are very high, showing no changes are required.
+
 ![Profile page lighthouse score](readme_imgs/profile_1.png)
 
-Allauth not done as templates
-
-Sitewide issues found:
-- Render-blocking resources: All required add-ins such as Stripe, font awesome, AWS.
-- Insufficient contrast colours: This was checked using Adobe's contrast checker before setting on a colour scheme and no clashing colours have been used.
-- Missing meta description tag: This was added as a generic description to the base template so it would be present on every page of the site.
-- Heading elements not in sequential order: This is because the heading element out of order is in the footer and therefore can't always be in order on every page.
+The allauth templates were not tested as they are standard templates with custom styling added, therefore any changes required that are specific to those pages could not be made.
 
 ### Future Improvements
 
 reset password page not styled the same
 
 Sort reviews by latest date
+
+    - [ ] Review ratings can be up to 9.9 rather than 5.0
 
 Emails - future improvment
 
@@ -1453,6 +1496,16 @@ DEBUG = int(os.environ.get("DEVELOPMENT", default=0))
 
 Performance issues related to lighthouse testing
 
+Zero waste kit missing image credit - Maybe add a new one
+
+Add comments to code where it's not my own or customised from a template
+
+Add total number of commits to version control section
+
+Make github repo public
+
+Check debug
+
 **Future Additions (if time)**
 31 | Site User | Receive a confirmation email after registering | Verify that my account was successfully created
 32 | Site User | Add items to my wishlist | Save products that I'd like to purchase later
@@ -1460,10 +1513,68 @@ Performance issues related to lighthouse testing
 
 ## Credits & Acknowledgements
 
-Add comments to code where it's not my own or customised from a template
+### Credits
 
-Mockups for renders <a href="https://www.freepik.com/free-vector/digital-device-mockup-set_4122518.htm#query=device%20mockup&position=8&from_view=search&track=ais&uuid=2c6b5773-48a8-4b9a-b8a0-4b83164331af">Image by rawpixel.com</a> on Freepik
+- **Code Institute** for creating the [gitpod-full-template](https://github.com/Code-Institute-Org/gitpod-full-template) and Boutique Ado walkthrough project which was the starting point for this project.
+- [**The Clean Market**](https://thecleanmarket.co.uk/), the main site used for researching sustainable products and categories.
+- [**dbdiagram.io**](https://dbdiagram.io/home/), the site used to create the [data schema](#data-schema).
 
-No image found image = Image by <a href="https://www.freepik.com/free-vector/realistic-question-box-mockup_28846681.htm#query=mystery&position=1&from_view=search&track=sph&uuid=3ddffba5-4263-4cdb-8308-d88d826b07f6">Freepik</a>
+### Acknowledgements
 
-favicon credit: <a href="https://www.flaticon.com/free-icons/leaf" title="leaf icons">Leaf icons created by Pixel perfect - Flaticon</a>
+- The Code Institute Slack Community for their help when unrecognised issues arose throughout the project.
+- Chris Quinn, my Code Institute mentor, thank you for your help and support throughout this project.
+
+### Imagery Credits
+
+Image | Credit | Link (if applicable)
+:--- | :--- | :---
+recycled-cotton-throw-blanket.jpg |	rawpixel.com | https://www.freepik.com/free-photo/aesthetic-bathroom-home-decor_18099265.htm#query=folded%20blanket&position=44&from_view=search&track=ais&uuid=9ea448c3-b144-428b-9d25-bf145b686a34
+cotton-organic-towel-set.jpg | Freepik | https://www.freepik.com/free-photo/stacked-white-towels_3490215.htm#query=towels&position=4&from_view=search&track=sph&uuid=9eaf05d6-58b1-4e7a-8702-1c987d2ccdb8
+upcycled-throw-pillows.jpg	| Freepik | https://www.freepik.com/free-photo/beautiful-interior-room-design-concept_11523470.htm#query=throw%20pillow&position=16&from_view=search&track=ais&uuid=38cec4d0-1c6f-4411-b7f0-e6f12a7bf615
+cork-coasters.jpg | Annushka Ahuja | https://www.pexels.com/photo/people-holding-coasters-8054771/
+soy-wax-candles.jpg | Freepik | https://www.freepik.com/free-photo/close-up-dry-pods-candle-candleholder-marble-surface_3624019.htm#query=scented%20candle&position=14&from_view=search&track=ais&uuid=afd368f9-9493-45f5-a53d-8e300502cd36"
+upcycled-wooden-wall-art.jpg | Photo bu Kara Eads on Unsplash
+upcycled-glass-vases.jpg | Freepik | https://www.freepik.com/free-photo/close-up-arrangement-modern-vase_31277268.htm#query=glass%20vase&position=2&from_view=search&track=ais&uuid=a63404bd-21b3-4c5a-b1fc-4194be892c9a"
+organic-cotton-tote-bag.jpg | Vie Studio | https://www.pexels.com/photo/brown-tote-bag-on-white-table-8148587/
+eco-friendly-yoga-mat.jpg | Werner Moser | https://pixabay.com/users/pixelcreatures-127599/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=940359"
+recycled-paper-notebooks.jpg | Freepik | https://www.freepik.com/free-photo/top-view-notebooks-table_12062758.htm#query=plain%20notebooks&position=0&from_view=search&track=ais&uuid=f915284d-ce95-4dc6-8920-220baf3ca886
+bamboo-utensil-set.jpg | Photo by Maria Ilves on Unsplash
+eco-friendly-cleaning-brushes.jpg | Photo by Lina Verovaya on Unsplash
+reusable-beeswax-wraps.jpg | Photo by Jack Cole on Unsplash
+bamboo-cutting-board.jpg | Photo by Mockup Graphics on Unsplash
+glass-food-storage-containers.jpg | Photo by rebootanika on Unsplash
+organic-cotton-dish-towel-set.jpg | Freepik | https://www.freepik.com/free-photo/high-view-stacked-white-towels_5173766.htm#query=dish%20towels&position=38&from_view=search&track=ais&uuid=10c3326d-4c36-4313-b6e9-3ccb5e95d7b1
+cork-trivet-set.jpg | Photo by feey on Unsplash
+recycled-glass-water-pitcher.jpg | Photo by Mockup Graphics on Unsplash
+glass-kitchen-spray-bottles.jpg | Photo by Daiga Ellaby on Unsplash
+plant-based-laundry-detergent.jpg | Photo by No Revisions on Unsplash
+reusable-snack-food-tins.jpg | Photo by S'well on Unsplash
+organic-and-vegan-lip-balm.jpg | Photo by Brittney Weng on Unsplash
+bamboo-charcoal-cleansing-bar.jpg | Freepik | https://www.freepik.com/free-photo/high-angle-natural-hygiene-products_5713488.htm#query=charcoal%20cleansing%20bar&position=0&from_view=search&track=ais&uuid=2c6cd897-5269-4c84-a537-6edaabd4f681
+zero-waste-shampoo-bar.jpg | jcomp | https://www.freepik.com/free-photo/macadamia-soap-skin-care-treatment_13902017.htm#query=shampoo%20bar&position=3&from_view=search&track=ais&uuid=fcdd1c8c-2413-4f64-8c86-355e0fc2f950
+organic-and-fairtrade-soap.jpg | Photo by Good Soul Shop on Unsplash
+bamboo-toothbrush.jpg | Freepik | https://www.freepik.com/free-photo/natural-self-care-assortment_14958730.htm#query=bamboo%20toothbrush&position=1&from_view=search&track=ais&uuid=d4d1f528-31ca-4868-8f22-0854b101f143
+natural-deodorant-stick.jpg | Photo by Cristi Ursea on Unsplash
+organic-cotton-facial-rounds.jpg | Photo by EcoPanda on Unsplash
+fairtrade-shea-butter.jpg | Freepik | https://www.freepik.com/free-photo/shea-butter-beauty-treatment-arrangement_14063011.htm#query=shea%20butter&position=6&from_view=search&track=ais&uuid=b290f3ee-41c3-4afd-8f19-cf7d1f2c0076
+eco-friendly-hair-conditioner.jpg | Photo by No Revisions on Unsplash
+recycled-coffee-body-scrub.jpg | Photo by Dear Scrub on Unsplash
+sustainable-toothpaste-tablets.jpg | Monfocus | https://pixabay.com/users/monfocus-2516394/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4528586
+organic-cotton-dog-toy.jpg | Photo by FLOUFFY on Unsplash
+organic-cotton-dog-bandana.jpg | Photo by No Revisions on Unsplash
+bamboo-pet-bowl.jpg	| chandlervid85 | https://www.freepik.com/free-photo/empty-wooden-bowl-isolated-white-background_19608619.htm#query=bamboo%20bowl&position=10&from_view=search&track=ais&uuid=4ed24576-1989-4a89-aa2b-d0b602f9a036
+natural-dog-treats.jpg | Freepik | https://www.freepik.com/free-photo/domestic-pet-food-assortment_14603257.htm#query=dog%20treats&position=1&from_view=search&track=ais&uuid=8529e213-6819-4788-a82a-b362767fb269
+recycled-pet-dog-harness.jpg | Josh Hild | https://www.pexels.com/photo/a-dog-sitting-on-a-wooden-bridge-with-metal-railings-9700137/
+organic-cotton-pet-bed.jpg | Photo by Jamie Street on Unsplash
+natual-rubber-ball.jpg | Kris | https://pixabay.com/users/thedigitalway-3008341/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1561011
+sustainable-dog-grooming-brush.jpg | Photo by Ayla Verschueren on Unsplash
+recycled-glass-teacups.jpg | Photo by Alison Marras on Unsplash
+bamboo-dustpan-brush.jpg | Photo by Jan Kopřiva on Unsplash
+bamboo-device-charging-dock.jpg | Photo by Dario on Unsplash
+zero-waste-bathroom-starter-kit.jpg | Photo by Svitlana on Unsplash
+zero-waste-kitchen-starter-kit.jpg | Photo by Good Soul Shop on Unsplash
+zero-waste-beauty-starter-kit.jpg	
+zero-waste-pet-starter-kit.jpg | Photo by Kristina Balić on Unsplash
+favicon.png | Leaf icons created by Pixel perfect | https://www.flaticon.com/free-icons/leaf
+no-image.png | Freepik | https://www.freepik.com/free-vector/realistic-question-box-mockup_28846681.htm#query=mystery&position=1&from_view=search&track=sph&uuid=3ddffba5-4263-4cdb-8308-d88d826b07f6
+renders-final.png | Template by rawpixel.com | https://www.freepik.com/free-vector/digital-device-mockup-set_4122518.htm#query=device%20mockup&position=8&from_view=search&track=ais&uuid=2c6b5773-48a8-4b9a-b8a0-4b83164331af

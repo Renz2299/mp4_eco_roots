@@ -388,7 +388,8 @@ footer {
     }
     .keep-shopping-btn,
     .detail-btn,
-    .review-btn {
+    .review-btn,
+    .btn-danger {
         width: 100%;
     }
 }
