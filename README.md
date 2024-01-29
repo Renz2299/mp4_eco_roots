@@ -1224,7 +1224,7 @@ This site was deployed on Heroku using an ElephantSQL database.
 
     ![Create a new app in Heroku](readme_imgs/esql_deployment_12.png)
 
-2. Give the app a name and select the closest region, the click 'Create app'.
+2. Give the app a name and select the closest region, then click 'Create app'.
 
     ![Naming the new Heroku app](readme_imgs/esql_deployment_13.png)
 
@@ -1238,29 +1238,27 @@ This site was deployed on Heroku using an ElephantSQL database.
 
 ### Connecting ESQL database to the local development server
 
-1. To connect the ElephantSQL database to the development server, dj_database_url and psycopg2 are required. These can be installed by typing 'pip3 install dj_database_url psycopg2' into the terminal.
+1. To connect the ElephantSQL database to the development server, dj_database_url and psycopg2 are required. These can be installed by typing 'pip3 install dj_database_url psycopg2' into the terminal. Once they are installed, the requirements.txt file can be updated by typing 'pip freeze > requirements.txt' in the terminal.
 
-2. Once they are installed, the requirements.txt file can be updated by typing 'pip freeze > requirements.txt' in the terminal.
-
-3. Next, in the settings.py file dj_database_url needs importing. This can be added under the 'import os' line.
+2. Next, in the settings.py file dj_database_url needs importing. This can be added under the 'import os' line.
 
     ![Importing dj_database_url in settings.py](readme_imgs/importing_dj_database_url.png)
 
-4. Still within the settings.py file, the databases section should be commented out and a new database section should be added underneath with the database url from ElephantSQL. This now means the development server is looking at the ElephantSQL database rather than the local sqlite3 database. Code should not be committed with this database url in, this will be updated later on in the deployment process to keep the url secret.
+3. Still within the settings.py file, the databases section should be commented out and a new database section should be added underneath with the database url from ElephantSQL. This now means the development server is looking at the ElephantSQL database rather than the local sqlite3 database. Code should not be committed with this database url in, this will be updated later on in the deployment process to keep the url secret.
 
     ![Databases section in settings.py](readme_imgs/db_url_in_settings.png)
 
-5. Now, run 'python3 manage.py showmigrations' in the terminal. If you are successfully connected to the ElephantSQL database you should see a list of migrations, however none of them should be checked off. This is the point where any known updates to models or fixtures should be done as they will be migrated/ loaded in the next steps, so updating them now can prevent having to do more work later.
+4. Now, run 'python3 manage.py showmigrations' in the terminal. If you are successfully connected to the ElephantSQL database you should see a list of migrations, however none of them should be checked off. This is the point where any known updates to models or fixtures should be done as they will be migrated/ loaded in the next steps, so updating them now can prevent having to do more work later.
 
     ![Show migrations in the terminal](readme_imgs/migrations_showing_connected_to_db.png)
 
-6. In the terminal run 'python3 manage.py migrate' to migrate the database models to the new database, run this with the plan flag to check the migrations first if desired.
+5. In the terminal run 'python3 manage.py migrate' to migrate the database models to the new database, run this with the plan flag to check the migrations first if desired.
 
-7. Run 'python3 manage.py loaddata [fixture name] to load the data into the new database. Be sure to load fixtures files in the correct order if any of them have data tat relies on the other, for this project, the categories data needed loading first.
+6. Run 'python3 manage.py loaddata [fixture name] to load the data into the new database. Be sure to load fixtures files in the correct order if any of them have data that relies on the other, for this project, the categories data needed loading first.
 
-8. Run 'python3 manage.py createsuperuser' in the terminal to create a superuser for the new database. Follow the steps in the terminal to enter email, username and password.
+7. Run 'python3 manage.py createsuperuser' in the terminal to create a superuser for the new database. Follow the steps in the terminal to enter email, username and password.
 
-9. Finally, the database url from step 4 can be removed and the commented out code can be added back in to prevent the database url being pushed to github. This section will be reviewed again later on in the deployment process.
+8. Finally, the database url from step 4 can be removed and the commented out code can be added back in to prevent the database url being pushed to github. This section will be reviewed again later on in the deployment process.
 
 ### Confirming the database
 
@@ -1278,7 +1276,7 @@ This site was deployed on Heroku using an ElephantSQL database.
 
 ### Deploying to Heroku
 
-1. First, install gunicorn which will act as the web server for the deployed site. To do this run 'pip3 install gunicorn' in the terminal. And then freeze the requirements.txt file with 'pip freeze > requirements.txt'
+1. First, install gunicorn which will act as the web server for the deployed site. To do this run 'pip3 install gunicorn' in the terminal. Then freeze the requirements.txt file with 'pip freeze > requirements.txt'
 
 2. Next, update the databases section of the settings.py to the following. The if statement is looking for a DATABASE_URL in the environment variables, if it finds one then it will use that url. Else, it will use the local sqlite3 database.
 
@@ -1324,7 +1322,153 @@ This site was deployed on Heroku using an ElephantSQL database.
 
 ### Storing static files with AWS S3
 
-1. 
+#### Creating an AWS account
+
+1. Go to aws.amazon.com and click 'Create AWS Account'.
+
+    ![Create AWS Account](readme_imgs/create_aws_account.png)
+
+2. Fill out the requred information to create an account.
+
+    ![AWS Account Registration Form](readme_imgs/aws_account_details.png)
+
+#### Creating an S3 Bucket
+
+1. Once the account is created, go back to aws.amazon.com and sign in to the new account. In the search bar, search for 'S3'.
+
+    ![Searching for 'S3'](readme_imgs/search_s3.png)
+
+2. In the S3 dashboard, click 'Create Bucket'
+
+    ![Create Bucket button](readme_imgs/create_bucket.png)
+
+3. In the general configuration section, choose the AWS region closest and give the bucket a name. In the object ownership section select 'ACLs enabled' and ensure 'Bucket owner preferred' is selected. In the public access section, ensure 'Block Public Access settings for this bucket' is unchecked and acknowledge that these settings will result in the objects in the bucket being public.
+
+    ![Bucket configuration](readme_imgs/bucket_config_1.png)
+
+    ![Bucket configuration](readme_imgs/bucket_config_2.png)
+
+4. Once the bucket is created, go to the bucket's 'Properties' tab. Scroll to the bottom section called 'Static Web Hosting' and click 'Edit'.
+
+    ![Bucket properties tab](readme_imgs/properties_tab.png)
+
+    ![Static web hosting section](readme_imgs/static_web_hosting.png)
+
+5. In the static web hosting settings, select 'Enable' and set the hosting type to 'Host a static website'. For the index and error document, the default values AWS suggests can be used. Then click 'Save changes'.
+
+    ![Static web hosting settings](readme_imgs/edit_static_web_hosting.png)
+
+6. Next, go to the 'Permissions' tab and scroll down to the 'Cross-origin resouce sharing (CORS)' section and click 'Edit'.
+
+    ![Bucket permissions tab](readme_imgs/permissions_tab.png)
+
+    ![CORS configuration section](readme_imgs/cors_config.png)
+
+7. In the CORS settings, add the following code to the textfield and click 'Save changes'.
+
+    ![CORS configuration settings](readme_imgs/edit_cors_config.png)
+
+8. Still in the bucket permissions tab, scroll to the 'Bucket Policy' section and click 'Edit. Within the bucket policy settings, click 'Policy generator'.
+
+    ![Policy generator button](readme_imgs/policy_generator.png)
+
+9. Within the policy generator settings select 'S3 Bucket Policy' for the policy type. Keep the effect as 'Allow'. Set the action to 'GetObject' from the dropdown list. And copy the bucket ARN into the ARN field. Then click 'Add Statement' and the statement will appear underneath the settings.
+
+    ![Policy generator settings](readme_imgs/policy_generator_settings.png)
+
+10. Select 'Generate Policy' and a dialog box will appear containing a JSON document of the new bucket policy. Copy this JSON into the textfield on the edit bucket policy page, add '/*' to the end of the resource and click 'Save changes'.
+
+    ![Bucket policy JSON](readme_imgs/bucket_policy.png)
+
+    ![Bucket policy settings](readme_imgs/bucket_policy_settings.png)
+
+11. Still in the bucket 'Permissions' tab, scroll to the 'Access Control List (ACL)' section and click 'Edit'.
+
+12. In the ACL settings, set everyone to 'List' and acknowledge the effects of these changes, then click 'Save changes'.
+
+    ![ACL settings](readme_imgs/acl_settings.png)
+
+#### Creating a User Group
+
+1. Now that the bucket is created, within the search bar, search for 'IAM'.
+
+    ![Searching for 'IAM'](readme_imgs/search_iam.png)
+
+2. In the IAM dashboard, select 'User Groups' from the side navigation and the click 'Create Group'.
+
+    ![User groups in IAM navigation](readme_imgs/user_groups_iam_navigation.png)
+
+    ![Create group button](readme_imgs/create_group.png)
+
+3. Give the group a name such as 'manage-app-name' then click 'Create group'.
+
+4. Next in the IAM dashboard, on the side navigation select 'Policies' and the click 'Create Policy'.
+
+    ![Create policy button](readme_imgs/create_policy.png)
+
+5. In the create policy settings, go to the 'JSON' tab, the click the 'Actions' dropdown and selctin 'Import Policy'
+
+    ![Create policy settings](readme_imgs/import_policy.png)
+
+6. Select the amazon s3 full access policy and click 'Import Policy'.
+
+    ![S3 Full Access Policy](readme_imgs/s3_full_access_policy.png)
+
+7. Update the resource within the policy to the bucket ARN and the bucket ARN with '/*' added to the end, as shown below.
+
+    ![S3 Full Access Policy resource](readme_imgs/group_policy.png)
+
+8. Finally, click 'Next page', add any tags if desired and then click 'Review policy'. Give the policy a suitable name and description then click 'Create policy'.
+
+9. Back in the 'User Groups' tab, go to the 'Permissions' tab and click 'Add permissions'. In the dropdown select 'Attach policies' and search for the policy just created, then click 'Attach policy'.
+
+    ![User Group attach policy](readme_imgs/attach_policy.png)
+
+#### Creating a User
+
+1. Next, go to the 'Users' tab of the side navigation and click 'Create User'. Give the user a suitable name such as 'app-name-staticfiles-user' and give the user programmatic access.
+
+    ![Create user button](readme_imgs/create_user.png)
+
+2. Add the user to the newly created group and click through to the end to creat the user.
+
+3. Within the Users section of the IAM dashboard, select the user just created. Go to the 'Security Credentials' tab and scroll of 'Access Keys'. Click 'Create access key'.
+
+4. Select 'Application running outside AWS' and click 'Next'. Then click 'Create Access Key' and click 'Download .csv file' to download the users access key and secret key.
+
+### Connecting Django to S3 Bucket
+
+1. First, install boto3 and django-storages by typing 'pip3 install boto3 django-storages'. Then freeze the requirements with 'pip freeze > requirements.txt'.
+
+2. Add the 'storages' app to the installed apps within settings.py.
+
+3. Add the following code to the settings.py file and then set the AWS variables in Heroku.
+
+    ![Use_AWS in settings.py](readme_imgs/if_use_aws.png)
+
+    ![Updated config vars in Heroku](readme_imgs/config_vars_aws.png)
+
+4. Create a new file in the root directory called 'custom_storages.py' and add the following code to it.
+
+    ![Custom storages file](readme_imgs/custom_storages.png)
+
+5. Next, push these updates to GitHub to trigger an automatic deployment to Heroku. Go to the S3 bucket on AWS and check that the static files have appeared in the bucket.
+
+    ![Static files in S3 bucket](readme_imgs/static_files_in_bucket.png)
+
+#### Adding Media Files
+
+1. Within the bucket, click 'Create folder' and give it the name 'media'.
+
+    ![Create folder button](readme_imgs/create_folder.png)
+
+2. Within the folder, click 'Upload' and then 'Add files' and select the product/ site images to be uploaded from within the dialog box. Make sure to click public read access and then click 'Upload' and wait for them to be uploaded to the bucket.
+
+    ![Upload button](readme_imgs/upload.png)
+
+3. Finally, go to the deployed app and check that the images are loading correctly.
+
+The site should now be deployed and working correctly.
 
 ## Post-Deployment Testing
 Once the site was deployed and appeared to be working correctly, manual testing of the site responsiveness and browser compatibilty was carried out again to ensure the deployed site was also functioning correctly. Lighthouse testing was also carried out as part of this process to ensure the site's performance, accessibility, best practices and SEO were all adequate.
@@ -1505,6 +1649,10 @@ Add total number of commits to version control section
 Make github repo public
 
 Check debug
+
+Check form validation
+
+Check user is always signposted
 
 **Future Additions (if time)**
 31 | Site User | Receive a confirmation email after registering | Verify that my account was successfully created
