@@ -5,6 +5,8 @@ from django.contrib import messages
 from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
 
 
+# The following code was written based on the Code Institute Boutique Ado
+# walkthrough and customised to fit this application
 def view_basket(request):
     """ A view that renders the basket contents page """
 

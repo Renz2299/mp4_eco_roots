@@ -8,6 +8,8 @@ from .forms import UserProfileForm
 from checkout.models import Order
 
 
+# The following code was written based on the Code Institute Boutique Ado
+# walkthrough and customised to fit this application
 @login_required
 def profile(request):
     """ Display the user's profile """

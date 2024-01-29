@@ -4,6 +4,8 @@ from django.shortcuts import get_object_or_404
 from products.models import Product
 
 
+# The following code was written based on the Code Institute Boutique Ado
+# walkthrough and customised to fit this application
 def basket_contents(request):
 
     basket_items = []

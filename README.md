@@ -1621,43 +1621,26 @@ The profile page also had a rather low performance score due to multiple sitewid
 The allauth templates were not tested as they are standard templates with custom styling added, therefore any changes required that are specific to those pages could not be made.
 
 ### Future Improvements
+Through testing the site there were a number of further improvements found that would be nice to include in the site however were not either because of time constraints or a lack of knowledge of the specific functionality.
 
-reset password page not styled the same
+1. The rating added by a user on the add review form can take any number up to 9.9, however the ratings on the site are out of 5.0. If there was more time, further research could be completed to figure out how to set a model DecimalField with a max value attribute.
 
-Sort reviews by latest date
+2. The site is not currently sending emails, meaning that user's will not receive a verification email to verify their account or confirmation emails for their account and orders. To prevent this causing problems right now, email verification in settings.py has been set to none, so that users can continue using the site without verifying their email. This functionality was attempted following the Code Institute walkthrough tutorial, however the process appeared to be slightly out of date, therefore with more time further research could be completed into setting up site emails properly to ensure user's are receiving verification and confirmation emails.
 
-    - [ ] Review ratings can be up to 9.9 rather than 5.0
+3. The Review Contact Requests page ideally needs pagination, so that the list of contact requests does not become too long for the store owner to understand and respond to requests.
 
-Emails - future improvment
+4. During lighthouse testing there were a number of performance issues that were sitewide and causing the site to receive a lower score. With more time, the current JPG product images could be exchanged for WEBP formats, and the code could be inspected further to ensure Stripe, Fontawesome and AWS elements that were causing performance issues are loading correctly and on the pages where they are necessary.
 
-Contact review needs pagination
+5. As a store owner, deleting a product that is in the basket will cause a 404 error and make the site impossible to get back onto without fully clearing the browser cache. With more time this would be reviewed and corrected however this is an unlikely situation as only store owners can delete products and a store owner is unlikely to have items in their basket.
 
-README - JavaScript or JQuery?
+6. Introduce the ability for users to add items to a wishlist so users can save items they would like to purchase later. With more time this functionality would be further researched and possibly introduced to the site.
 
-DEBUG = int(os.environ.get("DEVELOPMENT", default=0))
-
-- [ ] Deleting a product that is in the basket will cause a 404 error.
-
-Performance issues related to lighthouse testing
-
-Zero waste kit missing image credit - Maybe add a new one
-
-Add comments to code where it's not my own or customised from a template
-
-Add total number of commits to version control section
-
-Make github repo public
-
-Check debug
-
-Check form validation
-
-Check user is always signposted
-
-**Future Additions (if time)**
-31 | Site User | Receive a confirmation email after registering | Verify that my account was successfully created
-32 | Site User | Add items to my wishlist | Save products that I'd like to purchase later
-33 | Shopper | Receive a confirmation email after placing an order | Keep the order confirmation for my records
+Still to do:
+- Zero waste kit missing image credit - Maybe add a new one
+- Add comments to code where it's not my own or customised from a template
+- Add total number of commits to version control section
+- Check form validation
+- Check user is always signposted
 
 ## Credits & Acknowledgements
 

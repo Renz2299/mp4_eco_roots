@@ -2,6 +2,8 @@ from django.contrib import admin
 from .models import Product, Category, Review
 
 
+# The following code was written based on the Code Institute Boutique Ado
+# walkthrough and customised to fit this application
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
         'sku',
@@ -20,6 +22,7 @@ class CategoryAdmin(admin.ModelAdmin):
         'friendly_name',
         'name',
     )
+# End of customised code from Boutique Ado walkthrough
 
 
 class ReviewAdmin(admin.ModelAdmin):

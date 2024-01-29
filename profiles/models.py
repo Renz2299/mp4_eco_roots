@@ -4,6 +4,8 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 
 
+# The following code was written based on the Code Institute Boutique Ado
+# walkthrough and customised to fit this application
 class UserProfile(models.Model):
     """ A user profile model for default info and order history """
     user = models.OneToOneField(User, on_delete=models.CASCADE)

@@ -2,6 +2,8 @@ from django import forms
 from .models import UserProfile
 
 
+# The following code was written based on the Code Institute Boutique Ado
+# walkthrough and customised to fit this application
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile

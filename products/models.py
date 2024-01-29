@@ -1,6 +1,8 @@
 from django.db import models
 
 
+# The following code was written based on the Code Institute Boutique Ado
+# walkthrough and customised to fit this application
 class Category(models.Model):
 
     class Meta:
@@ -29,6 +31,7 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+# End of customised code from Boutique Ado walkthrough
 
 
 class Review(models.Model):

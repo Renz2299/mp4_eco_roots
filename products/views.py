@@ -8,6 +8,8 @@ from .models import Product, Category, Review
 from .forms import ProductForm, ReviewForm
 
 
+# The following code was written based on the Code Institute Boutique Ado
+# walkthrough and customised to fit this application
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
 
@@ -145,6 +147,7 @@ def delete_product(request, product_id):
     product.delete()
     messages.info(request, 'Product deleted!')
     return redirect(reverse('products'))
+# End of customised code from Boutique Ado walkthrough
 
 
 @login_required

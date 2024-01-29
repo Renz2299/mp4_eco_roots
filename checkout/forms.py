@@ -2,6 +2,8 @@ from django import forms
 from .models import Order
 
 
+# The following code was written based on the Code Institute Boutique Ado
+# walkthrough and customised to fit this application
 class OrderForm(forms.ModelForm):
     class Meta:
         model = Order

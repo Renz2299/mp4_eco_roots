@@ -2,6 +2,8 @@ from django import forms
 from .models import Product, Category, Review
 
 
+# The following code was written based on the Code Institute Boutique Ado
+# walkthrough and customised to fit this application
 class ProductForm(forms.ModelForm):
 
     class Meta:
@@ -16,6 +18,7 @@ class ProductForm(forms.ModelForm):
         self.fields['category'].choices = friendly_names
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-black'
+# End of customised code from Boutique Ado walkthrough
 
 
 class ReviewForm(forms.ModelForm):

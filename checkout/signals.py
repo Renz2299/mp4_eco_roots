@@ -4,6 +4,8 @@ from django.dispatch import receiver
 from .models import OrderLineItem
 
 
+# The following code was written based on the Code Institute Boutique Ado
+# walkthrough and customised to fit this application
 @receiver(post_save, sender=OrderLineItem)
 def update_on_save(sender, instance, created, **kwargs):
     """ Update order total on lineitem update/create """
