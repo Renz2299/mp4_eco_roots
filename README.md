@@ -330,7 +330,7 @@ Below is a visualisation of the tables needed for the minimum viable application
 - Python
 
 ### Version Control
-During the development of the EcoRoots site, GitHub was used to manage versions of each file. Commits were made often and consisted of one feature implementation or edit so it would be easier to roll back to a previous version if required. In total, there were ?? commits for this project. Details of the commits can be found here: https://github.com/Renz2299/mp4_eco_roots/commits/main
+During the development of the EcoRoots site, GitHub was used to manage versions of each file. Commits were made often and consisted of one feature implementation or edit so it would be easier to roll back to a previous version if required. In total, there were 105 commits for this project. Details of the commits can be found here: https://github.com/Renz2299/mp4_eco_roots/commits/main
 
 ## Site Development & Features
 
@@ -1635,13 +1635,6 @@ Through testing the site there were a number of further improvements found that 
 
 6. Introduce the ability for users to add items to a wishlist so users can save items they would like to purchase later. With more time this functionality would be further researched and possibly introduced to the site.
 
-Still to do:
-- Zero waste kit missing image credit - Maybe add a new one
-- Add comments to code where it's not my own or customised from a template
-- Add total number of commits to version control section
-- Check form validation
-- Check user is always signposted
-
 ## Credits & Acknowledgements
 
 ### Credits
@@ -1704,7 +1697,7 @@ bamboo-dustpan-brush.jpg | Photo by Jan Kopřiva on Unsplash
 bamboo-device-charging-dock.jpg | Photo by Dario on Unsplash
 zero-waste-bathroom-starter-kit.jpg | Photo by Svitlana on Unsplash
 zero-waste-kitchen-starter-kit.jpg | Photo by Good Soul Shop on Unsplash
-zero-waste-beauty-starter-kit.jpg	
+zero-waste-beauty-starter-kit.jpg | Photo by Kristina Balić on Unsplash  
 zero-waste-pet-starter-kit.jpg | Photo by Kristina Balić on Unsplash
 favicon.png | Leaf icons created by Pixel perfect | https://www.flaticon.com/free-icons/leaf
 no-image.png | Freepik | https://www.freepik.com/free-vector/realistic-question-box-mockup_28846681.htm#query=mystery&position=1&from_view=search&track=sph&uuid=3ddffba5-4263-4cdb-8308-d88d826b07f6
